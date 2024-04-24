@@ -38,16 +38,16 @@
 
     default_layer {
       bindings = <
-        &kp PG_UP  &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &none                                                            &mo 3     &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &none
+        &kp PG_UP  &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &none                                                            &mo MOD     &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &none
         &kp PG_DN  &kp Q     &kp W    &kp E    &kp R      &kp T  &kp GRAVE                                                        &none     &kp Y  &kp U    &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC    &kp A     &kp S    &kp D    &kp F      &kp G  &kp MINUS       &kp TAB   &none    &kp LGUI &kp RALT             &kp EQUAL &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
+        &kp ESC    &kp A     &kp S    &kp D    &kp F      &kp G  &kp MINUS       &kp TAB   &kp K_CMENU &kp LGUI &kp RALT             &kp EQUAL &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
         &kp LSHFT  &kp Z     &kp X    &kp C    &kp V      &kp B                            &none    &kp HOME                                &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &none      &kp CAPS  &none    &kp LEFT &kp RIGHT                &kp BSPC &kp LCTRL &kp DEL  &kp END  &kp ENTER &lt NUM SPACE               &kp UP   &kp DOWN  &kp LBKT &kp RBKT &none
+        &none      &kp CAPS  &none    &kp LEFT &kp RIGHT                &lt FN BSPC &kp LCTRL &kp DEL  &kp END  &kp ENTER &lt NUM SPACE               &kp UP   &kp DOWN  &kp LBKT &kp RBKT &none
       >;
     };
     num {
       bindings = <
-        &trans &trans &trans &trans &trans &trans  &none                                            &mo 3  &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans  &none                                            &mo MOD &trans &trans &trans &trans &trans &trans
         &trans &trans &trans &trans &trans &trans  &trans                                           &trans &trans &trans &trans &trans &trans &trans
         &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5  &trans        &trans &trans &trans &trans        &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
         &trans &trans &trans &trans &trans &trans                      &trans &trans                       &trans &trans &trans &trans &trans &trans
@@ -56,11 +56,11 @@
     };
     fn {
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                           &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans  &none                                            &mo MOD &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans  &trans                                           &trans &trans &trans &trans &trans &trans &trans
+        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6  &trans        &trans &trans &trans &trans        &trans &kp F7 &kp F8 &kp F9 &kp F0 &kp F11 &kp F12
+        &trans &trans &trans &trans &trans &trans                      &trans &trans                       &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans
       >;
     };
     mod {
