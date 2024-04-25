@@ -43,7 +43,7 @@
         &kp TAB    &kp Q      &kp W      &kp E     &kp R      &kp T   &kp GRAVE                                                        &none     &kp Y  &kp U   &kp I      &kp O     &kp P     &kp BSLH
         &kp ESC    &kp A      &kp S      &kp D     &kp F      &kp G   &kp MINUS          &kp TAB   &kp K_CMENU  &kp LGUI &kp RALT       &kp EQUAL &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
         &kp LSHFT  &kp Z      &kp X      &kp C     &kp V      &kp B                                &none        &kp HOME                          &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-        &kp CAPS   &kp PG_UP  &kp PG_DN  &kp LEFT  &kp RIGHT                &lt SYM BSPC &kp LCTRL &lt FN DEL   &kp END  &kp ENTER &lt NUM SPACE         &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &none
+        &kp CAPS   &kp PG_UP  &kp PG_DN  &kp LEFT  &kp RIGHT                &lt SYM ENTER &kp LCTRL &lt FN DEL   &kp END  &kp BSPC &lt NUM SPACE         &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &none
       >;
     };
     num {
