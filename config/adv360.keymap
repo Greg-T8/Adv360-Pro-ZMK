@@ -66,11 +66,11 @@
     };
     sym {
       bindings = <
-        &trans &trans &trans &trans &trans &trans  &none                                            &mo MOD &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans &trans  &trans                                           &trans  &trans &trans &trans &trans &trans &trans
-        &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT  &trans        &trans &trans &trans &trans       &trans &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp trans
-        &trans &trans &trans &trans &trans &trans                      &trans &trans                        &trans &trans &trans &trans &trans &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans                 &trans &trans &trans &trans &trans
+        &trans  &trans    &trans  &trans    &trans    &trans     &none                                             &mo MOD  &trans     &trans    &trans    &trans    &trans    &trans
+        &trans  &trans    &trans  &trans    &trans    &trans     &trans                                            &trans   &trans     &trans    &trans    &trans    &trans    &trans
+        &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &trans       &trans  &trans  &trans  &trans       &trans   &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &trans
+        &trans  &trans    &trans  &trans    &trans    &trans                          &trans  &trans                        &trans     &trans    &trans    &trans    &trans    &trans
+        &trans  &trans    &trans  &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans                   &trans    &trans    &trans    &trans    &trans
       >;
     };
     mod {
