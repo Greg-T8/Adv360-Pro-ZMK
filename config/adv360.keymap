@@ -6,8 +6,8 @@
 
 #define DEFAULT 0
 #define NUM     1
-#define FN      2
-#define SYM     3
+#define SYM     2
+#define FN      3
 #define MOD     4
 
 / {
