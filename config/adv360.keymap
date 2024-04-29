@@ -44,7 +44,7 @@
         &kp TAB    &kp Q      &kp W      &kp E     &kp R      &kp T   &none                                                          &none     &kp Y  &kp U   &kp I      &kp O     &kp P     &kp BSLH
         &kp ESC    &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G   &none          &kp TAB    &kp K_CMENU  &kp LGUI &kp RALT       &none  &kp H  &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI &kp SQT
         &kp LSHFT  &kp Z      &kp X      &kp C     &kp V      &kp B                                 &none        &kp HOME                          &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-        &kp CAPS   &kp PG_UP  &kp PG_DN  &kp LEFT  &kp RIGHT                &lt SYM ENTER &kp LCTRL &lt FN DEL   &kp END  &kp BSPC &lt NUM SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &none
+        &kp CAPS   &kp PG_UP  &kp PG_DN  &kp LEFT  &kp RIGHT                &kp LSHFT  &lt SYM BSPC  &hm LCTRL DEL   &lt FN ESC  &kp ENTER &lt NUM SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &none
       >;
     };
     num {
