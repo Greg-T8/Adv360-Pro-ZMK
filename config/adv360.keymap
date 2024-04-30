@@ -8,8 +8,9 @@
 #define DEFAULT 0
 #define NUM     1
 #define SYM     2
-#define FN      3
-#define MOD     4
+#define NAV     3
+#define FN      4
+#define MOD     5
 
 &lt {
     tapping-term-ms = <200>;
@@ -34,7 +35,8 @@
           label = "HOMEROW_MODS";
           #binding-cells = <2>;
           tapping-term-ms = <200>;
-          quick_tap_ms = <175>;
+          quick_tap_ms = <0>;
+          require-idle-ms = <125>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
@@ -47,9 +49,9 @@
       bindings = <
         &none      &kp N1      &kp N2      &kp N3       &kp N4       &kp N5  &kp F5                                                              &mo MOD  &kp N6  &kp N7       &kp N8       &kp N9      &kp N0         &none
         &kp TAB    &kp Q       &kp W       &kp E        &kp R        &kp T   &none                                                               &none    &kp Y   &kp U        &kp I        &kp O       &kp P          &kp BSLH
-        &kp ESC    &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G   &none        &kp TAB       &kp K_CMENU     &kp LGUI    &none        &none    &kp H   &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp SQT
-        &kp LSHFT  &kp Z       &kp X       &kp C        &kp V        &kp B                              &none           &none                             &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RSHFT
-        &kp CAPS   &kp PG_UP   &kp PG_DN   &kp LEFT     &kp RIGHT              &kp LSHFT  &lt SYM BSPC  &hm LCTRL DEL   &lt FN ESC  &kp ENTER  &lt NUM SPACE      &kp UP       &kp DOWN     &kp LBKT    &kp RBKT       &none
+        &kp ESC    &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G   &none           &kp TAB    &kp LGUI  &kp LGUI  &kp TAB              &none    &kp H   &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp SQT
+        &kp LSHFT  &kp Z       &kp X       &kp C        &kp V        &kp B                              &none     &none                                   &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RSHFT
+        &kp CAPS   &kp PG_UP   &kp PG_DN   &kp LEFT     &kp RIGHT              &lt SYM BSPC  &kp LCTRL  &kp DEL   &none     &lt NAV ENTER  &lt NUM SPACE          &kp UP       &kp DOWN     &kp LBKT    &kp RBKT       &none
       >;
     };
     num {
@@ -64,10 +66,19 @@
     sym {
       bindings = <
         &trans  &trans    &trans  &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
-        &trans  &trans    &trans  &trans    &trans     &trans  &trans                                            &trans   &trans  &kp GRAVE  &kp MINUS  &kp EQUAL  &trans    &trans
+        &trans  &trans    &trans  &trans    &trans     &trans  &trans                                            &trans   &trans  &kp GRAVE  &kp MINUS  &kp EQUAL  &SQT      &trans
         &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR  &trans
         &trans  &trans    &trans  &trans    &kp PRCNT  &trans                       &trans  &trans                        &trans  &kp CARET  &kp UNDER  &kp PLUS   &trans    &trans
         &trans  &trans    &trans  &trans    &trans                  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans     &trans     &trans    &trans
+      >;
+    };
+    nav {
+      bindings = <
+        &trans  &trans           &trans    &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &kp INS          &kp HOME  &kp UP    &kp PG_UP  &trans  &trans                                            &trans   &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &kp PSCRN        &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &kp SLCK         &kp END   &trans    &kp PG_DN  &trans                       &trans  &trans                        &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &kp PAUSE_BREAK  &trans    &trans    &trans                  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans     &trans     &trans    &trans
       >;
     };
     fn {
