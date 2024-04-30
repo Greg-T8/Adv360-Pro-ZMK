@@ -36,7 +36,7 @@
           #binding-cells = <2>;
           tapping-term-ms = <200>;
           quick_tap_ms = <0>;
-          flavor = "tap-preferred";
+          flavor = "balanced";
           bindings = <&kp>, <&kp>;
       };
     };
@@ -46,11 +46,11 @@
 
     default_layer {
       bindings = <
-        &none      &kp N1      &kp N2      &kp N3       &kp N4       &kp N5  &kp F5                                                              &mo MOD  &kp N6  &kp N7       &kp N8       &kp N9      &kp N0         &none
-        &kp TAB    &kp Q       &kp W       &kp E        &kp R        &kp T   &none                                                               &none    &kp Y   &kp U        &kp I        &kp O       &kp P          &kp BSLH
-        &kp ESC    &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G   &none           &kp TAB    &kp LGUI  &kp LGUI  &kp TAB              &none    &kp H   &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp SQT
-        &kp LSHFT  &kp Z       &kp X       &kp C        &kp V        &kp B                              &none     &none                                   &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RSHFT
-        &kp CAPS   &kp PG_UP   &kp PG_DN   &kp LEFT     &kp RIGHT              &lt SYM BSPC  &kp LCTRL  &kp DEL   &none     &lt NAV ENTER  &lt NUM SPACE          &kp UP       &kp DOWN     &kp LBKT    &kp RBKT       &none
+        &none          &kp N1      &kp N2      &kp N3       &kp N4       &kp N5  &kp F5                                                              &mo MOD  &kp N6  &kp N7       &kp N8       &kp N9      &kp N0         &none
+        &kp TAB        &kp Q       &kp W       &kp E        &kp R        &kp T   &none                                                               &none    &kp Y   &kp U        &kp I        &kp O       &kp P          &kp BSLH
+        &hm GRAVE ESC  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G   &none           &kp TAB    &kp LGUI  &kp LGUI  &kp TAB              &none    &kp H   &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp SQT
+        &kp LSHFT      &kp Z       &kp X       &kp C        &kp V        &kp B                              &none     &none                                   &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RSHFT
+        &kp CAPS       &kp PG_UP   &kp PG_DN   &kp LEFT     &kp RIGHT              &lt SYM BSPC  &kp LCTRL  &kp DEL   &none     &lt NAV ENTER  &lt NUM SPACE          &kp UP       &kp DOWN     &kp LBKT    &kp RBKT       &none
       >;
     };
     num {
