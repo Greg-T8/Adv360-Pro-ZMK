@@ -6,10 +6,10 @@
 #include <dt-bindings/zmk/backlight.h>
 
 #define DEFAULT 0
-#define NUM     1
-#define SYM     2
-#define NAV     3
-#define FN      4
+#define NAV     1
+#define FN      2
+#define NUM     3
+#define SYM     4
 #define MOD     5
 
 &lt {
@@ -53,24 +53,6 @@
         &kp CAPS       &kp PG_UP   &kp PG_DN   &kp LEFT     &kp RIGHT              &lt SYM BSPC  &kp LCTRL  &kp DEL   &none     &lt NAV ENTER  &lt NUM SPACE          &kp UP       &kp DOWN     &kp LBKT    &kp RBKT       &none
       >;
     };
-    num {
-      bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &none                                            &mo MOD  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                           &trans   &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &kp N1  &kp N2  &kp N3  &kp N4  &trans  &trans       &trans  &trans  &trans  &trans      &trans   &trans  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-        &trans  &trans  &trans  &trans  &kp N5  &trans                       &trans  &trans                       &trans  &kp N6  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans
-      >;
-    };
-    sym {
-      bindings = <
-        &trans  &trans    &trans  &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
-        &trans  &trans    &trans  &trans    &trans     &trans  &trans                                            &trans   &trans  &kp GRAVE  &kp MINUS  &kp EQUAL  &kp SQT   &trans
-        &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR  &trans
-        &trans  &trans    &trans  &trans    &kp PRCNT  &trans                       &trans  &trans                        &trans  &kp CARET  &kp UNDER  &kp PLUS   &trans    &trans
-        &trans  &trans    &trans  &trans    &trans                  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans     &trans     &trans    &trans
-      >;
-    };
     nav {
       bindings = <
         &trans  &trans           &trans    &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
@@ -87,6 +69,24 @@
         &trans  &kp F1   &kp F2   &kp F3  &kp F4  &trans  &trans       &trans  &trans  &trans  &trans      &trans   &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
         &trans  &kp F11  &kp F12  &trans  &kp F5  &trans                       &trans  &trans                       &trans  &kp F6  &trans  &trans  &trans   &trans
         &trans  &trans   &trans   &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans   &trans
+      >;
+    };
+    num {
+      bindings = <
+        &trans  &trans  &trans  &trans  &trans  &trans  &none                                            &mo MOD  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                           &trans   &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &kp N1  &kp N2  &kp N3  &kp N4  &trans  &trans       &trans  &trans  &trans  &trans      &trans   &trans  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+        &trans  &trans  &trans  &trans  &kp N5  &trans                       &trans  &trans                       &trans  &kp N6  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans
+      >;
+    };
+    sym {
+      bindings = <
+        &trans  &trans    &trans  &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &trans    &trans  &trans    &trans     &trans  &trans                                            &trans   &trans  &kp GRAVE  &kp MINUS  &kp EQUAL  &trans    &trans
+        &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR  &trans
+        &trans  &trans    &trans  &trans    &kp PRCNT  &trans                       &trans  &trans                        &trans  &kp CARET  &trans     &trans     &trans    &trans
+        &trans  &trans    &trans  &trans    &trans                  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans     &trans     &trans    &trans
       >;
     };
     mod {
