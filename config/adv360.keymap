@@ -66,7 +66,7 @@
     sym {
       bindings = <
         &trans  &trans    &trans  &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
-        &trans  &trans    &trans  &trans    &trans     &trans  &trans                                            &trans   &trans  &kp GRAVE  &kp MINUS  &kp EQUAL  &SQT      &trans
+        &trans  &trans    &trans  &trans    &trans     &trans  &trans                                            &trans   &trans  &kp GRAVE  &kp MINUS  &kp EQUAL  &kp SQT   &trans
         &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR  &trans
         &trans  &trans    &trans  &trans    &kp PRCNT  &trans                       &trans  &trans                        &trans  &kp CARET  &kp UNDER  &kp PLUS   &trans    &trans
         &trans  &trans    &trans  &trans    &trans                  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans     &trans     &trans    &trans
