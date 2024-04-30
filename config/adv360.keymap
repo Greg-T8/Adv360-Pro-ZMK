@@ -46,16 +46,16 @@
 
     default_layer {
       bindings = <
-        &none          &kp N1      &kp N2      &kp N3       &kp N4       &kp N5  &kp F5                                                              &mo MOD  &kp N6  &kp N7       &kp N8       &kp N9      &kp N0         &none
-        &kp TAB        &kp Q       &kp W       &kp E        &kp R        &kp T   &none                                                               &none    &kp Y   &kp U        &kp I        &kp O       &kp P          &kp BSLH
-        &hm GRAVE ESC  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G   &none           &kp TAB    &kp LGUI  &kp LGUI  &kp TAB              &none    &kp H   &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp SQT
-        &kp LSHFT      &kp Z       &kp X       &kp C        &kp V        &kp B                              &none     &none                                   &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RSHFT
-        &kp CAPS       &kp PG_UP   &kp PG_DN   &kp LEFT     &kp RIGHT              &lt SYM BSPC  &kp LCTRL  &kp DEL   &none     &lt NAV ENTER  &lt NUM SPACE          &kp UP       &kp DOWN     &kp LBKT    &kp RBKT       &none
+        &none          &kp N1      &kp N2      &kp N3       &kp N4       &kp N5  &kp F5                                                                &mo MOD  &kp N6  &kp N7       &kp N8       &kp N9      &kp N0         &none
+        &kp TAB        &kp Q       &kp W       &kp E        &kp R        &kp T   &none                                                                 &none    &kp Y   &kp U        &kp I        &kp O       &kp P          &kp BSLH
+        &hm GRAVE ESC  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G   &none           &kp TAB    &kp LGUI    &kp LGUI  &kp TAB              &none    &kp H   &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp SQT
+        &kp LSHFT      &kp Z       &kp X       &kp C        &kp V        &kp B                              &none       &none                                   &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RSHFT
+        &kp CAPS       &kp PG_UP   &kp PG_DN   &kp LEFT     &kp RIGHT              &lt SYM BSPC  &kp LCTRL  &lt FN DEL  &none     &lt NAV ENTER  &lt NUM SPACE          &kp UP       &kp DOWN     &kp LBKT    &kp RBKT       &none
       >;
     };
     nav {
       bindings = <
-        &trans  &trans           &trans    &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &none            &trans    &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
         &trans  &kp INS          &kp HOME  &kp UP    &kp PG_UP  &trans  &trans                                            &trans   &trans  &trans     &trans     &trans     &trans    &trans
         &trans  &kp PSCRN        &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &trans     &trans     &trans     &trans    &trans
         &trans  &kp SLCK         &kp END   &trans    &kp PG_DN  &trans                       &trans  &trans                        &trans  &trans     &trans     &trans     &trans    &trans
