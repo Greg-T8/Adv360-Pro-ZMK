@@ -55,11 +55,11 @@
     };
     nav {
       bindings = <
-        &trans  &none            &trans    &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
-        &trans  &kp INS          &kp HOME  &kp UP    &kp PG_UP  &trans  &trans                                            &trans   &trans  &trans     &trans     &trans     &trans    &trans
-        &trans  &kp PSCRN        &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &trans     &trans     &trans     &trans    &trans
-        &trans  &kp SLCK         &kp END   &trans    &kp PG_DN  &trans                       &trans  &trans                        &trans  &trans     &trans     &trans     &trans    &trans
-        &trans  &kp PAUSE_BREAK  &trans    &trans    &trans                  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans     &trans     &trans    &trans
+        &trans  &none            &trans     &trans    &trans     &trans  &none                                             &mo MOD  &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &kp INS          &kp PG_UP  &kp UP    &kp HOME   &trans  &trans                                            &trans   &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &kp PSCRN        &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &kp SLCK         &kp PG_DN  &trans    &kp END    &trans                       &trans  &trans                        &trans  &trans     &trans     &trans     &trans    &trans
+        &trans  &kp PAUSE_BREAK  &trans     &trans    &trans                  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans     &trans     &trans    &trans
       >;
     };
     fn {
