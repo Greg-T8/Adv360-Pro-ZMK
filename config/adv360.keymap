@@ -29,6 +29,15 @@
       };
       #endif
 
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&lt FN>;
+        };
+    };
+
       hm: homerow_mods {
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS";
@@ -55,9 +64,9 @@
     nav {
       bindings = <
         &trans  &trans  &trans  &trans  &trans  &trans  &none                                             &mo MOD  &trans    &trans     &trans     &trans     &trans    &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                            &trans   &trans    &kp PG_DN  &kp PG_UP  &trans     &trans    &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                            &trans   &trans    &kp PG_UP  &kp PG_DN  &trans     &trans    &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans                        &trans    &kp END    &kp HOME   &trans     &trans    &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans                        &trans    &kp HOME   &kp END    &trans     &trans    &trans
         &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans     &trans     &trans    &trans
       >;
     };
