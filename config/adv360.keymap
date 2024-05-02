@@ -38,7 +38,7 @@
         combo_left_thumb_keys {
             timeout-ms = <50>;
             key-positions = <71 72>;
-            bindings = <&lt FN>;
+            bindings = <&kp ENTER>;
         };
     };
     behaviors {
