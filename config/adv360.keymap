@@ -37,7 +37,7 @@
         compatible = "zmk,combos";
         combo_left_thumb_keys {
             timeout-ms = <200>;
-            key-positions = <71 72>;
+            key-positions = <35 36>;
             bindings = <&lt FN FN>;
         };
     };
