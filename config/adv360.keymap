@@ -47,7 +47,7 @@
               , <&macro_release &kp LSHIFT>
               ;
         }
-    } 
+    }; 
     combos {
         compatible = "zmk,combos";
         combo_left_thumb_keys {
