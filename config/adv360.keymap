@@ -32,6 +32,10 @@
     quick_tap_ms = <175>;
 };
 
+&caps_word { 
+    continue-list = <UNDERSCORE MINUS>;
+}
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -70,11 +74,11 @@
     };
     nav {
       bindings = <
-        &trans  &trans  &trans  &trans  &trans     &trans     &none                                             &mo MOD  &trans    &trans     &trans     &trans     &trans    &trans
-        &trans  &trans  &trans  &trans  &trans     &trans     &trans                                            &trans   &trans    &kp PG_UP  &kp HOME   &trans     &trans    &trans
-        &trans  &trans  &trans  &trans  &kp LCTRL  &kp LSHFT  &trans       &trans  &trans  &trans  &trans       &trans   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
-        &trans  &trans  &trans  &trans  &trans     &trans                          &trans  &trans                        &trans    &kp PG_DN  &kp END    &trans     &trans    &trans
-        &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans     &trans     &trans    &trans
+        &trans  &trans  &trans  &trans     &trans      &trans  &none                                             &mo MOD  &trans    &trans     &trans     &trans     &trans    &trans
+        &trans  &trans  &trans  &trans     &trans      &trans  &trans                                            &trans   &trans    &kp PG_UP  &kp HOME   &trans     &trans    &trans
+        &trans  &trans  &trans  &kp LCTRL  &kp LSHIFT  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
+        &trans  &trans  &trans  &trans     &trans      &trans                       &trans  &trans                        &trans    &kp PG_DN  &kp END    &trans     &trans    &trans
+        &trans  &trans  &trans  &trans     &trans                   &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans     &trans     &trans    &trans
       >;
     };
     fn {
