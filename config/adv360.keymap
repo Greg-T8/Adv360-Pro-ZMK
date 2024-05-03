@@ -87,7 +87,7 @@
       bindings = <
         &none      &kp N1      &kp N2      &kp N3       &kp N4       &kp N5  &kp F5                                                                &mo MOD  &kp N6  &kp N7       &kp N8       &kp N9      &kp N0         &none
         &kp TAB    &kp Q       &cw 0 W     &kp E        &kp R        &kp T   &none                                                                 &none    &kp Y   &kp U        &kp I        &kp O       &kp P          &kp BSLH
-        &kp ESC    &tp LGUI A  &tp LALT S  &tp LCTRL D  &tp LSHFT F  &kp G   &none           &kp TAB    &kp LGUI    &kp RGUI  &shift_tab           &none    &kp H   &tp RSHFT J  &tp RCTRL K  &tp RALT L  &tp RGUI SEMI  &kp SQT
+        &kp ESC    &tp LGUI A  &tp LALT S  &tp LSHFT D  &tp LCTRL F  &kp G   &none           &kp TAB    &kp LGUI    &kp RGUI  &shift_tab           &none    &kp H   &tp RCTRL J  &tp RSHFT K  &tp RALT L  &tp RGUI SEMI  &kp SQT
         &kp LSHFT  &kp Z       &kp X       &kp C        &kp V        &kp B                              &kp ENTER   &none                                   &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RSHFT
         &kp CAPS   &none       &none       &none        &none                  &lt NUM BSPC  &kp LCTRL  &lt FN DEL  &none     &kp ENTER  &kp SPACE                  &none        &none        &none       &none          &none
       >;
@@ -96,7 +96,7 @@
       bindings = <
         &trans  &trans  &trans  &trans     &trans      &trans  &none                                             &mo MOD  &trans    &trans     &trans     &trans     &trans    &trans
         &trans  &trans  &trans  &trans     &trans      &trans  &trans                                            &trans   &trans    &kp PG_UP  &kp HOME   &trans     &trans    &trans
-        &trans  &trans  &trans  &kp LCTRL  &kp LSHIFT  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
+        &trans  &trans  &trans  &kp LSHFT  &kp LCTRL   &trans  &trans       &trans  &trans  &trans  &trans       &trans   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
         &trans  &trans  &trans  &trans     &trans      &trans                       &trans  &trans                        &trans    &kp PG_DN  &kp END    &trans     &trans    &trans
         &trans  &trans  &trans  &trans     &trans                   &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans     &trans     &trans    &trans
       >;
