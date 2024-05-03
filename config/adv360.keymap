@@ -53,6 +53,8 @@
             bindings
               = <&macro_press &kp LSHIFT>
               , <&macro_press &kp LCTRL>
+              , <&macro_release &kp LSHIFT> 
+              , <&macro_release &kp LCTRL>
               ;
         };
     }; 
