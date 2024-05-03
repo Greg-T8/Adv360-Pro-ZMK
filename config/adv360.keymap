@@ -58,7 +58,7 @@
         combo_ctrl_shift {
             timeout-ms = <200>;
             key-positions = <31 32>;
-            bindings = <&kp LCTRL &kp LSHFT>;
+            bindings = <&kp LCTRL LSHFT>;
         };
     };
     behaviors {
