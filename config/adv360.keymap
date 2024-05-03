@@ -47,16 +47,6 @@
               , <&macro_release &kp LSHIFT>
               ;
         };
-        shift_ctrl: shift_ctrl {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-              = <&macro_press &kp LSHIFT>
-              , <&macro_press &kp LCTRL>
-              , <&macro_release &kp LSHIFT> 
-              , <&macro_release &kp LCTRL>
-              ;
-        };
     }; 
     combos {
         compatible = "zmk,combos";
@@ -64,11 +54,6 @@
             timeout-ms = <100>;
             key-positions = <65 66>;
             bindings = <&lt NAV 0>;
-        };
-        combo_ctrl_shift {
-            timeout-ms = <200>;
-            key-positions = <31 32>;
-            bindings = <&shift_ctrl>;
         };
     };
     behaviors {
