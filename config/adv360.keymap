@@ -69,10 +69,10 @@
           #binding-cells = <2>;
           bindings = <&kp>, <&kp>;
       };
-      cw: caps_word {
+      cw: cap_word {
           compatible = "zmk,behavior-hold-tap";
           flavor = "tap-preferred";
-          label = "Tap-Preferred";
+          label = "Caps_Word";
           tapping-term-ms = <175>;
           quick_tap_ms = <0>;
           #binding-cells = <2>;
@@ -104,9 +104,9 @@
     fn {
       bindings = <
         &trans  &trans   &trans      &trans     &trans  &trans  &none                                            &mo MOD  &trans  &trans  &trans  &trans  &trans   &trans
-        &trans  &trans   &caps_word  &trans     &trans  &trans  &trans                                           &trans   &trans  &kp F7  &kp F8  &kp F9  &kp F11  &trans
+        &trans  &trans   &trans      &trans     &trans  &trans  &trans                                           &trans   &trans  &kp F7  &kp F8  &kp F9  &kp F11  &trans
         &trans  &trans   &trans      &trans     &trans  &trans  &trans       &trans  &trans  &trans  &trans      &trans   &trans  &kp F4  &kp F5  &kp F6  &kp F10  &trans
-        &trans  &trans   &trans      &kp CAPS   &trans  &trans                       &trans  &trans                       &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
+        &trans  &trans   &trans      &trans     &trans  &trans                       &trans  &trans                       &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
         &trans  &trans   &trans      &trans     &trans               &trans  &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans   &trans
       >;
     };
