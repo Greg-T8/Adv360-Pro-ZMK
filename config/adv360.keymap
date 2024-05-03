@@ -74,7 +74,7 @@
           flavor = "tap-preferred";
           label = "Caps_Word";
           tapping-term-ms = <175>;
-          quick_tap_ms = <0>;
+          quick_tap_ms = <125>;
           #binding-cells = <2>;
           bindings = <&caps_word>, <&kp>;
       };
@@ -86,7 +86,7 @@
     default_layer {
       bindings = <
         &none      &kp N1      &kp N2      &kp N3       &kp N4       &kp N5  &kp F5                                                                &mo MOD  &kp N6  &kp N7       &kp N8       &kp N9      &kp N0         &none
-        &kp TAB    &kp Q       &cw W       &kp E        &kp R        &kp T   &none                                                                 &none    &kp Y   &kp U        &kp I        &kp O       &kp P          &kp BSLH
+        &kp TAB    &kp Q       &cw W 0     &kp E        &kp R        &kp T   &none                                                                 &none    &kp Y   &kp U        &kp I        &kp O       &kp P          &kp BSLH
         &kp ESC    &tp LGUI A  &tp LALT S  &tp LCTRL D  &tp LSHFT F  &kp G   &none           &kp TAB    &kp LGUI    &kp RGUI  &shift_tab           &none    &kp H   &tp RSHFT J  &tp RCTRL K  &tp RALT L  &tp RGUI SEMI  &kp SQT
         &kp LSHFT  &kp Z       &kp X       &kp C        &kp V        &kp B                              &kp ENTER   &none                                   &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp RSHFT
         &kp CAPS   &none       &none       &none        &none                  &lt NUM BSPC  &kp LCTRL  &lt FN DEL  &none     &kp ENTER  &kp SPACE                  &none        &none        &none       &none          &none
