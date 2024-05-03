@@ -47,6 +47,14 @@
               , <&macro_release &kp LSHIFT>
               ;
         };
+        shift_ctrl: shift_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+              = <&macro_press &kp LSHIFT>
+              , <&macro_press &kp LCTRL>
+              ;
+        };
     }; 
     combos {
         compatible = "zmk,combos";
@@ -58,7 +66,7 @@
         combo_ctrl_shift {
             timeout-ms = <200>;
             key-positions = <31 32>;
-            bindings = <&kp LCTRL LSHFT>;
+            bindings = <&shift_ctrl>;
         };
     };
     behaviors {
