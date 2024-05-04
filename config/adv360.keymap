@@ -32,6 +32,10 @@
     quick_tap_ms = <175>;
 };
 
+&sk {
+    quick-release;
+}
+
 &caps_word { 
     continue-list = <UNDERSCORE MINUS>;
 };
