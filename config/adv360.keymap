@@ -50,10 +50,7 @@
         start_sentence: start_sentence {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-              = <&kp DOT &kp SPACE>
-              , <&macro_press &kp LSHIFT>
-              ;
+            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
         };
     }; 
     combos {
@@ -94,7 +91,7 @@
           compatible = "zmk,behavior-tap-dance";
           #binding-cells = <0>;
           tapping-term-ms = <200>;
-          bindings = <&kp DOT>, <&start_sentence>;
+          bindings = <&kp DOT &kp SPACE>, <&start_sentence>;
       };
     };
 
