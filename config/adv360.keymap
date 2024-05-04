@@ -116,11 +116,11 @@
     };
     num {
       bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &none                                            &mo MOD  &trans     &trans  &trans  &trans  &trans     &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans                                           &trans   &kp GRAVE  &kp N7  &kp N8  &kp N9  &kp LBKT   &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans      &trans   &kp MINUS  &kp N4  &kp N5  &kp N6  &kp N0     &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans                       &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp RBKT   &trans
-        &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans     &trans
+        &trans  &trans       &trans       &trans        &trans        &trans  &none                                            &mo MOD  &trans     &trans        &trans        &trans       &trans       &trans
+        &trans  &trans       &trans       &trans        &trans        &trans  &trans                                           &trans   &kp GRAVE  &kp EQUAL     &kp MINUS     &kp LBKT     &kp RBKT     &trans
+        &trans  &tp LGUI N1  &tp LALT N2  &tp LSHFT N3  &tp LCTRL N4  &kp N5  &trans       &trans  &trans  &trans  &trans      &trans   &kp N6     &tp RCTRL N7  &tp RSHFT N8  &tp RALT N9  &tp RGUI N0  &trans
+        &trans  &trans       &trans       &trans        &trans        &trans                       &trans  &trans                       &trans     &trans        &trans        &trans       &trans       &trans
+        &trans  &trans       &trans       &trans        &trans                     &trans  &trans  &trans  &trans  &trans  &trans                  &trans        &trans        &trans       &trans       &trans
       >;
     };
     mod {
