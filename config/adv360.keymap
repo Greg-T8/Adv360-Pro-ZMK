@@ -124,8 +124,8 @@
       bindings = <
         &trans  &trans       &trans       &trans        &trans        &trans     &none                                                 &mo MOD  &trans     &trans        &trans        &trans       &trans       &trans
         &trans  &kp EXCL     &kp AT       &kp HASH      &kp DLLR      &kp PRCNT  &kp CARET                                             &trans   &kp LBKT   &kp AMPS      &kp STAR      &kp LPAR     &kp RPAR     &trans
-        &trans  &tp LGUI N1  &tp LALT N2  &tp LSHFT N3  &tp LCTRL N4  &kp N5     &kp N6          &trans  &trans  &trans  &trans        &trans   &kp TILDE  &tp RCTRL N7  &tp RSHFT N8  &tp RALT N9  &tp RGUI N0  &trans
-        &trans  &trans       &kp GRAVE    &kp EQUAL     &kp PLUS      &trans                             &trans  &trans                         &kp RBKT   &kp MINUS     &trans        &trans       &trans       &trans
+        &trans  &tp LGUI N1  &tp LALT N2  &tp LSHFT N3  &tp LCTRL N4  &kp N5     &kp N6          &trans  &trans  &trans  &trans        &trans   &kp GRAVE  &tp RCTRL N7  &tp RSHFT N8  &tp RALT N9  &tp RGUI N0  &trans
+        &trans  &trans       &kp TILDE    &kp EQUAL     &kp PLUS      &trans                             &trans  &trans                         &kp RBKT   &kp MINUS     &trans        &trans       &trans       &trans
         &trans  &trans       &trans       &trans        &trans                           &trans  &trans  &trans  &kp BSPC  &trans  &trans                  &trans        &trans        &trans       &trans       &trans
       >;
     };
