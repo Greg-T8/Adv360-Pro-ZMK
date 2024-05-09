@@ -86,7 +86,7 @@
 
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
-        }
+        };
 
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
@@ -100,7 +100,7 @@
 
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
-        }
+        };
 
         cw: cap_word {
             compatible = "zmk,behavior-hold-tap";
