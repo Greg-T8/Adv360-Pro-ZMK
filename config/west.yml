@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: okke-formsma
-      url-base: https://github.com/okke-formsma
+    - name: mcrosson
+      url-base: https://github.com/mcrosson
   projects:
     - name: zmk
-      remote: okke-formsma
-      revision: macros
+      remote: mcrosson
+      revision: feat-behavior-sleep
       import: app/west.yml
   self:
     path: config
