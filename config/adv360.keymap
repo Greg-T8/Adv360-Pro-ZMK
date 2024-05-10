@@ -78,12 +78,10 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
             require-prior-idle-ms = <PRIOR_IDLE>;
             quick-tap-ms = <QUICK_TAP>;
-
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
         };
@@ -92,12 +90,10 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-
             flavor = "balanced";
             tapping-term-ms = <TAPPING_TERM>;
             require-prior-idle-ms = <PRIOR_IDLE>;
             quick-tap-ms = <QUICK_TAP>;
-
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
         };
