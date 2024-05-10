@@ -7,15 +7,9 @@ manifest:
     - name: urob
       url-base: https://github.com/urob
   projects:
-    - name: refil-zmk
-      repo-path: zmk
+    - name: zmk
       remote: refil
       revision: adv360-z3.5
       import: app/west.yml
-    - name: urob-zmk
-      repo-path: zmk
-      remote: urob
-      revision: main
-      import: app/west.yml    
   self:
     path: config
