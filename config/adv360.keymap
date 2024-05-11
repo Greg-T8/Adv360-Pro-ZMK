@@ -65,7 +65,6 @@
     }; 
     combos {
         compatible = "zmk,combos";
-        #define 
         nav_layer {
             timeout-ms = <COMBO_TERM_FAST>;
             require-idle-ms = <COMBO_IDLE_FAST>;
@@ -78,6 +77,12 @@
             bindings = <&kp LC(LSHFT)>;
         };
         backspace {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <62 63>;
+            bindings = <&kp BSPC>;
+        };
+        delete {
             timeout-ms = <COMBO_TERM_FAST>;
             require-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <62 63>;
