@@ -87,14 +87,15 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <48 49>;
-            bindings = <&kp BSPC>;
+            bindings = <&kp DEL>;
         };
-        delete {
+        esc {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <48 49>;
-            bindings = <&kp BSPC>;
+            key-positions = <30 31>;
+            bindings = <&kp ESC>;
         };
+        
         
     };
     behaviors {
