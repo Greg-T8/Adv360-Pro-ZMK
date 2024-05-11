@@ -32,8 +32,8 @@
 
 #define THUMBS_RIGHT 37 38 53 68 69 70
 
-#define COMBO_TERM_FAST 18
-#define COMBO_TERM_SLOW 30
+#define COMBO_TERM_FAST 50
+#define COMBO_TERM_SLOW 70
 
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
@@ -95,7 +95,7 @@
             key-positions = <30 31>;
             bindings = <&kp ESC>;
         };
-        
+
         
     };
     behaviors {
