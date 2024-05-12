@@ -22,11 +22,11 @@
                   46 47 48 49 50 51 \
                   60 61 62 63 64
 
-#define KEYS_RIGHT 7 8 9 10 11 12 13 \
+#define KEYS_RIGHT  7  8  9 10 11 12 13 \
                    21 22 23 24 25 26 27 \
                    39 40 41 42 43 44 45 \
-                   54 55 56 57 58 59 \
-                   71 72 73 74 75
+                      54 55 56 57 58 59 \
+                         71 72 73 74 75
 
 #define THUMBS_LEFT 35 36 52 65 66 67
 
@@ -89,8 +89,8 @@
         tab {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-           key-positions = <16 17>;
-            bindings = <&kp ESC>;
+            key-positions = <16 17>;
+            bindings = <&kp TAB>;
         };
         esc {
             timeout-ms = <COMBO_TERM_FAST>;
@@ -221,6 +221,12 @@
 
         /* Vertical combos - right hand */
 
+        caret {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <22 40>;
+            bindings = <&kp CARET>;
+        };
         ampersand {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -248,19 +254,19 @@
         star {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <42 57>;
+            key-positions = <42 56>;
             bindings = <&kp STAR>;
         };
         equal {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <43 58>;
+            key-positions = <43 57>;
             bindings = <&kp EQUAL>;
         };
         pipe {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <44 59>;
+            key-positions = <44 58>;
             bindings = <&kp PIPE>;
         };
     };
@@ -340,20 +346,20 @@
 
     default_layer {
       bindings = <
-        &kp F5     &kp N1       &kp N2       &kp N3        &kp N4        &kp N5  &kp N6                                                                &mo MOD  &kp N6  &kp N7        &kp N8        &kp N9       &kp N0          &kp MINUS
-        &kp TAB    &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                                 &none    &kp Y   &kp U         &kp I         &kp O        &kp P           &kp BSLH
-        &kp ESC    &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F  &kp G   &none            &none         &none  &none  &none                    &none    &kp H   &hmr RCTRL J  &hmr RSHFT K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
-        &sk LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                  &none  &none                                   &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &sk RSHFT
-        &kp CAPS   &none        &none        &none         &none                   &lt NAV SPACE  &lt FN ENTER  &none  &none  &sn NUM 0 &ss SPACE 0                 &none         &none         &none        &none           &none
+        &none  &kp N1       &kp N2       &kp N3        &kp N4        &kp N5  &none                                                              &mo MOD  &kp N6  &kp N7        &kp N8        &kp N9       &kp N0          &none
+        &none  &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                              &none    &kp Y   &kp U         &kp I         &kp O        &kp P           &none
+        &none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G   &none            &none         &none    &none  &none               &none    &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &none
+        &none  &kp Z        &kp X        &kp C         &kp V         &kp B                                  &none    &none                               &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
+        &none  &none        &none        &none         &none                   &lt NAV SPACE  &lt FN ENTER  &kp DEL  &none  &sn NUM 0 &ss LSHFT 0                &none         &none         &none        &none           &none
       >;
     };
     num {
       bindings = <
-        &trans  &trans        &trans        &trans         &trans         &trans     &none                                                 &mo MOD  &trans     &trans         &trans         &trans        &trans        &trans
-        &trans  &kp EXCL      &kp AT        &kp HASH       &kp DLLR       &kp PRCNT  &kp CARET                                             &trans   &kp LBKT   &kp AMPS       &kp STAR       &kp LPAR      &kp RPAR      &trans
-        &trans  &hml LGUI N1  &hml LALT N2  &hml LSHFT N3  &hml LCTRL N4  &kp N5     &kp N6          &trans  &trans  &trans  &trans        &trans   &kp GRAVE  &hmr RCTRL N7  &hmr RSHFT N8  &hmr RALT N9  &hmr RGUI N0  &trans
-        &trans  &trans        &kp TILDE     &kp EQUAL      &kp PLUS       &trans                             &trans  &trans                         &kp RBKT   &kp MINUS      &trans         &trans        &trans        &trans
-        &trans  &trans        &trans        &trans         &trans                           &trans  &trans  &trans  &kp BSPC  &trans  &trans                   &trans         &trans         &trans        &trans        &trans
+        &trans  &trans        &trans        &trans         &trans         &trans     &none                                             &mo MOD  &trans     &trans         &trans         &trans        &trans        &trans
+        &trans  &trans        &trans        &trans         &trans         &trans     &trans                                            &trans   &trans     &trans         &trans         &trans        &trans        &trans
+        &trans  &hml LGUI N1  &hml LALT N2  &hml LSHFT N3  &hml LCTRL N4  &kp N5     &kp N6       &trans  &trans  &trans  &trans       &CARET   &kp GRAVE  &hmr RCTRL N7  &hmr RSHFT N8  &hmr RALT N9  &hmr RGUI N0  &trans
+        &trans  &trans        &kp TILDE     &kp EQUAL      &kp PLUS       &trans                          &trans  &trans                        &trans     &trans         &trans         &trans        &trans        &trans
+        &trans  &trans        &trans        &trans         &trans                         &trans  &trans  &trans  &trans  &trans  &trans                   &trans         &trans         &trans        &trans        &trans
       >;
     };
     nav {
@@ -367,20 +373,20 @@
     };
     fn {
       bindings = <
-        &trans  &trans   &trans  &trans  &trans  &trans  &none                                            &mo MOD  &trans  &trans   &trans   &trans  &trans   &trans
-        &trans  &trans   &trans  &trans  &trans  &trans  &trans                                           &trans   &trans  &trans   &trans   &trans  &trans   &trans
-        &trans  &kp F1   &kp F2  &kp F3  &kp F4  &kp F5  &kp F6       &trans  &trans  &trans  &trans      &trans   &trans  &kp F7   &kp F8   &kp F9  &kp F10  &trans
-        &trans  &trans   &trans  &trans  &trans  &trans                       &trans  &trans                       &trans  &kp F11  &kp F12  &trans  &trans   &trans
-        &trans  &trans   &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans               &trans   &trans   &trans  &trans   &trans
+        &trans  &trans   &trans   &trans  &trans  &trans  &none                                             &mo MOD  &trans  &trans  &trans  &trans  &trans   &trans
+        &trans  &trans   &trans   &trans  &trans  &trans  &trans                                            &trans   &trans  &trans  &trans  &trans  &trans   &trans
+        &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &trans       &trans  &trans  &trans  &trans       &trans   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+        &trans  &kp F11  &kp F12  &trans  &trans  &trans                       &trans  &trans                        &trans  &trans  &trans  &trans  &trans   &trans
+        &trans  &trans   &trans   &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans   &trans
       >;
     };
     mod {
       bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                     &trans                 &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                               &bootloader            &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none        &none        &trans                  &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &macro_ver   &none                                      &none &none                                                        &none        &none        &none        &none &none &none
-        &none &none        &none        &none        &none                                       &none &none &none &none &bl BL_TOG &rgb_ug RGB_TOG                                          &bl BL_INC   &bl BL_DEC   &none &none &none
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                      &trans                  &none  &none       &none       &none  &none  &none
+        &none &none        &none        &none        &none        &none        &bootloader                                                &bootloader             &none  &none       &none       &none  &none  &none
+        &none &none        &none        &none        &none        &none        &trans          &none &none &bt BT_CLR &none               &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
+        &none &none        &none        &none        &macro_ver   &none                              &none &none                                                  &none  &none       &none       &none  &none  &none
+        &none &none        &none        &none        &none                               &none &none &none &none &bl BL_TOG &rgb_ug RGB_TOG                              &bl BL_INC  &bl BL_DEC  &none  &none  &none
       >;
     };
   };
