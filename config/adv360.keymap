@@ -303,7 +303,7 @@
     
         nd: num_dance {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             bindings = <&sl NUM>, <&tog NUM>;
             tapping-term-ms = <TAPPING_TERM>;
         };
@@ -319,7 +319,7 @@
 
         wd: word_dance {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             bindings = <&sk LSHFT>, <&caps_word>;
             tapping-term-ms = <TAPPING_TERM>;
         };
