@@ -149,12 +149,6 @@
             key-positions = <19 33>;
             bindings = <&kp PRCNT>;
         };
-        caret {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <20 34>;
-            bindings = <&kp CARET>;
-        };
         select-all {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
