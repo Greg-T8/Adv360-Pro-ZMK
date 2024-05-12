@@ -233,17 +233,17 @@
             key-positions = <24 42>;
             bindings = <&kp MINUS>;
         };
-        plus {
+        equal {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <25 43>;
-            bindings = <&kp PLUS>;
-        }; 
-        backslash {
+            bindings = <&kp EQUAL>;
+        };
+        pipe {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <26 44>;
-            bindings = <&kp BSLH>;
+            bindings = <&kp PIPE>;
         };
         star {
             timeout-ms = <COMBO_TERM_SLOW>;
@@ -251,17 +251,17 @@
             key-positions = <42 56>;
             bindings = <&kp STAR>;
         };
-        equal {
+        plus {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <43 57>;
-            bindings = <&kp EQUAL>;
-        };
-        pipe {
+            bindings = <&kp PLUS>;
+        }; 
+        backslash {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <44 58>;
-            bindings = <&kp PIPE>;
+            bindings = <&kp BSLH>;
         };
     };
     behaviors {
@@ -349,11 +349,11 @@
     };
     num {
       bindings = <
-        &trans  &trans        &trans        &trans         &trans         &trans     &none                                             &mo MOD    &trans     &trans         &trans         &trans        &trans        &trans
-        &trans  &trans        &trans        &trans         &trans         &trans     &trans                                            &trans     &trans     &trans         &trans         &trans        &trans        &trans
-        &trans  &hml LGUI N1  &hml LALT N2  &hml LSHFT N3  &hml LCTRL N4  &kp N5     &kp N6       &trans  &trans  &trans  &trans       &kp CARET  &kp GRAVE  &hmr RCTRL N7  &hmr RSHFT N8  &hmr RALT N9  &hmr RGUI N0  &trans
-        &trans  &trans        &kp TILDE     &kp EQUAL      &kp PLUS       &trans                          &trans  &trans                          &trans     &trans         &trans         &trans        &trans        &trans
-        &trans  &trans        &trans        &trans         &trans                         &trans  &trans  &trans  &trans  &trans  &trans                     &trans         &trans         &trans        &trans        &trans
+        &trans  &trans        &trans        &trans         &trans         &trans     &none                                             &mo MOD  &trans     &trans         &trans         &trans        &trans        &trans
+        &trans  &trans        &trans        &trans         &trans         &trans     &trans                                            &trans   &trans     &trans         &trans         &trans        &trans        &trans
+        &trans  &hml LGUI N1  &hml LALT N2  &hml LSHFT N3  &hml LCTRL N4  &kp N5     &kp N6       &trans  &trans  &trans  &trans       &trans   &kp N6     &hmr RCTRL N7  &hmr RSHFT N8  &hmr RALT N9  &hmr RGUI N0  &trans
+        &trans  &trans        &kp TILDE     &kp EQUAL      &kp PLUS       &trans                          &trans  &trans                        &trans     &trans         &trans         &trans        &trans        &trans
+        &trans  &trans        &trans        &trans         &trans                         &trans  &trans  &trans  &trans  &trans  &trans                   &trans         &trans         &trans        &trans        &trans
       >;
     };
     nav {
