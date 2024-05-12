@@ -159,31 +159,31 @@
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <29 47>;
-            bindings = <LC(A)>;
+            bindings = <kp LC(A)>;
         };
         cut {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <30 48>;
-            bindings = <LC(X)>;
+            bindings = <kp LC(X)>;
         };
         copy {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <31 49>;
-            bindings = <LC(C)>;
+            bindings = <kp LC(C)>;
         };
         paste {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <32 50>;
-            bindings = <LC(V)>;
+            bindings = <kp LC(V)>;
         };
         bold {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <33 51>;
-            bindings = <LC(B)>;
+            bindings = <kp LC(B)>;
         };
 
         /* Horizontal combos - right hand */
