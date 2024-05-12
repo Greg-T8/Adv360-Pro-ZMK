@@ -77,17 +77,20 @@
             key-positions = <31 32>;
             bindings = <&kp LC(LSHFT)>;
         };
-        backspace {
+
+        /* Horizontal combos - left hand */
+
+        tilde {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <49 50>;
-            bindings = <&kp BSPC>;
+            key-positions = <15 16>;
+            bindings = <&kp TILDE>;
         };
-        delete {
+        tab {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <48 49>;
-            bindings = <&kp DEL>;
+           key-positions = <16 17>;
+            bindings = <&kp ESC>;
         };
         esc {
             timeout-ms = <COMBO_TERM_FAST>;
@@ -95,8 +98,171 @@
             key-positions = <30 31>;
             bindings = <&kp ESC>;
         };
+        grave {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <47 48>;
+            bindings = <&kp GRAVE>;
+        };
+        delete {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <48 49>;
+            bindings = <&kp DEL>;
+        };
+        backspace {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <49 50>;
+            bindings = <&kp BSPC>;
+        };
 
-        
+        /* Vertical combos - left hand */ 
+
+        exclamation {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <15 29>;
+            bindings = <&kp EXCL>;
+        };
+        at {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <16 30>;
+            bindings = <&kp AT>;
+        };
+        hash {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <17 31>;
+            bindings = <&kp HASH>;
+        };
+        dollar {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <18 32>;
+            bindings = <&kp DLLR>;
+        };
+        percent {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <19 33>;
+            bindings = <&kp PRCNT>;
+        };
+        caret {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <20 34>;
+            bindings = <&kp CARET>;
+        };
+        select-all {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <29 47>;
+            bindings = <LC(A)>;
+        };
+        cut {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <30 48>;
+            bindings = <LC(X)>;
+        };
+        copy {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <31 49>;
+            bindings = <LC(C)>;
+        };
+        paste {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <32 50>;
+            bindings = <LC(V)>;
+        };
+        bold {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <33 51>;
+            bindings = <LC(B)>;
+        };
+
+        /* Horizontal combos - right hand */
+
+        left_paren {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <41 42>;
+            bindings = <&kp LPAR>;
+        };
+        right_paren {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <42 43>;
+            bindings = <&kp RPAR>;
+        };
+        left_bracket {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <55 56>;
+            bindings = <&kp LBKT>;
+        };
+        right_bracket {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <56 57>;
+            bindings = <&kp RBKT>;
+        };
+        underscore {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <57 58>;
+            bindings = <&kp UNDERSCORE>;
+        }; 
+
+        /* Vertical combos - right hand */
+
+        ampersand {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <23 41>;
+            bindings = <&kp AMPS>;
+        };
+        minus {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <24 42>;
+            bindings = <&kp MINUS>;
+        };
+        plus {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <25 43>;
+            bindings = <&kp PLUS>;
+        }; 
+        backslash {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <26 44>;
+            bindings = <&kp BSLH>;
+        };
+        star {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <42 57>;
+            bindings = <&kp STAR>;
+        };
+        equal {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <43 58>;
+            bindings = <&kp EQUAL>;
+        };
+        pipe {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <44 59>;
+            bindings = <&kp PIPE>;
+        };
     };
     behaviors {
         #include "macros.dtsi"
@@ -134,6 +300,39 @@
             #binding-cells = <2>;
             bindings = <&caps_word>, <&kp>;
         };
+    
+        nd: num_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <2>;
+            bindings = <&sl NUM>, <&tog NUM>;
+            tapping-term-ms = <TAPPING_TERM>;
+        };
+
+        sn: smart_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick_tap_ms = <175>;
+            bindings = <&mo>, <&nd>;
+        };
+
+        wd: word_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <2>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+            tapping-term-ms = <TAPPING_TERM>;
+        };
+
+        smart_shift: smart_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick_tap_ms = <175>;
+            bindings = <&kp>, <&wd>;
+        };
+
     };
 
   keymap {
@@ -143,9 +342,9 @@
       bindings = <
         &kp F5     &kp N1       &kp N2       &kp N3        &kp N4        &kp N5  &kp N6                                                                &mo MOD  &kp N6  &kp N7        &kp N8        &kp N9       &kp N0          &kp MINUS
         &kp TAB    &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                                 &none    &kp Y   &kp U         &kp I         &kp O        &kp P           &kp BSLH
-        &kp ESC    &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F  &kp G   &none           &kp TAB    &kp LGUI    &kp RGUI  &shift_tab           &none    &kp H   &hmr RCTRL J  &hmr RSHFT K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
-        &sk LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                              &kp ENTER   &none                                   &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &sk RSHFT
-        &kp CAPS   &none        &none        &none         &none                   &lt NUM BSPC  &sk LCTRL  &lt FN DEL  &none     &kp ENTER  &kp SPACE                  &none         &none         &none        &none           &none
+        &kp ESC    &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F  &kp G   &none            &none         &none  &none  &none                    &none    &kp H   &hmr RCTRL J  &hmr RSHFT K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
+        &sk LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                  &none  &none                                   &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &sk RSHFT
+        &kp CAPS   &none        &none        &none         &none                   &lt NAV SPACE  &lt FN ENTER  &none  &none  &smart_num NUM 0 &smart_shift SPACE 0                 &none         &none         &none        &none           &none
       >;
     };
     num {
