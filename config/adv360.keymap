@@ -343,7 +343,7 @@
         rpar_gt: rpar_gt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <kp RPAR>, <kp GT>;
+            bindings = <&kp RPAR>, <&kp GT>;
             mods = <(MOD_LSFT)>;
         };
     };
@@ -364,7 +364,7 @@
       bindings = <
         &trans  &trans        &trans        &trans         &trans         &trans     &none                                             &mo MOD  &trans     &trans         &trans         &trans        &trans        &trans
         &trans  &trans        &trans        &trans         &trans         &trans     &trans                                            &trans   &trans     &trans         &trans         &trans        &trans        &trans
-        &trans  &hml LGUI N1  &hml LALT N2  &hml LSHFT N3  &hml LCTRL N4  &kp N5     &kp N6       &trans  &trans  &trans  &trans       &trans   &kp N6     &hmr RCTRL N7  &hmr RSHFT N8  &hmr RALT N9  &hmr RGUI N0  &trans
+        &trans  &hml LGUI N1  &hml LALT N2  &hml LSHFT N3  &hml LCTRL N4  &kp N5     &trans       &trans  &trans  &trans  &trans       &trans   &kp N6     &hmr RCTRL N7  &hmr RSHFT N8  &hmr RALT N9  &hmr RGUI N0  &trans
         &trans  &trans        &kp TILDE     &kp EQUAL      &kp PLUS       &trans                          &trans  &trans                        &trans     &trans         &trans         &trans        &trans        &trans
         &trans  &trans        &trans        &trans         &trans                         &trans  &trans  &trans  &trans  &trans  &trans                   &trans         &trans         &trans        &trans        &trans
       >;
