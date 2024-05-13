@@ -337,7 +337,7 @@
         lpar_lt: lpar_lt {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <kp LPAR>, <kp LT>;
+            bindings = <&kp LPAR>, <&kp LT>;
             mods = <(MOD_LSFT)>;
         };
         rpar_gt: rpar_gt {
