@@ -186,13 +186,13 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <41 42>;
-            bindings = <&kp LPAR>;
+            bindings = <&lpar_lt>;
         };
         right_paren {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <42 43>;
-            bindings = <&kp RPAR>;
+            bindings = <&rpar_gt>;
         };
         left_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
