@@ -80,12 +80,6 @@
 
         /* Horizontal combos - left hand */
 
-        tilde {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <15 16>;
-            bindings = <&kp TILDE>;
-        };
         tab {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
@@ -97,12 +91,6 @@
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <30 31>;
             bindings = <&kp ESC>;
-        };
-        grave {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <47 48>;
-            bindings = <&kp GRAVE>;
         };
         delete {
             timeout-ms = <COMBO_TERM_FAST>;
@@ -244,6 +232,18 @@
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <26 44>;
             bindings = <&kp PIPE>;
+        };
+        tilde {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <40 54>;
+            bindings = <&kp TILDE>;
+        };
+        grave {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <41 55>;
+            bindings = <&kp GRAVE>;
         };
         star {
             timeout-ms = <COMBO_TERM_SLOW>;
