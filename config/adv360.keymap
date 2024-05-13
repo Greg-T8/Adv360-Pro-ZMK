@@ -80,23 +80,11 @@
 
         /* Horizontal combos - left hand */
 
-        tab {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <16 17>;
-            bindings = <&kp TAB>;
-        };
         esc {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <30 31>;
             bindings = <&kp ESC>;
-        };
-        delete {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <48 49>;
-            bindings = <&kp DEL>;
         };
         backspace {
             timeout-ms = <COMBO_TERM_FAST>;
@@ -325,7 +313,7 @@
         &none  &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                              &none    &kp Y   &kp U         &kp I         &kp O        &kp P           &none
         &none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G   &none            &none      &none      &none  &none                &none    &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
         &none  &kp Z        &kp X        &kp C         &kp V         &kp B                               &kp ENTER  &none                               &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
-        &none  &none        &none        &none         &none                   &lt NAV BSPC  &lt NUM TAB  &kp DEL    &none  &lt FN SPACE  &kp ENTER                &none         &none         &none        &none           &none
+        &none  &none        &none        &none         &none                   &lt NAV BSPC  &lt NUM TAB  &kp DEL    &none  &lt FN ENTER  &kp SPACE                &none         &none         &none        &none           &none
       >;
     };
     num {
