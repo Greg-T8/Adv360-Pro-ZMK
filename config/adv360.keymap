@@ -86,11 +86,11 @@
             key-positions = <30 31>;
             bindings = <&kp ESC>;
         };
-        backspace {
+        undo {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <49 50>;
-            bindings = <&kp BSPC>;
+            key-positions = <47 48>;
+            bindings = <&kp LC(Z)>;
         };
 
         /* Vertical combos - left hand */ 
