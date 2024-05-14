@@ -324,7 +324,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&masked_home 0>, <&kp LEFT>;
+            bindings = <&masked_home>, <&kp LEFT>;
         };
         nav_right: nav_right {
             compatible = "zmk,behavior-hold-tap";
@@ -333,7 +333,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&masked_end 0>, <&kp RIGHT>;
+            bindings = <&masked_end>, <&kp RIGHT>;
         };
 
         // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
