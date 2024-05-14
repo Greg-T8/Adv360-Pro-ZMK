@@ -51,6 +51,14 @@
     quick-release;
 }; 
 
+// Mod-tap settings
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <220>;
+    quick_tap_ms = <220>;
+    hold-trigger-key-positions = <0>;
+};
+
 &caps_word { 
     continue-list = <UNDERSCORE MINUS>;
 }; 
@@ -367,9 +375,9 @@
     nav {
       bindings = <
         &trans  &trans  &trans  &trans     &trans      &trans  &none                                             &mo MOD  &trans    &trans     &trans     &trans     &trans    &trans
-        &trans  &trans  &trans  &trans     &trans      &trans  &trans                                            &trans   &none     &kp PG_UP  &kp HOME   &none      &trans    &trans
-        &trans  &trans  &trans  &kp LCTRL  &kp LSHFT   &trans  &trans       &trans  &trans  &trans  &trans       &trans   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
-        &trans  &trans  &trans  &trans     &trans      &trans                       &trans  &trans                        &none     &kp PG_DN  &kp END    &none      &trans    &trans
+        &trans  &trans  &trans  &trans     &trans      &trans  &trans                                            &trans   &none     &kp PG_UP  &trans   &none      &trans    &trans
+        &trans  &trans  &trans  &kp LCTRL  &kp LSHFT   &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP     &nav_right 0 RIGHT  &trans    &trans
+        &trans  &trans  &trans  &trans     &trans      &trans                       &trans  &trans                        &none     &kp PG_DN  &trans    &none      &trans    &trans
         &trans  &trans  &trans  &trans     &trans                   &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans     &trans     &trans    &trans
       >;
     };
