@@ -316,7 +316,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&masked_home 0>, <&kp LEFT>;
+            bindings = <&mt_home>, <&kp>;
         };
         nav_right: nav_right {
             compatible = "zmk,behavior-hold-tap";
@@ -325,17 +325,17 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&masked_end 0>, <&kp RIGHT>;
+            bindings = <&mt_end>, <&kp>;
         };
 
         // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
-        masked_home: masked_home {
+        mt_home: mt_home {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp HOME>, <&kp HOME>;
             mods = <(MOD_LCTL)>;
         };
-        masked_end: masked_end {
+        mt_end: mt_end {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp END>, <&kp END>;
