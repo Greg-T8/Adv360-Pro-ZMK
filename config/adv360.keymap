@@ -341,7 +341,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp HOME>, <&kp HOME>;
-            mods = (MOD_LCTL);
+            mods = <(MOD_LCTL)>;
         };
         masked_end: masked_end {
             compatible = "zmk,behavior-mod-morph";
