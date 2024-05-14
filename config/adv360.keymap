@@ -38,18 +38,30 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
+// Layer-Tap Settings
 &lt {
+    flavor = "balanced";
     tapping-term-ms = <200>;
     quick_tap_ms = <175>;
 };
 
+// Sticky-Key Settings
 &sk {
+    release-after-ms = <900>;
     quick-release;
-};
+}; 
+
+// Mod-Tap Settings
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <220>;
+    quick-tap-ms = <220>;
+    hold-trigger-key-positions = <0>;
+}
 
 &caps_word { 
     continue-list = <UNDERSCORE MINUS>;
-};
+}; 
 
 / {
     macros {
@@ -302,6 +314,41 @@
             bindings = <&kp RPAR>, <&kp GT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        /* NAV cluster */
+
+        mt_home: mt_home {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <220>;
+            hold-trigger-key-positions = <0>;
+            bindings = <&masked_home 0>, <&kp LEFT>;
+        }
+        mt_end: mt_end {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <220>;
+            hold-trigger-key-positions = <0>;
+            bindings = <&masked_end 0>, <&kp RIGHT>;
+        }
+
+        // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
+        masked_home: masked_home {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&kp HOME>;
+            mods = (MOD_LCTL);
+        }
+        masked_end: masked_end {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&kp END>;
+            mods = (MOD_LCTL);
+        }
     };
 
   keymap {
