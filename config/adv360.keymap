@@ -38,26 +38,18 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-// Layer-Tap Settings
+// Layer-tap settings
 &lt {
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick_tap_ms = <175>;
 };
 
-// Sticky-Key Settings
+// Sticky-key settings
 &sk {
     release-after-ms = <900>;
     quick-release;
 }; 
-
-// Mod-Tap Settings
-&mt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <220>;
-    quick-tap-ms = <220>;
-    hold-trigger-key-positions = <0>;
-};
 
 &caps_word { 
     continue-list = <UNDERSCORE MINUS>;
@@ -324,7 +316,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&masked_home>, <&kp LEFT>;
+            bindings = <&masked_home 0>, <&kp LEFT>;
         };
         nav_right: nav_right {
             compatible = "zmk,behavior-hold-tap";
@@ -333,7 +325,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&masked_end>, <&kp RIGHT>;
+            bindings = <&masked_end 0>, <&kp RIGHT>;
         };
 
         // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
