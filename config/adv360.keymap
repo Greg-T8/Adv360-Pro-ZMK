@@ -1,3 +1,11 @@
+/*
+
+This is my keymap for the Kinesis Advantage 360 keyboard. 
+Much of the advanced configuration was taken from Urob's base keymap config: 
+- https://github.com/urob/zmk-config/blob/main/config/base.keymap
+
+*/
+
 #include <behaviors.dtsi>
 
 #include <dt-bindings/zmk/keys.h>
@@ -374,11 +382,11 @@
     };
     nav {
       bindings = <
-        &trans  &trans  &trans  &trans     &trans      &trans  &none                                             &mo MOD  &trans    &trans     &trans     &trans     &trans    &trans
-        &trans  &trans  &trans  &trans     &trans      &trans  &trans                                            &trans   &none     &kp PG_UP  &trans   &none      &trans    &trans
-        &trans  &trans  &trans  &kp LCTRL  &kp LSHFT   &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP     &nav_right 0 RIGHT  &trans    &trans
-        &trans  &trans  &trans  &trans     &trans      &trans                       &trans  &trans                        &none     &kp PG_DN  &trans    &none      &trans    &trans
-        &trans  &trans  &trans  &trans     &trans                   &trans  &trans  &trans  &trans  &trans  &trans                  &trans     &trans     &trans     &trans    &trans
+        &trans  &trans  &trans  &trans     &trans      &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans  &trans
+        &trans  &trans  &trans  &trans     &trans      &trans  &trans                                            &trans   &none             &trans            &kp PG_UP        &none               &trans  &trans
+        &trans  &trans  &trans  &kp LCTRL  &kp LSHFT   &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans      &trans                       &trans  &trans                        &none             &trans            &kp PG_DN        &none               &trans  &trans
+        &trans  &trans  &trans  &trans     &trans                   &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans  &trans
       >;
     };
     fn {
