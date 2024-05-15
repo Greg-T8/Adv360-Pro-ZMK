@@ -5,8 +5,7 @@ manifest:
     - name: refil
       url-base: https://github.com/refil
   projects:
-    - name: refil
-      repo-path: zmk
+    - name: zmk
       remote: refil
       revision: adv360-z3.5
       import: app/west.yml
