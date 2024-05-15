@@ -2,16 +2,9 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
     - name: refil
       url-base: https://github.com/refil
   projects:
-    - name: urob
-      repo-path: zmk
-      remote: urob
-      revision: main
-      import: app/west.yml
     - name: refil
       repo-path: zmk
       remote: refil
