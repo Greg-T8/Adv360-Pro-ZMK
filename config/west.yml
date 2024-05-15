@@ -7,13 +7,13 @@ manifest:
     - name: refil
       url-base: https://github.com/refil
   projects:
-    - name: zmk
-      repo-path: urob
+    - name: urob
+      repo-path: zmk
       remote: urob
       revision: main
       import: app/west.yml
-    - name: zmk
-      repo-path: refil
+    - name: refil
+      repo-path: zmk
       remote: refil
       revision: adv360-z3.5
       import: app/west.yml
