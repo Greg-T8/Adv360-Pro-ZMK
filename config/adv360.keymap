@@ -21,7 +21,7 @@ Much of the advanced configuration was taken from Urob's base keymap config:
 
 #define TAPPING_TERM 280
 #define TAPPING_TERM_FAST 200
-#define PRIOR_IDLE 150
+#define PRIOR_IDLE 175
 #define QUICK_TAP 175
 
 #define KEYS_LEFT 0 1 2 3 4 5 6 \
@@ -53,7 +53,7 @@ Much of the advanced configuration was taken from Urob's base keymap config:
     quick_tap_ms = <175>;
 };
 
-// Sticky-key settings
+// Sticky-key settings: https://zmk.dev/docs/behaviors/sticky-key, https://zmk.dev/docs/config/behaviors#sticky-key
 &sk {
     release-after-ms = <900>;
     quick-release;
