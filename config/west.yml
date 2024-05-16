@@ -13,10 +13,5 @@ manifest:
       path: zmk
       revision: adv360-z3.5
       import: app/west.yml
-    - name: zmk2
-      repo-path: zmk
-      remote: urob
-      path: zmk
-      revision: main
   self:
     path: config
