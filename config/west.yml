@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: refil
       url-base: https://github.com/refil
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk1
       repo-path: zmk
@@ -11,5 +13,10 @@ manifest:
       path: zmk
       revision: adv360-z3.5
       import: app/west.yml
+    - name: zmk2
+      repo-path: zmk
+      remote: urob
+      path: zmk
+      revision: main
   self:
     path: config
