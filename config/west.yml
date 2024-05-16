@@ -9,9 +9,9 @@ manifest:
   projects:
     - name: zmk1
       repo-path: zmk
-      remote: refil
+      remote: urob
       path: zmk
-      revision: adv360-z3.5
+      revision: main
       import: app/west.yml
   self:
     path: config
