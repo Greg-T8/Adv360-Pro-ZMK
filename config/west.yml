@@ -3,7 +3,7 @@ manifest:
     - name: refil
       url-base: https://github.com/refil
     - name: Greg-T8
-      url-base: https://github.com/Greg-T8/zmk
+      url-base: https://github.com/Greg-T8
   projects:
     - name: zmk
       remote: Greg-T8
