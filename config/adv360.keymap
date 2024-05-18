@@ -48,7 +48,7 @@ Much of the advanced configuration was taken from Urob's base keymap config:
 
 // Layer-tap settings
 &lt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick_tap_ms = <175>;
 };
