@@ -8,7 +8,7 @@ manifest:
     - name: zmk
       remote: refil
       path: zmk
-      revision: main
+      revision: adv360-z3.5
       import: app/west.yml
   self:
     path: config
