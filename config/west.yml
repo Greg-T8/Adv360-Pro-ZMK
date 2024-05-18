@@ -6,7 +6,7 @@ manifest:
       url-base: https://github.com/Greg-T8
   projects:
     - name: zmk
-      remote: Greg-T8
+      remote: refil
       path: zmk
       revision: main
       import: app/west.yml
