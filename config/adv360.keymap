@@ -376,7 +376,7 @@ Much of the advanced configuration was taken from Urob's base keymap config:
 
     default_layer {
       bindings = <
-        &none      &kp N1       &kp N2       &kp N3        &kp N4        &kp N5  &none                                                               &mo MOD  &kp N6  &kp N7        &kp N8        &kp N9       &kp N0          &none
+        &none      &kp N1       &kp N2       &kp N3        &kp N4        &kp N5  &none                                                               &mo MOD  &kp N6  &kp N7        &kp N8        &kp N9       &kp N0          &kp MINUS
         &kp TAB    &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                               &none    &kp Y   &kp U         &kp I         &kp O        &kp P           &none
         &none      &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G   &none           &none        &none      &none  &none                &none    &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
         &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                &kp ENTER  &none                                &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
