@@ -245,7 +245,7 @@ Much of the advanced configuration was taken from Urob's base keymap config:
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <25 43>;
-            bindings = <&kp EQUAL>;
+            bindings = <&kp PLUS>;
         };
         pipe {
             timeout-ms = <COMBO_TERM_SLOW>;
@@ -275,7 +275,7 @@ Much of the advanced configuration was taken from Urob's base keymap config:
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <43 57>;
-            bindings = <&kp PLUS>;
+            bindings = <&kp EQUAL>;
         }; 
         backslash {
             timeout-ms = <COMBO_TERM_SLOW>;
