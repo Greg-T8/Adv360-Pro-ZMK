@@ -18,9 +18,8 @@ Some configuration was taken from Urob's base keymap config:
 #define FN      2
 #define MOD     3
 
-#define TAPPING_TERM 280
-#define TAPPING_TERM_FAST 200
-#define PRIOR_IDLE 200
+#define TAPPING_TERM 200
+#define PRIOR_IDLE 175
 #define QUICK_TAP 175
 
 #define KEYS_LEFT   0 1 2 3 4 5 6 \
@@ -241,7 +240,7 @@ Some configuration was taken from Urob's base keymap config:
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <TAPPING_TERM>;
             require-prior-idle-ms = <PRIOR_IDLE>;
             quick-tap-ms = <QUICK_TAP>;
@@ -253,7 +252,7 @@ Some configuration was taken from Urob's base keymap config:
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <TAPPING_TERM>;
             require-prior-idle-ms = <PRIOR_IDLE>;
             quick-tap-ms = <QUICK_TAP>;
