@@ -308,7 +308,7 @@ Some configuration was taken from Urob's base keymap config:
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PLUS>, <&kp EQUAL>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
