@@ -20,7 +20,7 @@ Some configuration was taken from Urob's base keymap config:
 
 #define TAPPING_TERM 280
 #define TAPPING_TERM_FAST 200
-#define PRIOR_IDLE 175
+#define PRIOR_IDLE 200
 #define QUICK_TAP 175
 
 #define KEYS_LEFT 0 1 2 3 4 5 6 \
@@ -96,7 +96,7 @@ Some configuration was taken from Urob's base keymap config:
         undo {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <29 30>;
+            key-positions = <47 48>;
             bindings = <&kp LC(Z)>;
         };
 
@@ -313,7 +313,7 @@ Some configuration was taken from Urob's base keymap config:
         &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                 &none    &none                                  &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
         &kp CAPS   &none        &none        &none         &none                   &lt NAV BSPC  &lt FN ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &kp SPACE               &none         &none         &none        &none           &none
       >;
-    };
+    }; 
     nav {
       bindings = <
         &trans  &trans  &trans  &trans     &trans      &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans  &trans
