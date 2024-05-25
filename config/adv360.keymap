@@ -1,7 +1,7 @@
 /*
 
 This is my keymap for the Kinesis Advantage 360 keyboard. 
-Much of the advanced configuration was taken from Urob's base keymap config: 
+Some configuration was taken from Urob's base keymap config: 
 - https://github.com/urob/zmk-config/blob/main/config/base.keymap
 
 */
@@ -14,10 +14,9 @@ Much of the advanced configuration was taken from Urob's base keymap config:
 #include <dt-bindings/zmk/backlight.h>
 
 #define DEFAULT 0
-#define NUM     1
-#define NAV     2
-#define FN      3
-#define MOD     4
+#define NAV     1
+#define FN      2
+#define MOD     3
 
 #define TAPPING_TERM 280
 #define TAPPING_TERM_FAST 200
@@ -53,13 +52,7 @@ Much of the advanced configuration was taken from Urob's base keymap config:
     quick_tap_ms = <175>;
 };
 
-// Sticky-key settings: https://zmk.dev/docs/behaviors/sticky-key, https://zmk.dev/docs/config/behaviors#sticky-key
-&sk {
-    release-after-ms = <900>;
-    quick-release;
-}; 
-
-// Mod-tap settings
+// Mod-tap settings. Used by navigation combos.
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <220>;
@@ -100,16 +93,10 @@ Much of the advanced configuration was taken from Urob's base keymap config:
 
         /* Horizontal combos - left hand */
 
-        esc {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <30 31>;
-            bindings = <&kp ESC>;
-        };
         undo {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <47 48>;
+            key-positions = <29 30>;
             bindings = <&kp LC(Z)>;
         };
 
@@ -190,36 +177,18 @@ Much of the advanced configuration was taken from Urob's base keymap config:
             key-positions = <24 25>;
             bindings = <&mt LC(DEL) DEL>;
         };
-        left_paren {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <41 42>;
-            bindings = <&lpar_lt>;
-        };
-        right_paren {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <42 43>;
-            bindings = <&rpar_gt>;
-        };
         left_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <55 56>;
+            key-positions = <54 55>;
             bindings = <&kp LBKT>;
         };
         right_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <56 57>;
+            key-positions = <55 56>;
             bindings = <&kp RBKT>;
         };
-        underscore {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <57 58>;
-            bindings = <&kp UNDERSCORE>;
-        }; 
 
         /* Vertical combos - right hand */
 
@@ -241,23 +210,11 @@ Much of the advanced configuration was taken from Urob's base keymap config:
             key-positions = <24 42>;
             bindings = <&kp MINUS>;
         };
-        equal {
+        plus {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <25 43>;
             bindings = <&kp PLUS>;
-        };
-        pipe {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <26 44>;
-            bindings = <&kp PIPE>;
-        };
-        tilde {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <40 54>;
-            bindings = <&kp TILDE>;
         };
         grave {
             timeout-ms = <COMBO_TERM_FAST>;
@@ -270,18 +227,6 @@ Much of the advanced configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <42 56>;
             bindings = <&kp STAR>;
-        };
-        plus {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <43 57>;
-            bindings = <&kp EQUAL>;
-        }; 
-        backslash {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <44 58>;
-            bindings = <&kp BSLH>;
         };
     };
     behaviors {
@@ -319,20 +264,6 @@ Much of the advanced configuration was taken from Urob's base keymap config:
             quick_tap_ms = <125>;
             #binding-cells = <2>;
             bindings = <&caps_word>, <&kp>;
-        };
-
-        // tap: left/right parenthesis | shft + tap: less-than/greater-than
-        lpar_lt: lpar_lt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp LT>;
-            mods = <(MOD_LSFT)>;
-        };
-        rpar_gt: rpar_gt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp GT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         /* NAV cluster */
@@ -376,20 +307,11 @@ Much of the advanced configuration was taken from Urob's base keymap config:
 
     default_layer {
       bindings = <
-        &none      &kp N1       &kp N2       &kp N3        &kp N4        &kp N5  &none                                                               &mo MOD  &kp N6  &kp N7        &kp N8        &kp N9       &kp N0          &kp MINUS
-        &kp TAB    &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                               &none    &kp Y   &kp U         &kp I         &kp O        &kp P           &none
-        &none      &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G   &none           &none        &none      &none  &none                &none    &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
-        &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                &kp ENTER  &none                                &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-        &none      &none        &none        &none         &none                   &lt NAV BSPC  &lt NUM TAB  &kp DEL    &none  &lt FN ENTER  &kp SPACE               &none         &none         &none        &none           &none
-      >;
-    };
-    num {
-      bindings = <
-        &trans  &trans        &trans        &trans         &trans         &trans     &none                                             &mo MOD  &trans     &trans         &trans         &trans        &trans        &trans
-        &trans  &trans        &trans        &trans         &trans         &trans     &trans                                            &trans   &trans     &trans         &trans         &trans        &trans        &trans
-        &trans  &hml LGUI N1  &hml LALT N2  &hml LSHFT N3  &hml LCTRL N4  &kp N5     &trans       &trans  &trans  &trans  &trans       &trans   &kp N6     &hmr RCTRL N7  &hmr RSHFT N8  &hmr RALT N9  &hmr RGUI N0  &trans
-        &trans  &trans        &trans        &kp EQUAL      &kp PLUS       &trans                          &trans  &trans                        &trans     &trans         &trans         &trans        &trans        &trans
-        &trans  &trans        &trans        &trans         &trans                         &trans  &trans  &trans  &trans  &trans  &trans                   &trans         &trans         &trans        &trans        &trans
+        &none      &kp N1       &kp N2       &kp N3        &kp N4        &kp N5  &kp 6                                                                &mo MOD  &kp N6  &kp N7        &kp N8        &kp N9       &kp N0          &kp MINUS
+        &kp TAB    &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                                &none    &kp Y   &kp U         &kp I         &kp O        &kp P           &kp BSLH
+        &kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G   &none           &none         &none    &none    &none                &none    &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
+        &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                 &none    &none                                  &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+        &kp CAPS   &none        &none        &none         &none                   &lt NAV BSPC  &lt FN ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &kp SPACE               &none         &none         &none        &none           &none
       >;
     };
     nav {
@@ -405,7 +327,7 @@ Much of the advanced configuration was taken from Urob's base keymap config:
       bindings = <
         &trans  &trans   &trans   &trans  &trans  &trans  &none                                             &mo MOD  &trans  &trans  &trans  &trans  &trans   &trans
         &trans  &trans   &trans   &trans  &trans  &trans  &trans                                            &trans   &trans  &trans  &trans  &trans  &trans   &trans
-        &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &trans       &trans  &trans  &trans  &trans       &trans   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+        &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &kp F6       &trans  &trans  &trans  &trans       &trans   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
         &trans  &kp F11  &kp F12  &trans  &trans  &trans                       &trans  &trans                        &trans  &trans  &trans  &trans  &trans   &trans
         &trans  &trans   &trans   &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans   &trans
       >;
