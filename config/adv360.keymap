@@ -218,7 +218,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <25 43>;
-            bindings = <&kp PLUS>;
+            bindings = <&mt_plus>;
         };
         grave {
             timeout-ms = <COMBO_TERM_FAST>;
@@ -302,6 +302,12 @@ Some configuration was taken from Urob's base keymap config:
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp END>, <&kp END>;
+            mods = <(MOD_LCTL)>;
+        };
+        mt_plus: mt_plus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp EQUAL>;
             mods = <(MOD_LCTL)>;
         };
     };
