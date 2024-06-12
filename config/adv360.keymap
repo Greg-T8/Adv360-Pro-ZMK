@@ -179,6 +179,12 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <24 25>;
             bindings = <&mt LC(DEL) DEL>;
         };
+        pipe {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <41 42>;
+            bindings = <&kp PIPE>;
+        };
         left_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
