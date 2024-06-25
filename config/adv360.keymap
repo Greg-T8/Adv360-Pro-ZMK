@@ -182,13 +182,13 @@ Some configuration was taken from Urob's base keymap config:
         NAV_BSPC {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <22 23>;
+            key-positions = <23 24>;
             bindings = <&mt LC(BSPC) BSPC>;
         };
         NAV_DEL {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <23 24>;
+            key-positions = <25 26>;
             bindings = <&mt LC(DEL) DEL>;
         };
         pipe {
