@@ -32,7 +32,7 @@ Some configuration was taken from Urob's base keymap config:
                       54 55 56 57 58 59 \
                          71 72 73 74 75
 
-#define THUMBS_LEFT 35 36 52 65 66 67
+#define THUMBS_LEFT  35 36 52 65 66 67
 #define THUMBS_RIGHT 37 38 53 68 69 70
 
 #define COMBO_TERM_FAST 50
@@ -74,12 +74,7 @@ Some configuration was taken from Urob's base keymap config:
     }; 
     combos {
         compatible = "zmk,combos";
-        nav_layer {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <65 66>;
-            bindings = <&lt NAV 0>;
-        };
+        
         hml_ctrl_shift {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
@@ -188,7 +183,7 @@ Some configuration was taken from Urob's base keymap config:
         NAV_DEL {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <25 26>;
+            key-positions = <24 25>;
             bindings = <&mt LC(DEL) DEL>;
         };
         pipe {
