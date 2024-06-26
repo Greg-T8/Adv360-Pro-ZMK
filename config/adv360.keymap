@@ -343,18 +343,18 @@ Some configuration was taken from Urob's base keymap config:
     }; 
     num {
       bindings = <
-        &trans  &trans  &trans  &trans  &trans  &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans    &trans
-        &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans                                            &trans   &kp N6            &kp N7            &kp N8           &kp N9              &kp N0    &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans    &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans                        &kp SQT           &kp PG_DN         &kp PG_UP        &none               &kp BSLH  &trans
-        &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans    &trans
+        &trans  &trans  &trans  &trans     &trans     &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans    &trans
+        &trans  &kp N1  &kp N2  &kp N3     &kp N4     &kp N5  &trans                                            &trans   &kp N6            &kp N7            &kp N8           &kp N9              &kp N0    &trans
+        &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans    &trans
+        &trans  &trans  &trans  &trans     &trans     &trans                       &trans  &trans                        &trans            &kp SQT           &trans           &trans              &kp BSLH  &trans
+        &trans  &trans  &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans    &trans
       >;
     };
     fn {
       bindings = <
         &trans  &trans   &trans   &trans  &trans  &trans  &none                                             &mo MOD  &trans  &trans  &trans  &trans  &trans   &trans
         &trans  &trans   &trans   &trans  &trans  &trans  &trans                                            &trans   &trans  &trans  &trans  &trans  &trans   &trans
-        &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &kp F6       &trans  &trans  &trans  &trans       &trans   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+        &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &trans       &trans  &trans  &trans  &trans       &trans   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
         &trans  &kp F11  &kp F12  &trans  &trans  &trans                       &trans  &trans                        &trans  &trans  &trans  &trans  &trans   &trans
         &trans  &trans   &trans   &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans   &trans
       >;
