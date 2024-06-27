@@ -307,7 +307,7 @@ Some configuration was taken from Urob's base keymap config:
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
             tapping-term-ms = <170>;
-            quick_tap_ms = <125>;
+            quick_tap_ms = <170>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
@@ -345,13 +345,15 @@ Some configuration was taken from Urob's base keymap config:
             #binding-cells = <0>;
             bindings = <&kp END>, <&kp END>;
             mods = <(MOD_LCTL)>;
-        };
+        }; 
+
         mt_plus: mt_plus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PLUS>, <&kp EQUAL>;
             mods = <(MOD_LSFT)>;
         };
+
         mt_pipe: mt_pipe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
