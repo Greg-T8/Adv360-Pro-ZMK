@@ -388,7 +388,7 @@ Some configuration was taken from Urob's base keymap config:
         &trans  &trans        &trans        &trans         &trans         &trans  &none                                             &mo MOD  &trans  &trans         &trans         &trans        &trans        &trans
         &trans  &trans        &trans        &trans         &trans         &trans  &trans                                            &trans   &trans  &trans         &trans         &trans        &trans        &trans
         &trans  &hml LGUI N1  &hml LALT N2  &hml LCTRL N3  &hml LSHFT N4  &kp N5  &trans       &trans  &trans  &trans  &trans       &trans   &kp N6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RALT N9  &hmr RGUI N0  &trans
-        &trans  &trans        &trans        &trans         &trans         &trans                       &trans  &trans                        &trans  &trans         &trans         &trans        &trans        &trans
+        &trans  &trans        &trans        &kp SPACE      &trans         &trans                       &trans  &trans                        &trans  &trans         &trans         &trans        &trans        &trans
         &trans  &trans        &trans        &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans                &trans         &trans         &trans        &trans        &trans
       >;
     };
