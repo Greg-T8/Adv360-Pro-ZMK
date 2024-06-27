@@ -13,9 +13,10 @@ Some configuration was taken from Urob's base keymap config:
 #include <dt-bindings/zmk/backlight.h>
 
 #define DEFAULT 0
-#define NUM     1
-#define FN      2
-#define MOD     3
+#define NAV     1
+#define NUM     2
+#define FN      3
+#define MOD     4
 
 #define TAPPING_TERM 220
 #define PRIOR_IDLE   200
@@ -196,7 +197,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <41 42>;
-            bindings = <&kp PIPE>;
+            bindings = <&mt_pipe>;
         };
         left_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
@@ -286,6 +287,14 @@ Some configuration was taken from Urob's base keymap config:
             #binding-cells = <2>;
             bindings = <&caps_word>, <&kp>;
         };
+        nt: num_toggle {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";
+            tapping-term-ms = <170>;
+            quick_tap_ms = <125>;
+            #binding-cells = <2>;
+            bindings = <&tog>, <&kp>;
+        };
 
         /* NAV cluster */
 
@@ -327,6 +336,12 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp PLUS>, <&kp EQUAL>;
             mods = <(MOD_LSFT)>;
         };
+        mt_pipe: mt_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>, <&kp BSLH>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
   keymap {
@@ -334,20 +349,29 @@ Some configuration was taken from Urob's base keymap config:
 
     default_layer {
       bindings = <
-        &none      &none        &none        &none         &none         &none   &none                                                                &mo MOD  &none   &none         &none         &none        &none           &none
-        &none      &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                                &none    &kp Y   &kp U         &kp I         &kp O        &kp P           &none
-        &none      &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G   &none           &none         &none    &none    &none                &none    &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &none
-        &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                 &none    &none                                  &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-        &none      &none        &none        &none         &none                   &lt NUM BSPC  &lt FN ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &kp SPACE               &none         &none         &none        &none           &none
+        &none      &none        &none        &none         &none         &none   &none                                                                 &mo MOD  &none       &none         &none         &none        &none           &none
+        &none      &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                                 &none    &kp Y       &kp U         &kp I         &kp O        &kp P           &none
+        &none      &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G   &none           &none          &none    &none    &none                &none    &kp H       &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &none
+        &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                  &none    &none                                  &nt NUM N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+        &none      &none        &none        &none         &none                   &lt NAV BSPC  &lt NUM ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &kp SPACE                   &none         &none         &none        &none           &none
       >;
     }; 
-    num {
+    nav {
       bindings = <
         &trans  &trans  &trans  &trans     &trans     &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans    &trans
-        &trans  &kp N1  &kp N2  &kp N3     &kp N4     &kp N5  &trans                                            &trans   &kp N6            &kp N7            &kp N8           &kp N9              &kp N0    &trans
+        &trans  &trans  &trans  &trans     &trans     &trans  &trans                                            &trans   &trans            &trans            &trans           &trans              &trans    &trans
         &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans    &trans
         &trans  &trans  &trans  &trans     &trans     &trans                       &trans  &trans                        &trans            &kp SQT           &trans           &trans              &kp BSLH  &trans
         &trans  &trans  &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans    &trans
+      >;
+    };
+    num {
+      bindings = <
+        &trans  &trans        &trans        &trans         &trans         &trans  &none                                             &mo MOD  &trans  &trans         &trans         &trans        &trans        &trans
+        &trans  &trans        &trans        &trans         &trans         &trans  &trans                                            &trans   &trans  &trans         &trans         &trans        &trans        &trans
+        &trans  &hml LGUI N1  &hml LALT N2  &hml LCTRL N3  &hml LSHFT N4  &kp N5  &trans       &trans  &trans  &trans  &trans       &trans   &kp N6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RALT N9  &hmr RGUI N0  &trans
+        &trans  &trans        &trans        &trans         &trans         &trans                       &trans  &trans                        &trans  &trans         &trans         &trans        &trans        &trans
+        &trans  &trans        &trans        &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans                &trans         &trans         &trans        &trans        &trans
       >;
     };
     fn {
