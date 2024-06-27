@@ -193,17 +193,17 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <24 25>;
             bindings = <&mt LC(DEL) DEL>;
         };
-        pipe {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <41 42>;
-            bindings = <&mt_pipe>;
-        };
         quote {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <42 43>;
+            key-positions = <41 42>;
             bindings = <&kp SQT>;
+        };
+        pipe {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <42 43>;
+            bindings = <&mt_pipe>;
         };
         left_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
