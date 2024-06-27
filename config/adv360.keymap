@@ -305,8 +305,8 @@ Some configuration was taken from Urob's base keymap config:
         
         hts: hold_tap_shift {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            tapping-term-ms = <170>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
             quick_tap_ms = <170>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
