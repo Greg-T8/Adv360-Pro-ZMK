@@ -214,7 +214,7 @@ Some configuration was taken from Urob's base keymap config:
         right_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <57 58>;
+            key-positions = <56 57>;
             bindings = <&kp RBKT>;
         };
 
