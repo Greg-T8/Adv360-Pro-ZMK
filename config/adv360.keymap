@@ -199,6 +199,12 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <41 42>;
             bindings = <&mt_pipe>;
         };
+        quote {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <42 43>;
+            bindings = <&kp SQT>;
+        };
         left_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
@@ -358,11 +364,11 @@ Some configuration was taken from Urob's base keymap config:
     }; 
     nav {
       bindings = <
-        &trans  &trans  &trans  &trans     &trans     &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans    &trans
-        &trans  &trans  &trans  &trans     &trans     &trans  &trans                                            &trans   &trans            &trans            &trans           &trans              &trans    &trans
-        &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans    &trans
-        &trans  &trans  &trans  &trans     &trans     &trans                       &trans  &trans                        &trans            &kp SQT           &trans           &trans              &kp BSLH  &trans
-        &trans  &trans  &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans    &trans
+        &trans  &trans  &trans  &trans     &trans     &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans  &trans
+        &trans  &trans  &trans  &trans     &trans     &trans  &trans                                            &trans   &trans            &trans            &trans           &trans              &trans  &trans
+        &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans  &trans
+        &trans  &trans  &trans  &trans     &trans     &trans                       &trans  &trans                        &trans            &trans            &trans           &trans              &trans  &trans
+        &trans  &trans  &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans  &trans
       >;
     };
     num {
