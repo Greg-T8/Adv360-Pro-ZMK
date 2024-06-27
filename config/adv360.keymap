@@ -106,13 +106,13 @@ Some configuration was taken from Urob's base keymap config:
         lpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <49 50>;
+            key-positions = <48 49>;
             bindings = <&kp LPAR>;
         };
         rpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <50 51>;
+            key-positions = <49 50>;
             bindings = <&kp RPAR>;
         };
 
@@ -208,13 +208,13 @@ Some configuration was taken from Urob's base keymap config:
         left_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <54 55>;
+            key-positions = <55 56>;
             bindings = <&kp LBKT>;
         };
         right_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <55 56>;
+            key-positions = <57 58>;
             bindings = <&kp RBKT>;
         };
 
