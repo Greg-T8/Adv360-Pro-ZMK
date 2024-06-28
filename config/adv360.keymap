@@ -109,17 +109,17 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <47 48>;
             bindings = <&kp LC(Z)>;
         };
-        lpar {
+        left_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <48 49>;
-            bindings = <&kp LPAR>;
+            bindings = <&kp LBKT>;
         };
-        rpar {
+        right_bracket {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <49 50>;
-            bindings = <&kp RPAR>;
+            bindings = <&kp RBKT>;
         };
 
         /* Vertical combos - left hand */ 
@@ -211,17 +211,17 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <42 43>;
             bindings = <&mt_pipe>;
         };
-        left_bracket {
+        lpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <55 56>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp LPAR>;
         };
-        right_bracket {
+        rpar {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <56 57>;
-            bindings = <&kp RBKT>;
+            bindings = <&kp RPAR>;
         };
 
         /* Vertical combos - right hand */
