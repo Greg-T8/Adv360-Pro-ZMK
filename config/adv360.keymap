@@ -384,8 +384,8 @@ Some configuration was taken from Urob's base keymap config:
       bindings = <
         &trans  &trans  &trans  &trans     &trans     &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans  &trans
         &trans  &trans  &trans  &trans     &trans     &trans  &trans                                            &trans   &trans            &trans            &trans           &trans              &trans  &trans
-        &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans  &trans
-        &trans  &trans  &trans  &trans     &trans     &trans                       &trans  &trans                        &trans            &trans            &trans           &trans              &trans  &trans
+        &trans  &trans  &trans  &trans     &trans     &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans  &trans
+        &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans                       &trans  &trans                        &trans            &trans            &trans           &trans              &trans  &trans
         &trans  &trans  &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans  &trans
       >;
     };
