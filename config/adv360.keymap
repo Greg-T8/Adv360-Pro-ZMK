@@ -433,3 +433,4 @@ Some configuration was taken from Urob's base keymap config:
       >;
     };
   };
+};
