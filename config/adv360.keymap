@@ -384,53 +384,53 @@ Some configuration was taken from Urob's base keymap config:
         };
     };
 
-  keymap {
-    compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-    default_layer {
-      bindings = <
-        &none  &none          &none        &none         &none         &none   &none                                                                &mo MOD  &none   &none         &none         &none        &none             &none
-        &none  &kp Q          &cw 0 W      &kp E         &kp R         &kp T   &none                                                                &none    &kp Y   &kp U         &kp I         &kp O        &kp P             &none
-        &none  &hmltp LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G   &none           &none         &none    &none    &none                &none    &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmrtp RGUI SEMI  &none
-        &none  &kp Z          &kp X        &kp C         &kp V         &kp B                                 &none    &none                                  &kp N   &nt NUM M     &kp COMMA     &kp DOT      &kp FSLH          &none
-        &none  &none          &none        &none         &none                   &lt NAV BSPC  &lt FN ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &lt NUM SPACE           &none         &none         &none        &none             &none
-      >;
-    }; 
-    nav {
-      bindings = <
-        &trans  &trans  &trans  &trans     &trans     &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans  &trans
-        &trans  &trans  &trans  &trans     &trans     &trans  &trans                                            &trans   &trans            &trans            &trans           &trans              &trans  &trans
-        &trans  &trans  &trans  &trans     &trans     &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans  &trans
-        &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans                       &trans  &trans                        &trans            &trans            &trans           &trans              &trans  &trans
-        &trans  &trans  &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans  &trans
-      >;
+        default_layer {
+            bindings = <
+                &none  &none          &none        &none         &none         &none   &none                                                                &mo MOD  &none   &none         &none         &none        &none             &none
+                &none  &kp Q          &cw 0 W      &kp E         &kp R         &kp T   &none                                                                &none    &kp Y   &kp U         &kp I         &kp O        &kp P             &none
+                &none  &hmltp LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G   &none           &none         &none    &none    &none                &none    &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmrtp RGUI SEMI  &none
+                &none  &kp Z          &kp X        &kp C         &kp V         &kp B                                 &none    &none                                  &kp N   &kp M         &kp COMMA     &kp DOT      &kp FSLH          &none
+                &none  &none          &none        &none         &none                   &lt NAV BSPC  &lt FN ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &lt NUM SPACE           &none         &none         &none        &none             &none
+            >;
+        }; 
+        nav {
+            bindings = <
+                &trans  &trans  &trans  &trans     &trans     &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans  &trans
+                &trans  &trans  &trans  &trans     &trans     &trans  &trans                                            &trans   &trans            &trans            &trans           &trans              &trans  &trans
+                &trans  &trans  &trans  &trans     &trans     &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans  &trans
+                &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans                       &trans  &trans                        &trans            &trans            &trans           &trans              &trans  &trans
+                &trans  &trans  &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans  &trans
+            >;
+        };
+        num {
+            bindings = <
+                &trans  &trans        &trans        &trans         &trans         &trans  &none                                             &mo MOD  &trans  &trans         &trans         &trans        &trans        &trans
+                &trans  &trans        &trans        &trans         &trans         &trans  &trans                                            &trans   &trans  &trans         &trans         &trans        &trans        &trans
+                &trans  &hml LGUI N1  &hml LALT N2  &hml LCTRL N3  &hml LSHFT N4  &kp N5  &trans       &trans  &trans  &trans  &trans       &trans   &kp N6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RALT N9  &hmr RGUI N0  &trans
+                &trans  &trans        &trans        &kp SPACE      &trans         &trans                       &trans  &trans                        &trans  &trans         &trans         &trans        &trans        &trans
+                &trans  &trans        &trans        &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans                &trans         &trans         &trans        &trans        &trans
+            >;
+        };
+        fn {
+            bindings = <
+                &trans  &trans   &trans   &trans  &trans  &trans  &none                                             &mo MOD  &trans  &trans  &trans  &trans  &trans   &trans
+                &trans  &trans   &trans   &trans  &trans  &trans  &trans                                            &trans   &trans  &trans  &trans  &trans  &trans   &trans
+                &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &trans       &trans  &trans  &trans  &trans       &trans   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+                &trans  &kp F11  &kp F12  &trans  &trans  &trans                       &trans  &trans                        &trans  &trans  &trans  &trans  &trans   &trans
+                &trans  &trans   &trans   &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans   &trans
+            >;
+        };
+        mod {
+            bindings = <
+                &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                      &trans                  &none  &none       &none       &none  &none  &none
+                &none &none        &none        &none        &none        &none        &bootloader                                                &bootloader             &none  &none       &none       &none  &none  &none
+                &none &none        &none        &none        &none        &none        &trans          &none &none &bt BT_CLR &none               &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
+                &none &none        &none        &none        &macro_ver   &none                              &none &none                                                  &none  &none       &none       &none  &none  &none
+                &none &none        &none        &none        &none                               &none &none &none &none &bl BL_TOG &rgb_ug RGB_TOG                              &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
     };
-    num {
-      bindings = <
-        &trans  &trans        &trans        &trans         &trans         &trans  &none                                             &mo MOD  &trans  &trans         &trans         &trans        &trans        &trans
-        &trans  &trans        &trans        &trans         &trans         &trans  &trans                                            &trans   &trans  &trans         &trans         &trans        &trans        &trans
-        &trans  &hml LGUI N1  &hml LALT N2  &hml LCTRL N3  &hml LSHFT N4  &kp N5  &trans       &trans  &trans  &trans  &trans       &trans   &kp N6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RALT N9  &hmr RGUI N0  &trans
-        &trans  &trans        &trans        &kp SPACE      &trans         &trans                       &trans  &trans                        &trans  &trans         &trans         &trans        &trans        &trans
-        &trans  &trans        &trans        &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans                &trans         &trans         &trans        &trans        &trans
-      >;
-    };
-    fn {
-      bindings = <
-        &trans  &trans   &trans   &trans  &trans  &trans  &none                                             &mo MOD  &trans  &trans  &trans  &trans  &trans   &trans
-        &trans  &trans   &trans   &trans  &trans  &trans  &trans                                            &trans   &trans  &trans  &trans  &trans  &trans   &trans
-        &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5  &trans       &trans  &trans  &trans  &trans       &trans   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-        &trans  &kp F11  &kp F12  &trans  &trans  &trans                       &trans  &trans                        &trans  &trans  &trans  &trans  &trans   &trans
-        &trans  &trans   &trans   &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans   &trans
-      >;
-    };
-    mod {
-      bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                      &trans                  &none  &none       &none       &none  &none  &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                &bootloader             &none  &none       &none       &none  &none  &none
-        &none &none        &none        &none        &none        &none        &trans          &none &none &bt BT_CLR &none               &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
-        &none &none        &none        &none        &macro_ver   &none                              &none &none                                                  &none  &none       &none       &none  &none  &none
-        &none &none        &none        &none        &none                               &none &none &none &none &bl BL_TOG &rgb_ug RGB_TOG                              &bl BL_INC  &bl BL_DEC  &none  &none  &none
-      >;
-    };
-  };
 };
