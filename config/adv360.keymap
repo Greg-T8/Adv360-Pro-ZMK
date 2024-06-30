@@ -109,18 +109,6 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <47 48>;
             bindings = <&kp LC(Z)>;
         };
-        left_bracket {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <48 49>;
-            bindings = <&kp LBKT>;
-        };
-        right_bracket {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <49 50>;
-            bindings = <&kp RBKT>;
-        };
 
         /* Vertical combos - left hand */ 
 
@@ -221,7 +209,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <56 57>;
-            bindings = <&kp RPAR>;
+            bindings = <&mt_rparen>;
         };
 
         /* Vertical combos - right hand */
@@ -393,6 +381,19 @@ Some configuration was taken from Urob's base keymap config:
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LBKT>, <&kp LBRC>;
+            mods = <(MOD_LCTL)>;
+        };
+        
+        mt_rparen: mt_rparen {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&mt_rbracket>;
+            mods = <(MOD_LSFT)>;
+        };
+        mt_rbracket: mt_rbracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>, <&kp RBRC>;
             mods = <(MOD_LCTL)>;
         };
     
