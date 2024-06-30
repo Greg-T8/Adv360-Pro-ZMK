@@ -215,7 +215,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <55 56>;
-            bindings = <&kp LPAR>;
+            bindings = <&mt_lparen>;
         };
         rpar {
             timeout-ms = <COMBO_TERM_SLOW>;
@@ -382,6 +382,20 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp PIPE>, <&kp BSLH>;
             mods = <(MOD_LSFT)>;
         };
+
+        mt_lparen: mt_lparen {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <mt_lbracket>;
+            mods = <(MOD_LSFT)>;
+        };
+        mt_lbracket: mt_lbracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp LBRC>;
+            mods = <(MOD_LCTL)>;
+        };
+    
     };
 
     keymap {
