@@ -386,7 +386,7 @@ Some configuration was taken from Urob's base keymap config:
         mt_lparen: mt_lparen {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LPAR>, <mt_lbracket>;
+            bindings = <&kp LPAR>, <&mt_lbracket>;
             mods = <(MOD_LSFT)>;
         };
         mt_lbracket: mt_lbracket {
