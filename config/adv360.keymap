@@ -58,7 +58,7 @@ Some configuration was taken from Urob's base keymap config:
 };
 
 &caps_word { 
-    continue-list = <UNDERSCORE MINUS>;
+    continue-list = <UNDERSCORE MINUS DEL BSPC>;
 }; 
 
 / {
