@@ -118,17 +118,17 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <15 29>;
             bindings = <&kp EXCL>;
         };
-        at {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <16 30>;
-            bindings = <&kp AT>;
-        };
         hash {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <17 31>;
+            key-positions = <16 30>;
             bindings = <&kp HASH>;
+        };
+        at {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <17 31>;
+            bindings = <&kp AT>;
         };
         dollar {
             timeout-ms = <COMBO_TERM_SLOW>;
