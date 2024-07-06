@@ -179,13 +179,13 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <23 24>;
-            bindings = <&mm LC(BSPC) BSPC>;
+            bindings = <&mt LC(BSPC) BSPC>;
         };
         del {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <24 25>;
-            bindings = <&mm LC(DEL) DEL>;
+            bindings = <&mt LC(DEL) DEL>;
         };
         quote {
             timeout-ms = <COMBO_TERM_SLOW>;
