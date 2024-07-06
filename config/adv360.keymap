@@ -331,7 +331,7 @@ Some configuration was taken from Urob's base keymap config:
             tapping-term-ms = <220>;
             quick-tap-ms = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&mt_home>, <&kp>;
+            bindings = <&mm_home>, <&kp>;
         };
         nav_right: nav_right {
             compatible = "zmk,behavior-hold-tap";
@@ -340,7 +340,7 @@ Some configuration was taken from Urob's base keymap config:
             tapping-term-ms = <220>;
             quick-tap-ms = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&mt_end>, <&kp>;
+            bindings = <&mm_end>, <&kp>;
         };
 
         // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
