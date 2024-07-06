@@ -255,7 +255,7 @@ Some configuration was taken from Urob's base keymap config:
         #include "macros.dtsi"
         #include "version.dtsi"
 
-        hmltp: homerow_mods_left_tap_preferred {
+        tpl: tap_preferred_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -267,7 +267,7 @@ Some configuration was taken from Urob's base keymap config:
             hold-trigger-on-release;
         };
 
-        hmrtp: homerow_mods_right_tap_preferred {
+        tpr: tap_preferred_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -279,7 +279,7 @@ Some configuration was taken from Urob's base keymap config:
             hold-trigger-on-release;
         };
         
-        hml: homerow_mods_left {
+        hpl: hold_preferred_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -291,7 +291,7 @@ Some configuration was taken from Urob's base keymap config:
             hold-trigger-on-release;
         };
 
-        hmr: homerow_mods_right {
+        hpr: hold_preferred_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -404,11 +404,11 @@ Some configuration was taken from Urob's base keymap config:
 
         default_layer {
             bindings = <
-                &none  &none          &none          &none           &none         &none   &none                                                                &mo MOD  &none   &none         &none           &none          &none             &none
-                &none  &kp Q          &cw 0 W        &kp E           &kp R         &kp T   &none                                                                &none    &kp Y   &kp U         &kp I           &kp O          &kp P             &none
-                &none  &hmltp LGUI A  &hmltp LALT S  &hmltp LCTRL D  &hml LSHFT F  &kp G   &none           &none         &none    &none    &none                &none    &kp H   &hmr RSHFT J  &hmrtp RCTRL K  &hmrtp RALT L  &hmrtp RGUI SEMI  &none
-                &none  &kp Z          &kp X          &kp C           &kp V         &kp B                                 &none    &none                                  &nt N   &kp M         &kp COMMA       &kp DOT        &kp FSLH          &none
-                &none  &none          &none          &none           &none                   &lt NAV BSPC  &lt FN ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &lt NUM SPACE           &none         &none           &none          &none             &none
+                &none  &none        &none        &none         &none         &none   &none                                                                &mo MOD  &none   &none         &none         &none        &none           &none
+                &none  &kp Q        &cw 0 W      &kp E         &kp R         &kp T   &none                                                                &none    &kp Y   &kp U         &kp I         &kp O        &kp P           &none
+                &none  &tpl LGUI A  &tpl LALT S  &tpl LCTRL D  &hpl LSHFT F  &kp G   &none           &none         &none    &none    &none                &none    &kp H   &hpr RSHFT J  &tpr RCTRL K  &tpr RALT L  &tpr RGUI SEMI  &none
+                &none  &kp Z        &kp X        &kp C         &kp V         &kp B                                 &none    &none                                  &nt N   &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
+                &none  &none        &none        &none         &none                   &lt NAV BSPC  &lt FN ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &lt NUM SPACE           &none         &none         &none        &none           &none
             >;
         }; 
         nav {
@@ -424,7 +424,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <
                 &trans  &trans        &trans        &trans         &trans         &trans  &none                                             &mo MOD  &trans  &trans         &trans         &trans        &trans        &trans
                 &trans  &trans        &trans        &trans         &trans         &trans  &trans                                            &trans   &trans  &trans         &trans         &trans        &trans        &trans
-                &trans  &hml LGUI N1  &hml LALT N2  &hml LCTRL N3  &hml LSHFT N4  &kp N5  &trans       &trans  &trans  &trans  &trans       &trans   &kp N6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RALT N9  &hmr RGUI N0  &trans
+                &trans  &tpl LGUI N1  &tpl LALT N2  &tpl LCTRL N3  &tpl LSHFT N4  &kp N5  &trans       &trans  &trans  &trans  &trans       &trans   &kp N6  &tpr RSHFT N7  &tpr RCTRL N8  &tpr RALT N9  &tpr RGUI N0  &trans
                 &trans  &trans        &trans        &kp SPACE      &trans         &trans                       &trans  &trans                        &trans  &trans         &trans         &trans        &trans        &trans
                 &trans  &trans        &trans        &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans                &trans         &trans         &trans        &trans        &trans
             >;
