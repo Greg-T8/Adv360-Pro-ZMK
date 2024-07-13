@@ -209,8 +209,10 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <55 56>;
-            bindings = <&mm_rparen>;
+            // bindings = <&mm_rparen>;
+            bindings = <&td0>;
         };
+        
         numtoggle {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -308,6 +310,13 @@ Some configuration was taken from Urob's base keymap config:
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
+        };
+
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <1>;
+            tapping-term-ms = <225>;
+            bindings = <&mm_lparen>, <&mm_rparen>;
         };
 
         cw: cap_word {
