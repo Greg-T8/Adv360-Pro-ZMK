@@ -314,7 +314,7 @@ Some configuration was taken from Urob's base keymap config:
 
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             tapping-term-ms = <225>;
             bindings = <&mm_lparen>, <&mm_rparen>;
         };
