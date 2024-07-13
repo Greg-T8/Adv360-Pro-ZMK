@@ -307,7 +307,7 @@ Some configuration was taken from Urob's base keymap config:
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <250>;
             bindings = <&kp V>, <&tog NUM>;
         };
         
