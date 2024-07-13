@@ -259,7 +259,7 @@ Some configuration was taken from Urob's base keymap config:
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hpl LSHFT F>, <&nt>;
+            bindings = <&hpl LSHFT F>, <&tog NUM>;
         };
 
         tpl: tap_preferred_left {
@@ -319,16 +319,6 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&caps_word>, <&kp>;
         };
 
-        nt: num_toggle {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick_tap_ms = <125>;
-            #binding-cells = <2>;
-            bindings = <&tog>, <&kp>;
-        };
-        
-        
         /* NAV cluster */
 
         nav_left: nav_left {
