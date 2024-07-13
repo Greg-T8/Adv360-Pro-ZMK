@@ -37,7 +37,7 @@ Some configuration was taken from Urob's base keymap config:
 #define THUMBS_RIGHT 37 38 53 68 69 70
 
 #define COMBO_TERM_FAST 20
-#define COMBO_TERM_SLOW 70
+#define COMBO_TERM_SLOW 90
 
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
@@ -199,18 +199,11 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <41 42>;
             bindings = <&kp SQT>;
         };
-        lpar {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <54 55>;
-            bindings = <&mm_lparen>;
-        };
-        rpar {
+        pairs {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <55 56>;
-            // bindings = <&mm_rparen>;
-            bindings = <&td0>;
+            bindings = <&tdp>;
         };
         
         numtoggle {
@@ -312,7 +305,7 @@ Some configuration was taken from Urob's base keymap config:
             hold-trigger-on-release;
         };
 
-        td0: tap_dance_0 {
+        tdp: tap_dance_pairs {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <225>;
