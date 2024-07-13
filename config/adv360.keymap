@@ -187,17 +187,17 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <24 25>;
             bindings = <&mt LC(DEL) DEL>;
         };
+        pipe {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <40 41>;
+            bindings = <&mm_pipe>;
+        };
         quote {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <41 42>;
             bindings = <&kp SQT>;
-        };
-        pipe {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <42 43>;
-            bindings = <&mm_pipe>;
         };
         lpar {
             timeout-ms = <COMBO_TERM_SLOW>;
