@@ -202,13 +202,13 @@ Some configuration was taken from Urob's base keymap config:
         lpar {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <55 56>;
+            key-positions = <54 55>;
             bindings = <&mm_lparen>;
         };
         rpar {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <56 57>;
+            key-positions = <55 56>;
             bindings = <&mm_rparen>;
         };
 
