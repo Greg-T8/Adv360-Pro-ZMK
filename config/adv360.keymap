@@ -308,7 +308,8 @@ Some configuration was taken from Urob's base keymap config:
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp V>, <&tog NUM>;
+            bindings = <&kp N1>, <&kp N2>;
+            // bindings = <&kp V>, <&tog NUM>;
         };
         
         cw: cap_word {
