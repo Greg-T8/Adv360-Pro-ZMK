@@ -308,7 +308,7 @@ Some configuration was taken from Urob's base keymap config:
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&kp V>, <&tog NUM>;
+            bindings = <&hpl LSHFT F>, <&tog NUM>;
         };
         
         cw: cap_word {
@@ -404,8 +404,8 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <
                 &none  &none        &none        &none         &none          &none   &none                                                                &mo MOD  &none  &none         &none         &none        &none           &none
                 &none  &kp Q        &cw 0 W      &kp E         &kp R          &kp T   &none                                                                &none    &kp Y  &kp U         &kp I         &kp O        &kp P           &none
-                &none  &tpl LGUI A  &tpl LALT S  &tpl LCTRL D  &hpl LSHFT F   &kp G   &none           &none         &none    &none    &none                &none    &kp H  &hpr RSHFT J  &tpr RCTRL K  &tpr RALT L  &tpr RGUI SEMI  &none
-                &none  &kp Z        &kp X        &kp C         &td0           &kp B                                 &none    &none                                  &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
+                &none  &tpl LGUI A  &tpl LALT S  &tpl LCTRL D  &td0   &kp G   &none           &none         &none    &none    &none                &none    &kp H  &hpr RSHFT J  &tpr RCTRL K  &tpr RALT L  &tpr RGUI SEMI  &none
+                &none  &kp Z        &kp X        &kp C         &kp V          &kp B                                 &none    &none                                  &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
                 &none  &none        &none        &none         &none                    &lt NAV BSPC  &lt FN ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &lt NUM SPACE          &none         &none         &none        &none           &none
             >;
         }; 
