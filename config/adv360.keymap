@@ -290,7 +290,7 @@ Some configuration was taken from Urob's base keymap config:
             // require-prior-idle-ms = <PRIOR_IDLE>;
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
-            hold-trigger-on-release;
+            // hold-trigger-on-release;
         };
 
         hpr: hold_preferred_right {
@@ -302,7 +302,7 @@ Some configuration was taken from Urob's base keymap config:
             // require-prior-idle-ms = <PRIOR_IDLE>;
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
-            hold-trigger-on-release;
+            // hold-trigger-on-release;
         };
 
         tdp: tap_dance_pairs {
