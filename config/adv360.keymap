@@ -39,7 +39,7 @@ Some configuration was taken from Urob's base keymap config:
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 90
 
-#define COMBO_IDLE_FAST 100
+#define COMBO_IDLE_FAST 125
 #define COMBO_IDLE_SLOW 200
 
 // Layer-tap settings
