@@ -19,7 +19,7 @@ Some configuration was taken from Urob's base keymap config:
 #define MOD     4
 
 #define TAPPING_TERM 220
-#define PRIOR_IDLE   90
+#define PRIOR_IDLE   90 // fine-tuned to avoid misfires on shift home-row capitalization
 #define QUICK_TAP    150
 
 #define KEYS_LEFT   0  1  2  3  4  5  6 \
@@ -39,8 +39,8 @@ Some configuration was taken from Urob's base keymap config:
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 90
 
-#define COMBO_IDLE_FAST 150
-#define COMBO_IDLE_SLOW 50
+#define COMBO_IDLE_FAST 90
+#define COMBO_IDLE_SLOW 200
 
 // Layer-tap settings
 &lt {
