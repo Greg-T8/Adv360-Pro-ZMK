@@ -39,7 +39,8 @@ Some configuration was taken from Urob's base keymap config:
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 90
 
-#define COMBO_IDLE_FAST 125
+// Larger idle time reduces accidental combos when typing fast 
+#define COMBO_IDLE_FAST 120
 #define COMBO_IDLE_SLOW 200
 
 // Layer-tap settings
@@ -56,6 +57,12 @@ Some configuration was taken from Urob's base keymap config:
     quick_tap_ms = <220>;
     hold-trigger-key-positions = <0>;
 };
+
+// Sticky-key settings
+&sk {
+    release-after-ms = <900>;
+    quick-release;              // no double capitalization when rolling keys
+}
 
 &caps_word { 
     continue-list = <UNDERSCORE MINUS DEL BSPC>;
@@ -87,19 +94,19 @@ Some configuration was taken from Urob's base keymap config:
 
         reverse-tab {
             timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <16 17>;
             bindings = <&kp LS(TAB)>;
         };
         tab {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <17 18>;
             bindings = <&kp TAB>;
         };
         esc {
             timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <30 31>;
             bindings = <&kp ESC>;
         };
@@ -356,6 +363,13 @@ Some configuration was taken from Urob's base keymap config:
             mods = <(MOD_LCTL)>;
         }; 
 
+        mm_shift: mm_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
+        };
+
         mm_plus: mm_plus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -403,11 +417,11 @@ Some configuration was taken from Urob's base keymap config:
 
         default_layer {
             bindings = <
-                &none  &none        &none        &none         &none          &none   &none                                                                &mo MOD  &none  &none         &none         &none        &none           &none
-                &none  &kp Q        &cw 0 W      &kp E         &kp R          &kp T   &none                                                                &none    &kp Y  &kp U         &kp I         &kp O        &kp P           &none
-                &none  &tpl LGUI A  &tpl LALT S  &tpl LCTRL D  &hpl LSHFT F   &kp G   &none           &none         &none    &none    &none                &none    &kp H  &hpr RSHFT J  &tpr RCTRL K  &tpr RALT L  &tpr RGUI SEMI  &none
-                &none  &kp Z        &kp X        &kp C         &kp V          &kp B                                 &none    &none                                  &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
-                &none  &none        &none        &none         &none                    &lt NAV BSPC  &lt FN ENTER  &kp DEL  &kp DEL  &lt FN ENTER  &lt NUM SPACE          &none         &none         &none        &none           &none
+                &none  &none        &none        &none         &none          &none   &none                                                                 &mo MOD  &none  &none         &none         &none        &none           &none
+                &none  &kp Q        &cw 0 W      &kp E         &kp R          &kp T   &none                                                                 &none    &kp Y  &kp U         &kp I         &kp O        &kp P           &none
+                &none  &tpl LGUI A  &tpl LALT S  &tpl LCTRL D  &hpl LSHFT F   &kp G   &none            &none         &none    &none    &none                &none    &kp H  &hpr RSHFT J  &tpr RCTRL K  &tpr RALT L  &tpr RGUI SEMI  &none
+                &none  &kp Z        &kp X        &kp C         &kp V          &kp B                                  &none    &none                                  &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
+                &none  &none        &none        &none         &none                    &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &lt NUM ENTER  &mm_shift             &none         &none         &none        &none           &none
             >;
         }; 
         nav {
