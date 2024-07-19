@@ -191,7 +191,7 @@ Some configuration was taken from Urob's base keymap config:
         del {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <24 25>;
+            key-positions = <23 25>;
             bindings = <&mt LC(DEL) DEL>;
         };
         pipe {
