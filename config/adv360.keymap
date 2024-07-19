@@ -62,7 +62,7 @@ Some configuration was taken from Urob's base keymap config:
 &sk {
     release-after-ms = <900>;
     quick-release;              // no double capitalization when rolling keys
-}
+};
 
 &caps_word { 
     continue-list = <UNDERSCORE MINUS DEL BSPC>;
