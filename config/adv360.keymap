@@ -94,7 +94,7 @@ Some configuration was taken from Urob's base keymap config:
 
         undo {
             timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <17 18>;
             bindings = <&kp LC(Z)>;
         };
@@ -106,13 +106,13 @@ Some configuration was taken from Urob's base keymap config:
         };
         del {
             timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <48 49>;
             bindings = <&mt LC(DEL) DEL>;
         };
         bspc {
             timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <49 50>;
             bindings = <&mt LC(BSPC) BSPC>;
         };
