@@ -298,6 +298,16 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&mo>, <&tog>;               // tap to toggle NUM layer, hold to activate NUM layer
         };
 
+        mts: mod_tap_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <TAPPING_TERM>;
+            quick-tap-ms = <QUICK_TAP>;
+            require-prior-idle-ms = <PRIOR_IDLE>;
+            bindings = <&caps_word>, <&sk LSHFT>;               
+        };
+
         cw: cap_word {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -400,7 +410,7 @@ Some configuration was taken from Urob's base keymap config:
                 &none  &kp Q        &kp W        &kp E         &kp R         &kp T   &none                                                                &none    &kp Y  &kp U         &kp I         &kp O        &kp P           &none
                 &none  &tpl LGUI A  &tpl LALT S  &tpl LCTRL D  &tpl LSHFT F  &kp G   &none            &none         &none    &none    &none               &none    &kp H  &tpr RSHFT J  &tpr RCTRL K  &tpr RALT L  &tpr RGUI SEMI  &none
                 &none  &kp Z        &kp X        &kp C         &kp V         &kp B                                  &none    &none                                 &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
-                &none  &none        &none        &none         &none                   &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM  &mm_shift             &none         &none         &none        &none           &none
+                &none  &none        &none        &none         &none                   &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM  &mts             &none         &none         &none        &none           &none
             >;
         }; 
         nav {
