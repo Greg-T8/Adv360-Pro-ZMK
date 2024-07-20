@@ -92,17 +92,29 @@ Some configuration was taken from Urob's base keymap config:
 
         /* Horizontal combos - left hand */
 
-        undo {
+        reverse-tab {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <16 17>;
+            bindings = <&kp LS(TAB)>;
+        };
+        tab {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <17 18>;
-            bindings = <&kp LC(Z)>;
+            bindings = <&kp TAB>;
         };
         esc {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <30 31>;
             bindings = <&kp ESC>;
+        };
+        undo {
+            timeout-ms = <COMBO_TERM_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <32 33>;
+            bindings = <&kp LC(Z)>;
         };
         del {
             timeout-ms = <COMBO_TERM_FAST>;
@@ -182,19 +194,6 @@ Some configuration was taken from Urob's base keymap config:
 
         /* Horizontal combos - right hand */
 
-
-        tab {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <23 24>;
-            bindings = <&kp TAB>;
-        };
-        reverse-tab {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <24 25>;
-            bindings = <&kp LS(TAB)>;
-        };
         pipe {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
