@@ -123,7 +123,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&mt LC(DEL) DEL>;
         };
         bspc {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <49 50>;
             bindings = <&mt LC(BSPC) BSPC>;
