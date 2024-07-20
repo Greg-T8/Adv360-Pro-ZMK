@@ -92,17 +92,11 @@ Some configuration was taken from Urob's base keymap config:
 
         /* Horizontal combos - left hand */
 
-        reverse-tab {
+        undo {
             timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <16 17>;
-            bindings = <&kp LS(TAB)>;
-        };
-        tab {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <17 18>;
-            bindings = <&kp TAB>;
+            bindings = <&kp LC(Z)>;
         };
         esc {
             timeout-ms = <COMBO_TERM_SLOW>;
@@ -110,11 +104,17 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <30 31>;
             bindings = <&kp ESC>;
         };
-        undo {
+        del {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions = <48 49>;
+            bindings = <&mt LC(DEL) DEL>;
+        };
+        bspc {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <49 50>;
-            bindings = <&kp LC(Z)>;
+            bindings = <&mt LC(BSPC) BSPC>;
         };
 
         /* Vertical combos - left hand */ 
@@ -182,17 +182,18 @@ Some configuration was taken from Urob's base keymap config:
 
         /* Horizontal combos - right hand */
 
-        bspc {
+
+        tab {
             timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <23 24>;
-            bindings = <&mt LC(BSPC) BSPC>;
+            bindings = <&kp TAB>;
         };
-        del {
+        reverse-tab {
             timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <23 25>;
-            bindings = <&mt LC(DEL) DEL>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <24 25>;
+            bindings = <&kp LS(TAB)>;
         };
         pipe {
             timeout-ms = <COMBO_TERM_SLOW>;
@@ -213,13 +214,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&tdp>;
         };
         
-        numtoggle {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <55 57>;
-            bindings = <&tog NUM>;
-        };
-
+        
         /* Vertical combos - right hand */
 
         caret {
