@@ -38,6 +38,7 @@ Some configuration was taken from Urob's base keymap config:
 
 #define COMBO_TERM_FAST 20
 #define COMBO_TERM_SLOW 90
+#define COMBO_TERM_EXTRA_SLOW 150
 
 // Larger idle time reduces accidental combos when typing fast 
 #define COMBO_IDLE_FAST 120
@@ -229,7 +230,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp AMPS>;
         };
         minus {
-            timeout-ms = <COMBO_TERM_SLOW>;
+            timeout-ms = <COMBO_TERM_EXTRA_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <24 42>;
             bindings = <&kp MINUS>;
@@ -305,7 +306,7 @@ Some configuration was taken from Urob's base keymap config:
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            bindings = <&caps_word>, <&sk>;               
+            bindings = <&caps_word>, <&sk>;         // tap to toggle SHIFT, hold to activate Caps Word       
         };
 
         cw: cap_word {
