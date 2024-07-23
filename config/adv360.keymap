@@ -37,7 +37,7 @@ Some configuration was taken from Urob's base keymap config:
 #define THUMBS_RIGHT 37 38 53 68 69 70
 
 #define COMBO_TERM_FAST 20
-#define COMBO_TERM_SLOW 90
+#define COMBO_TERM_SLOW 120
 
 // Larger idle time reduces accidental combos when typing fast 
 #define COMBO_IDLE_FAST 120
@@ -117,7 +117,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp LC(Z)>;
         };
         del {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <48 49>;
             bindings = <&mt LC(DEL) DEL>;
