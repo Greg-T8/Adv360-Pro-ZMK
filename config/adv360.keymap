@@ -323,7 +323,7 @@ Some configuration was taken from Urob's base keymap config:
             flavor = "tap-preferred";
             tapping-term-ms = <170>;
             quick_tap_ms = <125>;
-            bindings = <&tog NUM>, <&kp>;
+            bindings = <&tog>, <&kp>;
         };
 
         /* NAV cluster */
@@ -416,7 +416,7 @@ Some configuration was taken from Urob's base keymap config:
         default_layer {
             bindings = <
                 &none  &none        &none        &none         &none         &none   &none                                                             &mo MOD  &none  &none         &none         &none        &none           &none
-                &none  &kp Q        &nw W        &kp E         &kp R         &kp T   &none                                                             &none    &kp Y  &kp U         &kp I         &kp O        &kp P           &none
+                &none  &kp Q        &nw NUM W    &kp E         &kp R         &kp T   &none                                                             &none    &kp Y  &kp U         &kp I         &kp O        &kp P           &none
                 &none  &tpl LGUI A  &tpl LALT S  &tpl LCTRL D  &tpl LSHFT F  &kp G   &none            &none         &none    &none    &none            &none    &kp H  &tpr RSHFT J  &tpr RCTRL K  &tpr RALT L  &tpr RGUI SEMI  &none
                 &none  &kp Z        &kp X        &kp C         &kp V         &kp B                                  &none    &none                              &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
                 &none  &none        &none        &none         &none                   &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mo NUM  &mts 0 LSHFT            &none         &none         &none        &none           &none
