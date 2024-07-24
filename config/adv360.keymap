@@ -111,7 +111,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp ESC>;
         };
         undo {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <32 33>;
             bindings = <&kp LC(Z)>;
