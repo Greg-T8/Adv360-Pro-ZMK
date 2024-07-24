@@ -295,7 +295,7 @@ Some configuration was taken from Urob's base keymap config:
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            bindings = <&mo>, <&tog>;               // tap to toggle NUM layer, hold to activate NUM layer
+            bindings = <&mo>, <&sk>;               // tap to toggle NUM layer, hold to activate NUM layer
         };
 
         mts: mod_tap_shift {
