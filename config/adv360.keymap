@@ -37,7 +37,7 @@ Some configuration was taken from Urob's base keymap config:
 #define THUMBS_RIGHT 37 38 53 68 69 70
 
 #define COMBO_TERM_FAST 20
-#define COMBO_TERM_SLOW 120
+#define COMBO_TERM_SLOW 150
 
 // Larger idle time reduces accidental combos when typing fast 
 #define COMBO_IDLE_FAST 120
