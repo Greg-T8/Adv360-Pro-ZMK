@@ -257,7 +257,7 @@ Some configuration was taken from Urob's base keymap config:
         #include "macros.dtsi"
         #include "version.dtsi"
 
-        tpl: tap_preferred_left {
+        hml: tap_preferred_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -269,7 +269,7 @@ Some configuration was taken from Urob's base keymap config:
             hold-trigger-on-release;
         };
 
-        tpr: tap_preferred_right {
+        hmr: tap_preferred_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -417,7 +417,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <
                 &none  &none        &none        &none         &none         &none      &none                                                                 &mo MOD  &none  &none         &none         &none        &none           &none
                 &none  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      &none                                                                 &none    &kp Y  &kp U         &kp I         &kp O        &kp P           &none
-                &none  &tpl LGUI A  &tpl LALT S  &tpl LCTRL D  &tpl LSHFT F  &nw NUM 0  &none            &none         &none    &none    &none                &none    &kp H  &tpr RSHFT J  &tpr RCTRL K  &tpr RALT L  &tpr RGUI SEMI  &none
+                &none  &tpl LGUI A  &tpl LALT S  &tpl LCTRL D  &tpl LSHFT F  &nw NUM   &none            &none         &none    &none    &none                &none    &kp H  &tpr RSHFT J  &tpr RCTRL K  &tpr RALT L  &tpr RGUI SEMI  &none
                 &none  &kp Z        &kp X        &kp C         &kp V         &kp B                                     &none    &none                                  &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
                 &none  &none        &none        &none         &none                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        &none         &none         &none        &none           &none
             >;
