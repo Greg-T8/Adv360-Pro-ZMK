@@ -93,13 +93,13 @@ Some configuration was taken from Urob's base keymap config:
         /* Horizontal combos - left hand */
 
         reverse-tab {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <16 17>;
             bindings = <&kp LS(TAB)>;
         };
         tab {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <17 18>;
             bindings = <&kp TAB>;
@@ -265,8 +265,8 @@ Some configuration was taken from Urob's base keymap config:
             tapping-term-ms = <TAPPING_TERM>;
             require-prior-idle-ms = <PRIOR_IDLE>;
             quick-tap-ms = <QUICK_TAP>;
-            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
-            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;     // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
+            hold-trigger-on-release;                                                //                                 
             hold-while-undecided;
         };
 
@@ -280,7 +280,7 @@ Some configuration was taken from Urob's base keymap config:
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
-            Hold-while-undecided;
+            hold-while-undecided;
         };
         
         tdp: tap_dance_pairs {
