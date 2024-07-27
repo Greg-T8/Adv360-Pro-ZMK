@@ -267,6 +267,7 @@ Some configuration was taken from Urob's base keymap config:
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
+            hold-while-undecided;
         };
 
         hmr: home_row_mod_right {
@@ -279,6 +280,7 @@ Some configuration was taken from Urob's base keymap config:
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
+            Hold-while-undecided;
         };
         
         tdp: tap_dance_pairs {
