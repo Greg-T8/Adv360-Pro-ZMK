@@ -266,8 +266,8 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <PRIOR_IDLE>;
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;     // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
-            hold-trigger-on-release;                                                //                                 
-            hold-while-undecided;
+            hold-trigger-on-release;                                                // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
+            hold-while-undecided;                                                   // allows immediate usage of mouse with modifiers without waiting for tapping term to expire
         };
 
         hmr: home_row_mod_right {
@@ -283,6 +283,29 @@ Some configuration was taken from Urob's base keymap config:
             hold-while-undecided;
         };
         
+        hml1: home_row_mod_left1 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <TAPPING_TERM>;
+            require-prior-idle-ms = <PRIOR_IDLE>;
+            quick-tap-ms = <QUICK_TAP>;
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;     // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
+            hold-trigger-on-release;                                                // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
+        };
+        hmr1: home_row_mod_right1 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <TAPPING_TERM>;
+            require-prior-idle-ms = <PRIOR_IDLE>;
+            quick-tap-ms = <QUICK_TAP>;
+            hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-on-release;
+        };  
+
         tdp: tap_dance_pairs {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -419,7 +442,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <
                 &none  &none        &none        &none         &none         &none      &none                                                                 &mo MOD  &none  &none         &none         &none        &none           &none
                 &none  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      &none                                                                 &none    &kp Y  &kp U         &kp I         &kp O        &kp P           &none
-                &none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  &none            &none         &none    &none    &none                &none    &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &none
+                &none  &hml1 LGUI A  &hml1 LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  &none            &none         &none    &none    &none                &none    &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr1 RALT L  &hmr1 RGUI SEMI  &none
                 &none  &kp Z        &kp X        &kp C         &kp V         &kp B                                     &none    &none                                  &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
                 &none  &none        &none        &none         &none                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        &none         &none         &none        &none           &none
             >;
