@@ -36,7 +36,7 @@ Some configuration was taken from Urob's base keymap config:
 #define THUMBS_LEFT  35 36 52 65 66 67
 #define THUMBS_RIGHT 37 38 53 68 69 70
 
-#define COMBO_TERM_FAST 20
+#define COMBO_TERM_FAST 80
 #define COMBO_TERM_SLOW 200
 
 // Larger idle time reduces accidental combos when typing fast 
@@ -81,7 +81,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp LS(TAB)>;
         };
         tab {
-            timeout-ms = <COMBO_TERM_SLOW>;
+            timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <17 18>;
             bindings = <&kp TAB>;
@@ -225,7 +225,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&mm_plus>;
         };
         grave {
-            timeout-ms = <COMBO_TERM_FAST>;
+            timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions = <41 55>;
             bindings = <&kp GRAVE>;
