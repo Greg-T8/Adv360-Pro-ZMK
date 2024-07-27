@@ -83,13 +83,6 @@ Some configuration was taken from Urob's base keymap config:
     combos {
         compatible = "zmk,combos";
         
-        hml_ctrl_shift {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions = <31 32>;
-            bindings = <&kp LC(LSHFT)>;
-        };
-
         /* Horizontal combos - left hand */
 
         reverse-tab {
