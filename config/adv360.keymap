@@ -69,17 +69,6 @@ Some configuration was taken from Urob's base keymap config:
 }; 
 
 / {
-    macros {
-        shift_tab: shift_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-              = <&macro_press &kp LSHIFT>
-              , <&macro_tap &kp TAB>
-              , <&macro_release &kp LSHIFT>
-              ;
-        };
-    }; 
     combos {
         compatible = "zmk,combos";
         
@@ -121,6 +110,7 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <49 50>;
             bindings = <&mt LC(BSPC) BSPC>;
         };
+
 
         /* Vertical combos - left hand */ 
 
@@ -185,6 +175,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp LC(B)>;
         };
 
+
         /* Horizontal combos - right hand */
 
         pipe {
@@ -205,8 +196,8 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <55 56>;
             bindings = <&tdp>;
         };
-        
-        
+
+
         /* Vertical combos - right hand */
 
         caret {
@@ -246,6 +237,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp STAR>;
         };
     };
+
     behaviors {
         #include "macros.dtsi"
         #include "version.dtsi"
@@ -255,8 +247,8 @@ Some configuration was taken from Urob's base keymap config:
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             flavor = "balanced";
-            tapping-term-ms = <TAPPING_TERM>;
-            require-prior-idle-ms = <PRIOR_IDLE>;
+            tapping-term-ms = <2000>;
+            require-prior-idle-ms = <PRIOR_IDLE>;                                   // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;     // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
             hold-trigger-on-release;                                                // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
@@ -284,9 +276,10 @@ Some configuration was taken from Urob's base keymap config:
             tapping-term-ms = <TAPPING_TERM>;
             require-prior-idle-ms = <PRIOR_IDLE>;
             quick-tap-ms = <QUICK_TAP>;
-            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;     // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
-            hold-trigger-on-release;                                                // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;     
+            hold-trigger-on-release;                                                
         };
+
         hmr1: home_row_mod_right1 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
