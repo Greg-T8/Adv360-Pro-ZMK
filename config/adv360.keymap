@@ -319,7 +319,8 @@ Some configuration was taken from Urob's base keymap config:
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            bindings = <&kp>, <&sk>;         // tap to toggle SHIFT, hold to activate Caps Word       
+            bindings = <&kp>, <&sk>;         // tap to toggle SHIFT, hold to activate Caps Word 
+            hold-while-undecided-linger;      
         };
 
         cw: cap_word {
@@ -373,13 +374,6 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp END>, <&kp END>;
             mods = <(MOD_LCTL)>;
         }; 
-
-        mm_shift: mm_shift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&caps_word>;   // Hold for SHIFT, press for sticky SHIFT, home-row SHIFT + SHIFT for caps word
-            mods = <(MOD_LSFT)>;
-        };
 
         mm_plus: mm_plus {
             compatible = "zmk,behavior-mod-morph";
