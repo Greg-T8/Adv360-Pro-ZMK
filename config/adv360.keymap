@@ -250,7 +250,7 @@ Some configuration was taken from Urob's base keymap config:
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             flavor = "tap-preferred";
-            tapping-term-ms = <TAPPING_TERM>;
+            tapping-term-ms = <50>;
             require-prior-idle-ms = <PRIOR_IDLE>;                                   // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
             quick-tap-ms = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;     // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
