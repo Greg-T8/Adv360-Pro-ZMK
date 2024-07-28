@@ -19,7 +19,7 @@ Some configuration was taken from Urob's base keymap config:
 #define MOD     4
 
 #define TAPPING_TERM 220
-#define HMR_TAPPING_TERM 280
+#define HMR_TAPPING_TERM 350
 #define PRIOR_IDLE   170
 #define QUICK_TAP    150
 
