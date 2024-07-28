@@ -86,12 +86,6 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <17 18>;
             bindings = <&kp TAB>;
         };
-        esc {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <30 31>;
-            bindings = <&kp ESC>;
-        };
         undo {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -110,7 +104,12 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <49 50>;
             bindings = <&mt LC(BSPC) BSPC>;
         };
-
+        esc {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <48 49 50>;
+            bindings = <&kp ESC>;
+        };
 
         /* Vertical combos - left hand */ 
 
@@ -120,11 +119,11 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <15 29>;
             bindings = <&kp EXCL>;
         };
-        hash {
+        percent {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <16 30>;
-            bindings = <&kp HASH>;
+            bindings = <&kp PRCNT>;
         };
         at {
             timeout-ms = <COMBO_TERM_SLOW>;
@@ -138,12 +137,13 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <18 32>;
             bindings = <&kp DLLR>;
         };
-        percent {
+        hash {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <19 33>;
-            bindings = <&kp PRCNT>;
+            bindings = <&kp HASH>;
         };
+
         select-all {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -206,11 +206,11 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <22 40>;
             bindings = <&kp CARET>;
         };
-        ampersand {
+        star {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <23 41>;
-            bindings = <&kp AMPS>;
+            key-positions = <23 41>;           
+            bindings = <&kp STAR>;
         };
         minus {
             timeout-ms = <COMBO_TERM_SLOW>;
@@ -218,11 +218,11 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <24 42>;
             bindings = <&kp MINUS>;
         };
-        plus {
+        ampersand {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <25 43>;
-            bindings = <&mm_plus>;
+            bindings = <&kp AMPS>;
         };
         grave {
             timeout-ms = <COMBO_TERM_SLOW>;
@@ -230,12 +230,13 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <41 55>;
             bindings = <&kp GRAVE>;
         };
-        star {
+        plus {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <42 56>;
-            bindings = <&kp STAR>;
+            bindings = <&mm_plus>;
         };
+
     };
 
     behaviors {
@@ -425,11 +426,11 @@ Some configuration was taken from Urob's base keymap config:
 
         default_layer {
             bindings = <
-                &none  &none          &none          &none           &none         &none      &none                                                                 &mo MOD  &none  &none           &none           &none         &none             &none
-                &none  &kp Q          &cw 0 W        &kp E           &kp R         &kp T      &none                                                                 &none    &kp Y  &kp U           &kp I           &kp O         &kp P             &none
-                &none  &hmlag LGUI A  &hmlag LALT S  &hmlcs LCTRL D  &hml LSHFT F  &nw NUM G  &none            &none         &none    &none    &none                &none    &kp H  &hmrcs RSHFT J  &hmrcs RCTRL K  &hmr1 RALT L  &hmrag RGUI SEMI  &none
-                &none  &kp Z          &kp X          &kp C           &kp V         &kp B                                     &none    &none                                  &kp N  &kp M           &kp COMMA       &kp DOT       &kp FSLH          &none
-                &none  &none          &none          &none           &none                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        &none           &none           &none         &none             &none
+                &none  &none          &none          &none           &none         &none      &none                                                                 &mo MOD  &none  &none           &none           &none          &none             &none
+                &none  &kp Q          &cw 0 W        &kp E           &kp R         &kp T      &none                                                                 &none    &kp Y  &kp U           &kp I           &kp O          &kp P             &none
+                &none  &hmlag LGUI A  &hmlag LALT S  &hmlcs LCTRL D  &hml LSHFT F  &nw NUM G  &none            &none         &none    &none    &none                &none    &kp H  &hmrcs RSHFT J  &hmrcs RCTRL K  &hmrag RALT L  &hmrag RGUI SEMI  &none
+                &none  &kp Z          &kp X          &kp C           &kp V         &kp B                                     &none    &none                                  &kp N  &kp M           &kp COMMA       &kp DOT        &kp FSLH          &none
+                &none  &none          &none          &none           &none                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        &none           &none           &none          &none             &none
             >;
         }; 
         nav {
