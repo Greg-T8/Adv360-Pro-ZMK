@@ -258,7 +258,7 @@ Some configuration was taken from Urob's base keymap config:
             hold-while-undecided;                                                   // allows immediate usage of mouse with modifiers without waiting for tapping term to expire
         };
 
-        hmr: home_row_mod_right_ctrl_shift {
+        hmrcs: home_row_mod_right_ctrl_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
