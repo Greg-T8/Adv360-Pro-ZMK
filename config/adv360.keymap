@@ -75,14 +75,6 @@ Some configuration was taken from Urob's base keymap config:
         
         /* Horizontal combos - left hand */
 
-
-        ctrl {
-            timeout-ms = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <16 17 18>;
-            bindings = <LCTRL>;
-        };
-
         reverse-tab {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
