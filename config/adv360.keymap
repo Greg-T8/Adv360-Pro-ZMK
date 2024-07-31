@@ -90,7 +90,7 @@ Some configuration was taken from Urob's base keymap config:
         esc {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <30 31>;
+            key-positions = <31 32>;
             bindings = <&kp ESC>;
         };
         undo {
