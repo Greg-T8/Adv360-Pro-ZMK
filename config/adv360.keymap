@@ -406,20 +406,20 @@ Some configuration was taken from Urob's base keymap config:
         }; 
         nav {
             bindings = <
-                &trans  &trans  &trans  &trans     &trans     &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans     &trans
-                &trans  &trans  &trans  &trans     &trans     &trans  &trans                                            &trans   &trans            &trans            &trans           &trans              &trans     &trans
-                &trans  &trans  &trans  &trans     &trans     &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &kp COLON  &trans
-                &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans                       &trans  &trans                        &trans            &trans            &trans           &trans              &trans     &trans
-                &trans  &trans  &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans     &trans
+                &trans  &trans  &trans  &trans     &trans     &trans  &none                                             &mo MOD  &trans            &trans            &trans           &trans              &trans  &trans
+                &trans  &trans  &trans  &trans     &trans     &trans  &trans                                            &trans   &trans            &trans            &trans           &trans              &trans  &trans
+                &trans  &trans  &trans  &trans     &trans     &trans  &trans       &trans  &trans  &trans  &trans       &trans   &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  &trans  &trans
+                &trans  &trans  &trans  &kp PG_DN  &kp PG_UP  &trans                       &trans  &trans                        &trans            &trans            &trans           &trans              &trans  &trans
+                &trans  &trans  &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans                          &trans            &trans           &trans              &trans  &trans
             >;
         };
         num {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans  &none                                             &mo MOD  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &trans                                            &trans   &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &kp N0  &kp N4  &kp N5  &kp N6  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &kp N1  &kp N2  &kp N3  &trans                       &trans  &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &none                                             &mo MOD  &trans  &trans  &trans  &trans  &trans     &trans
+                &trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &trans                                            &trans   &trans  &trans  &trans  &trans  &trans     &trans
+                &trans  &kp N0  &kp N4  &kp N5  &kp N6  &trans  &trans       &trans  &trans  &trans  &trans       &trans   &trans  &trans  &trans  &trans  &kp COLON  &trans
+                &trans  &trans  &kp N1  &kp N2  &kp N3  &trans                       &trans  &trans                        &trans  &trans  &trans  &trans  &trans     &trans
+                &trans  &trans  &trans  &trans  &trans               &trans  &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans     &trans
             >;
         };
         fn {
