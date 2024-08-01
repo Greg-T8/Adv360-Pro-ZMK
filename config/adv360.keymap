@@ -76,7 +76,7 @@ Some configuration was taken from Urob's base keymap config:
         /* Horizontal combos - left hand */
 
         reverse-tab {
-            timeout-ms = <COMBO_TERM_SLOW>;
+            timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <16 17>;
             bindings = <&kp LS(TAB)>;
