@@ -14,8 +14,8 @@ Some configuration was taken from Urob's base keymap config:
 
 #define DEFAULT 0
 #define NAV     1
-#define NUM     2
-#define FN      3
+#define FN      2
+#define NUM     3
 #define MOD     4
 
 #define TAPPING_TERM 220
@@ -242,14 +242,12 @@ Some configuration was taken from Urob's base keymap config:
 
     };
 
-    {
-        conditional_layers {
-            compatible = "zmk,conditional-layers";
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
 
-            left_hand_num {
-                if-layers = <NAV FN>;
-                then-layer = <NUM>;            }
-        };
+        left_hand_num {
+            if-layers = <NAV FN>;
+            then-layer = <NUM>;            }
     };
 
     behaviors {
