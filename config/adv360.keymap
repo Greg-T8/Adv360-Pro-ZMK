@@ -239,12 +239,10 @@ Some configuration was taken from Urob's base keymap config:
             key-positions = <42 56>;
             bindings = <&mm_plus>;
         };
-
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-
         left_hand_num {
             if-layers = <NAV FN>;
             then-layer = <NUM>;            }
