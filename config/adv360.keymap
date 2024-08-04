@@ -77,7 +77,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <65 66>;
-            bindings = <&kp NUM>;
+            bindings = <&mo NUM>;
         };
         
         /* Horizontal combos - left hand */
