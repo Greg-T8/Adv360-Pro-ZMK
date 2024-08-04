@@ -242,6 +242,16 @@ Some configuration was taken from Urob's base keymap config:
 
     };
 
+    {
+        conditional_layers {
+            compatible = "zmk,conditional-layers";
+
+            left_hand_num {
+                if-layers = <NAV FN>;
+                then-layer = <NUM>;            }
+        };
+    };
+
     behaviors {
         #include "macros.dtsi"
         #include "version.dtsi"
