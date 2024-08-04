@@ -245,7 +245,7 @@ Some configuration was taken from Urob's base keymap config:
         compatible = "zmk,conditional-layers";
         left_hand_num {
             if-layers = <NAV FN>;
-            then-layer = <NUM>;            }
+            then-layer = <NUM>;
         };
     };
 
