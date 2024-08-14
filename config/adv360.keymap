@@ -80,12 +80,6 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp LC(LEFT_SHIFT)>;
         };
 
-        left-hand-control {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <31>;
-            bindings = <&kp LCTRL>;
-        };
 
         left-hand-num-layer-activation {
             timeout-ms = <COMBO_TERM_FAST>;
