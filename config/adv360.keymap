@@ -73,13 +73,6 @@ Some configuration was taken from Urob's base keymap config:
     combos {
         compatible = "zmk,combos";
 
-        left-hand-control-shift {
-            timeout-ms = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <31 32>;
-            bindings = <&kp LC(LEFT_SHIFT)>;
-        };
-
         left-hand-num-layer-activation {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
