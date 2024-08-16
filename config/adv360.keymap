@@ -18,8 +18,8 @@ Some configuration was taken from Urob's base keymap config:
 #define NUM     3
 #define MOD     4
 
-#define &none  XXX
-#define &trans ___
+#define XXX &none
+#define ___ &trans
 
 #define TAPPING_TERM 220
 #define HMR_TAPPING_TERM 220
