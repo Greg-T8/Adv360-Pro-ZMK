@@ -17,7 +17,8 @@ Some configuration was taken from Urob's base keymap config:
 #define FN      2
 #define NUM     3
 #define GAME    4
-#define MOD     5
+#define CMK     5
+#define MOD     6
 
 #define XXX &none
 #define ___ &trans
@@ -440,7 +441,7 @@ Some configuration was taken from Urob's base keymap config:
 
         default_layer {
             bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        &tog 4                                                              &mo MOD  XXX    XXX           XXX           XXX          XXX             XXX
+                XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX             &tog CMK
                 XXX  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      XXX                                                                 XXX      &kp Y  &kp U         &kp I         &kp O        &kp P           XXX
                 XXX  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
                 XXX  &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        XXX
@@ -483,6 +484,15 @@ Some configuration was taken from Urob's base keymap config:
                 XXX       XXX       XXX      XXX      XXX                      &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
             >; 
         };
+        cmk {
+            bindings = <
+                XXX  XXX          XXX          XXX           XXX           XXX        &tog 4                                                              &mo MOD  XXX    XXX           XXX           XXX          XXX          &tog DEFAULT
+                XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U         &kp Y        &kp SQT      XXX
+                XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  XXX
+                XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &kp COMMA     &kp DOT      &kp QMARK    XXX
+                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX           XXX          XXX          XXX
+            >;
+        }; 
         mod {
             bindings = <
                 XXX &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 XXX                                                       ___                     XXX  XXX         XXX         XXX  XXX  XXX
