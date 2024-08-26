@@ -486,7 +486,7 @@ Some configuration was taken from Urob's base keymap config:
         };
         cmk {
             bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        &tog 4                                                              &mo MOD  XXX    XXX           XXX           XXX          XXX          &tog DEFAULT
+                XXX  XXX          XXX          XXX           XXX           XXX        &tog 4                                                              &mo MOD  XXX    XXX           XXX           XXX          XXX          stog DEFAULT
                 XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U         &kp Y        &kp SQT      XXX
                 XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  XXX
                 XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &kp COMMA     &kp DOT      &kp QMARK    XXX
