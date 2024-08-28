@@ -20,6 +20,8 @@ Some configuration was taken from Urob's base keymap config:
 #define CMK     5
 #define MOD     6
 
+#define COMBOLAYERS DEFAULT NAV FN NUM CMK
+
 #define XXX &none
 #define ___ &trans
 
@@ -83,7 +85,7 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <31 32>;
             bindings              = <&kp LC(LEFT_SHIFT)>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
 
         left-hand-num-layer-activation {
