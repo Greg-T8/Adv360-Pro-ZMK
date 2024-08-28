@@ -93,7 +93,7 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <65 66>;
             bindings              = <&mo NUM>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         
         /* Horizontal combos - left hand */
@@ -103,42 +103,42 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <16 17>;
             bindings              = <&kp LS(TAB)>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         tab {
             timeout-ms            = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <17 18>;
             bindings              = <&kp TAB>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         esc {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <30 31>;
             bindings              = <&kp ESC>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         undo {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <32 33>;
             bindings              = <&kp LC(Z)>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         del {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <48 49>;
             bindings              = <&mt LC(DEL) DEL>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         bspc {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <49 50>;
             bindings              = <&mt LC(BSPC) BSPC>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
 
 
@@ -149,35 +149,35 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <15 29>;
             bindings              = <&kp EXCL>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         percent {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <16 30>;
             bindings              = <&kp PRCNT>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         at {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <17 31>;
             bindings              = <&kp AT>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         dollar {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <18 32>;
             bindings              = <&kp DLLR>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         hash {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <19 33>;
             bindings              = <&kp HASH>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
 
         select-all {
@@ -185,35 +185,35 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <29 47>;
             bindings              = <&kp LC(A)>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         cut {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <30 48>;
             bindings              = <&kp LC(X)>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         copy {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <31 49>;
             bindings              = <&kp LC(C)>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         paste {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <32 50>;
             bindings              = <&kp LC(V)>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         bold {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <33 51>;
             bindings              = <&kp LC(B)>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
 
 
@@ -224,21 +224,21 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <40 41>;
             bindings              = <&mm_pipe>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         quote {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
             bindings              = <&kp SQT>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         pairs {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <55 56>;
             bindings              = <&tdp>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
 
 
@@ -249,28 +249,28 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <22 40>;
             bindings              = <&kp CARET>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         star {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <23 41>;
             bindings              = <&kp STAR>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         minus {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <24 42>;
             bindings              = <&kp MINUS>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         ampersand {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <25 43>;
             bindings              = <&kp AMPS>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
 
         grave {
@@ -278,14 +278,14 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 55>;
             bindings              = <&kp GRAVE>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
         plus {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <42 56>;
             bindings              = <&mm_plus>;
-            layers                = <DEFAULT NAV FN NUM>;
+            layers                = <COMBOLAYERS>;
         };
     };
 
