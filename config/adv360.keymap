@@ -77,6 +77,11 @@ Some configuration was taken from Urob's base keymap config:
 }; 
 
 / {
+
+    macros {
+
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -95,7 +100,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&mo NUM>;
             layers                = <COMBOLAYERS>;
         };
-        
+
         /* Horizontal combos - left hand */
 
         reverse-tab {
@@ -219,6 +224,13 @@ Some configuration was taken from Urob's base keymap config:
 
         /* Horizontal combos - right hand */
 
+        quote {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <40 41>;
+            bindings              = <&kp SQT>;
+            layers                = <COMBOLAYERS>;
+        };
         lpar {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
