@@ -219,13 +219,6 @@ Some configuration was taken from Urob's base keymap config:
 
         /* Horizontal combos - right hand */
 
-        tilde {
-            timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions         = <40 41>;
-            bindings              = <&mm_tilde>;
-            layers                = <COMBOLAYERS>;
-        };
         lpar {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
@@ -287,11 +280,11 @@ Some configuration was taken from Urob's base keymap config:
             layers                = <COMBOLAYERS>;
         };
 
-        underscore {
+        grave {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <40 54>;
-            bindings              = <&kp UNDERSCORE>;
+            bindings              = <&kp GRAVE>;
             layers                = <COMBOLAYERS>;
         };
         minus {
@@ -440,13 +433,6 @@ Some configuration was taken from Urob's base keymap config:
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings       = <&kp RPAR>, <&kp GREATER_THAN>;
-            mods           = <(MOD_LSFT)>;
-        };
-        
-        mm_tilde: mm_tilde {
-            compatible     = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings       = <&kp TILDE>, <&kp GRAVE>;
             mods           = <(MOD_LSFT)>;
         };
         
