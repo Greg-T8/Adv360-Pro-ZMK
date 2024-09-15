@@ -230,14 +230,14 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
-            bindings              = <mm_lparen>;
+            bindings              = <&mm_lparen>;
             layers                = <COMBOLAYERS>;
         };
         rpar {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <42 43>;
-            bindings              = <mm_rparen>;
+            bindings              = <&mm_rparen>;
             layers                = <COMBOLAYERS>;
         };
         lbracket {
