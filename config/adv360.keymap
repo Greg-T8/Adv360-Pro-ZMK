@@ -342,11 +342,11 @@ Some configuration was taken from Urob's base keymap config:
             bindings                   = <&kp>, <&kp>;
             flavor                     = "tap-preferred";
             tapping-term-ms            = <HMR_TAPPING_TERM>;
-            require-prior-idle-ms      = <PRIOR_IDLE>;                              // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
+            require-prior-idle-ms      = <PRIOR_IDLE>;                                  // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
             quick-tap-ms               = <QUICK_TAP>;
-            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT 17>;  // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
-            hold-trigger-on-release;                                                   // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
-            //hold-while-undecided;                                                    // allows immediate usage of mouse with modifiers without waiting for tapping term to expire; prevents sticky shift on tap
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT 17>;      // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
+            hold-trigger-on-release;                                                    // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
+            //hold-while-undecided;                                                     // allows immediate usage of mouse with modifiers without waiting for tapping term to expire; prevents sticky shift on tap
         };
 
         hmr: home_row_mod_right {
@@ -399,7 +399,8 @@ Some configuration was taken from Urob's base keymap config:
             bindings        = <&tog>, <&kp>;
         };
 
-        /* NAV cluster */
+
+        /* Navigation */
 
         nav_left: nav_left {
             compatible                 = "zmk,behavior-hold-tap";
@@ -421,7 +422,7 @@ Some configuration was taken from Urob's base keymap config:
         };
 
 
-          /* Mod Morphs */
+        /* Mod Morphs */
         
         mm_cmk_comma: mm_cmk_comma {
             compatible     = "zmk,behavior-mod-morph";
@@ -461,8 +462,14 @@ Some configuration was taken from Urob's base keymap config:
         mm_slash: mm_slash {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&kp SLASH>, <&kp BSLH>;
+            bindings       = <&kp SLASH>, <&mm_pipe>;
             mods           = <(MOD_LSFT)>;
+        };
+        mm_pipe: mm_pipe {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp BSLH>, <&kp PIPE>;
+            mods           = <(MOD_LCTL)>;
         };
         mm_plus: mm_plus {
             compatible     = "zmk,behavior-mod-morph";
@@ -470,8 +477,6 @@ Some configuration was taken from Urob's base keymap config:
             bindings       = <&kp PLUS>, <&kp EQUAL>;
             mods           = <(MOD_LSFT)>;
         };
-
-
 
         mm_home: mm_home {
             compatible     = "zmk,behavior-mod-morph";
@@ -528,16 +533,16 @@ Some configuration was taken from Urob's base keymap config:
         };
         game {
             bindings = <
-                &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                                &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &trans
+                &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 ___                                                                   &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   ___
                 &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp I                                                                 &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
                 &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
                 &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                               XXX        &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
                 XXX       XXX       XXX      XXX      XXX                      &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
-            >; 
+            >;
         };
         cmk {
             bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        &trans                                                              &mo MOD  XXX    XXX           XXX            XXX          XXX            &trans
+                XXX  XXX          XXX          XXX           XXX           XXX        ___                                                                 &mo MOD  XXX    XXX           XXX            XXX          XXX            ___
                 XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U          &kp Y        &kp SQT        XXX
                 XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E   &hmr RALT I  &hmr RGUI O    XXX
                 XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &mm_cmk_comma  &mm_cmk_dot  &mm_cmk_qmark  XXX
