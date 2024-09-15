@@ -86,8 +86,10 @@ Some configuration was taken from Urob's base keymap config:
             wait-ms = <40>;
             tap-ms  = <40>;
             bindings
-                = <&macro_tap  &kp KP_N2 &kp KP_N0 &kp KP_N1 &kp KP_N3>
-                , <&macro_tap  &kp LALT &kp X>
+                = <&macro_tap     &kp KP_N2 &kp KP_N0 &kp KP_N1 &kp KP_N3>
+                , <&macro_press   &kp LALT>
+                , <&macro_tap     &kp X>
+                , <&macro_release &kp LALT>; 
                 ;
         };
     };
@@ -313,7 +315,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 55>;
-            bindings              = <&mm_dash>;
+            bindings              = <&kp MINUS>;
             layers                = <COMBOLAYERS>;
         };
         slash {
@@ -476,13 +478,6 @@ Some configuration was taken from Urob's base keymap config:
             #binding-cells = <0>;
             bindings       = <&kp BSLH>, <&kp PIPE>;
             mods           = <(MOD_LCTL)>;
-        };
-
-        mm_dash: mm_dash {
-            compatible     = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings       = <&kp MINUS>, <&endash>;
-            mods           = <(MOD_LSFT)>;
         };
 
         mm_home: mm_home {
