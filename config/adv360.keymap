@@ -219,25 +219,39 @@ Some configuration was taken from Urob's base keymap config:
 
         /* Horizontal combos - right hand */
 
-        pipe {
+        tilde {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <40 41>;
-            bindings              = <&mm_pipe>;
+            bindings              = <&mm_cmk_tilde>;
             layers                = <COMBOLAYERS>;
         };
-        quote {
+        lpar {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
-            bindings              = <&kp SQT>;
+            bindings              = <mm_lparen>;
             layers                = <COMBOLAYERS>;
         };
-        pairs {
+        rpar {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <42 43>;
+            bindings              = <mm_rparen>;
+            layers                = <COMBOLAYERS>;
+        };
+        lbracket {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <55 56>;
-            bindings              = <&tdp>;
+            bindings              = <&kp LBKT>;
+            layers                = <COMBOLAYERS>;
+        };
+        rbracket {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <56 57>;
+            bindings              = <&kp RBKT>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -251,18 +265,18 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp CARET>;
             layers                = <COMBOLAYERS>;
         };
-        star {
+        plus {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <23 41>;
-            bindings              = <&kp STAR>;
+            bindings              = <&kp PLUS>;
             layers                = <COMBOLAYERS>;
         };
-        minus {
+        star {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <24 42>;
-            bindings              = <&kp MINUS>;
+            bindings              = <&kp STAR>;
             layers                = <COMBOLAYERS>;
         };
         ampersand {
@@ -273,18 +287,32 @@ Some configuration was taken from Urob's base keymap config:
             layers                = <COMBOLAYERS>;
         };
 
-        grave {
+        underscore {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <40 54>;
+            bindings              = <&kp UNDERSCORE>;
+            layers                = <COMBOLAYERS>;
+        };
+        minus {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 55>;
-            bindings              = <&kp GRAVE>;
+            bindings              = <&kp MINUS>;
             layers                = <COMBOLAYERS>;
         };
-        plus {
+        slash {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <42 56>;
-            bindings              = <&mm_plus>;
+            bindings              = <&mm_slash>;
+            layers                = <COMBOLAYERS>;
+        };
+        pipe {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions         = <43 57>;
+            bindings              = <&kp PIPE>;
             layers                = <COMBOLAYERS>;
         };
     };
@@ -407,6 +435,27 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&kp QMARK>, <&kp EXCL>;
             mods = <(MOD_LSFT)>;
         };
+        
+        mm_cmk_lpar: mm_cmk_lpar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LESS_THAN>;
+            mods = <(MOD_LSFT)>;
+        };
+        
+        mm_cmk_tilde: mm_cmk_tilde {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp TILDE>, <&kp GRAVE>;
+            mods           = <(MOD_LCTL)>;
+        };
+        
+        mm_cmk_rpar: mm_cmk_rpar {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp RPAR>, <&kp GREATER_THAN>;
+            mods           = <(MOD_LCTL)>;
+        };
 
         mm_home: mm_home {
             compatible = "zmk,behavior-mod-morph";
@@ -421,10 +470,10 @@ Some configuration was taken from Urob's base keymap config:
             mods = <(MOD_LCTL)>;
         }; 
 
-        mm_plus: mm_plus {
+        mm_slash: mm_slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp PLUS>, <&kp EQUAL>;
+            bindings = <&kp SLASH>, <&kp BSLH>;
             mods = <(MOD_LSFT)>;
         };
 
