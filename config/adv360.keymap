@@ -89,7 +89,7 @@ Some configuration was taken from Urob's base keymap config:
                 = <&macro_tap     &kp KP_N2 &kp KP_N0 &kp KP_N1 &kp KP_N3>
                 , <&macro_press   &kp LALT>
                 , <&macro_tap     &kp X>
-                , <&macro_release &kp LALT> 
+                , <&macro_release &kp LALT>
                 ;
         };
     };
@@ -510,7 +510,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <
                 ___  ___  ___  ___  ___  ___  XXX                                &mo MOD  ___               ___               ___              ___                 ___  ___
                 ___  ___  ___  ___  ___  ___  ___                                ___      ___               ___               ___              ___                 ___  ___
-                ___  ___  ___  ___  ___  ___  ___       ___  ___  ___  ___       ___      &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  ___  ___
+                ___  ___  &kp TAB  &kp LCTRL  &kp LSHFT  ___  ___       ___  ___  ___  ___       ___      &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  ___  ___
                 ___  ___  ___  ___  ___  ___                 ___  ___                     ___               &kp PG_UP         &kp PG_DN        ___                 ___  ___
                 ___  ___  ___  ___  ___            ___  ___  ___  ___  ___  ___                             ___               ___              ___                 ___  ___
             >;
