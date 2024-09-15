@@ -384,6 +384,30 @@ Some configuration was taken from Urob's base keymap config:
             bindings = <&mm_end>, <&kp>;
         };
 
+
+          /* Mod Morphs */
+        
+        mm_cmk_comma: mm_cmk_comma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+            mods = <(MOD_LSFT)>;
+        };
+        
+        mm_cmk_dot: mm_cmk_dot {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp COLON>;
+            mods = <(MOD_LSFT)>;
+        };
+        
+        mm_cmk_qmark: mm_cmk_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp QMARK>, <&kp EXCL>;
+            mods = <(MOD_LSFT)>;
+        };
+
         mm_home: mm_home {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -488,11 +512,11 @@ Some configuration was taken from Urob's base keymap config:
         };
         cmk {
             bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        &trans                                                              &mo MOD  XXX    XXX           XXX           XXX          XXX          &trans
-                XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U         &kp Y        &kp SQT      XXX
-                XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  XXX
-                XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &kp COMMA     &kp DOT      &kp QMARK    XXX
-                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX           XXX          XXX          XXX
+                XXX  XXX          XXX          XXX           XXX           XXX        &trans                                                              &mo MOD  XXX    XXX           XXX            XXX          XXX            &trans
+                XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U          &kp Y        &kp SQT        XXX
+                XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E   &hmr RALT I  &hmr RGUI O    XXX
+                XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &mm_cmk_comma  &mm_cmk_dot  &mm_cmk_qmark  XXX
+                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX            XXX          XXX            XXX
             >;
         }; 
         mod {
