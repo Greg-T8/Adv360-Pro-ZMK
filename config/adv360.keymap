@@ -223,21 +223,21 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <40 41>;
-            bindings              = <&mm_cmk_tilde>;
+            bindings              = <&mm_tilde>;
             layers                = <COMBOLAYERS>;
         };
         lpar {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
-            bindings              = <&mm_lparen>;
+            bindings              = <&mm_lpar>;
             layers                = <COMBOLAYERS>;
         };
         rpar {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <42 43>;
-            bindings              = <&mm_rparen>;
+            bindings              = <&mm_rpar>;
             layers                = <COMBOLAYERS>;
         };
         lbracket {
@@ -322,193 +322,153 @@ Some configuration was taken from Urob's base keymap config:
         #include "version.dtsi"
 
         hml: home_row_mod_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <HMR_TAPPING_TERM>;
-            require-prior-idle-ms = <PRIOR_IDLE>;                                      // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
-            quick-tap-ms = <QUICK_TAP>;
-            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT 17>;     // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            bindings                   = <&kp>, <&kp>;
+            flavor                     = "tap-preferred";
+            tapping-term-ms            = <HMR_TAPPING_TERM>;
+            require-prior-idle-ms      = <PRIOR_IDLE>;                              // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
+            quick-tap-ms               = <QUICK_TAP>;
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT 17>;  // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
             hold-trigger-on-release;                                                   // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
             //hold-while-undecided;                                                    // allows immediate usage of mouse with modifiers without waiting for tapping term to expire; prevents sticky shift on tap
         };
 
         hmr: home_row_mod_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <HMR_TAPPING_TERM>;
-            require-prior-idle-ms = <PRIOR_IDLE>;
-            quick-tap-ms = <QUICK_TAP>;
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            bindings                   = <&kp>, <&kp>;
+            flavor                     = "tap-preferred";
+            tapping-term-ms            = <HMR_TAPPING_TERM>;
+            require-prior-idle-ms      = <PRIOR_IDLE>;
+            quick-tap-ms               = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
         };
         
-        tdp: tap_dance_pairs {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <TAPPING_TERM>;
-            bindings = <&mm_lparen>, <&mm_rparen>;
-        };
-
         mtn: mod_tap_num {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <TAPPING_TERM>;
-            quick-tap-ms = <QUICK_TAP>;
+            compatible            = "zmk,behavior-hold-tap";
+            #binding-cells        = <2>;
+            flavor                = "hold-preferred";
+            tapping-term-ms       = <TAPPING_TERM>;
+            quick-tap-ms          = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            bindings = <&mo>, <&sl>;                
+            bindings              = <&mo>, <&sl>;
         };
 
         mts: mod_tap_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <TAPPING_TERM>;
-            quick-tap-ms = <QUICK_TAP>;
+            compatible            = "zmk,behavior-hold-tap";
+            #binding-cells        = <2>;
+            flavor                = "hold-preferred";
+            tapping-term-ms       = <TAPPING_TERM>;
+            quick-tap-ms          = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            bindings = <&kp>, <&sk>;                
+            bindings              = <&kp>, <&sk>;
         };
 
         cw: cap_word {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
+            compatible      = "zmk,behavior-hold-tap";
+            #binding-cells  = <2>;
+            flavor          = "tap-preferred";
             tapping-term-ms = <170>;
-            quick_tap_ms = <125>;
-            bindings = <&caps_word>, <&kp>;
+            quick_tap_ms    = <125>;
+            bindings        = <&caps_word>, <&kp>;
         };
         
         nw: num_word {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
+            compatible      = "zmk,behavior-hold-tap";
+            #binding-cells  = <2>;
+            flavor          = "tap-preferred";
             tapping-term-ms = <170>;
-            quick_tap_ms = <125>;
-            bindings = <&tog>, <&kp>;
+            quick_tap_ms    = <125>;
+            bindings        = <&tog>, <&kp>;
         };
 
         /* NAV cluster */
 
         nav_left: nav_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <220>;
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            flavor                     = "tap-preferred";
+            tapping-term-ms            = <220>;
+            quick-tap-ms               = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&mm_home>, <&kp>;
+            bindings                   = <&mm_home>, <&kp>;
         };
         nav_right: nav_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <220>;
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            flavor                     = "tap-preferred";
+            tapping-term-ms            = <220>;
+            quick-tap-ms               = <220>;
             hold-trigger-key-positions = <0>;
-            bindings = <&mm_end>, <&kp>;
+            bindings                   = <&mm_end>, <&kp>;
         };
 
 
           /* Mod Morphs */
         
         mm_cmk_comma: mm_cmk_comma {
-            compatible = "zmk,behavior-mod-morph";
+            compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-            mods = <(MOD_LSFT)>;
+            bindings       = <&kp COMMA>, <&kp SEMI>;
+            mods           = <(MOD_LSFT)>;
         };
         
         mm_cmk_dot: mm_cmk_dot {
-            compatible = "zmk,behavior-mod-morph";
+            compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp COLON>;
-            mods = <(MOD_LSFT)>;
+            bindings       = <&kp PERIOD>, <&kp COLON>;
+            mods           = <(MOD_LSFT)>;
         };
         
         mm_cmk_qmark: mm_cmk_qmark {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-            mods = <(MOD_LSFT)>;
-        };
-        
-        mm_cmk_lpar: mm_cmk_lpar {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp LESS_THAN>;
-            mods = <(MOD_LSFT)>;
-        };
-        
-        mm_cmk_tilde: mm_cmk_tilde {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&kp TILDE>, <&kp GRAVE>;
-            mods           = <(MOD_LCTL)>;
+            bindings       = <&kp QMARK>, <&kp EXCL>;
+            mods           = <(MOD_LSFT)>;
         };
         
-        mm_cmk_rpar: mm_cmk_rpar {
+        mm_lpar: mm_lpar {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp LPAR>, <&kp LESS_THAN>;
+            mods           = <(MOD_LSFT)>;
+        };
+        
+        mm_rpar: mm_rpar {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings       = <&kp RPAR>, <&kp GREATER_THAN>;
-            mods           = <(MOD_LCTL)>;
+            mods           = <(MOD_LSFT)>;
+        };
+        
+        mm_tilde: mm_tilde {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp TILDE>, <&kp GRAVE>;
+            mods           = <(MOD_LSFT)>;
+        };
+        
+        mm_slash: mm_slash {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp SLASH>, <&kp BSLH>;
+            mods           = <(MOD_LSFT)>;
         };
 
         mm_home: mm_home {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp HOME>, <&kp HOME>;      // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
-            mods = <(MOD_LCTL)>;
-        };
-        mm_end: mm_end {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp END>, <&kp END>;
-            mods = <(MOD_LCTL)>;
-        }; 
-
-        mm_slash: mm_slash {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp BSLH>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        mm_pipe: mm_pipe {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PIPE>, <&kp BSLH>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        mm_lparen: mm_lparen {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&mm_lbracket>;
-            mods = <(MOD_LSFT)>;
-        };
-        mm_lbracket: mm_lbracket {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp LBRC>;
-            mods = <(MOD_LCTL)>;
-        };
-        
-        mm_rparen: mm_rparen {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&mm_rbracket>;
-            mods = <(MOD_LSFT)>;
-        };
-        mm_rbracket: mm_rbracket {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&kp RBKT>, <&kp RBRC>;
+            bindings       = <&kp HOME>, <&kp HOME>;    // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
             mods           = <(MOD_LCTL)>;
         };
+        mm_end: mm_end {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp END>, <&kp END>;
+            mods           = <(MOD_LCTL)>;
+        }; 
     };
 
     keymap {
