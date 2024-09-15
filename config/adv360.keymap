@@ -89,7 +89,7 @@ Some configuration was taken from Urob's base keymap config:
                 = <&macro_tap     &kp KP_N2 &kp KP_N0 &kp KP_N1 &kp KP_N3>
                 , <&macro_press   &kp LALT>
                 , <&macro_tap     &kp X>
-                , <&macro_release &kp LALT>; 
+                , <&macro_release &kp LALT> 
                 ;
         };
     };
