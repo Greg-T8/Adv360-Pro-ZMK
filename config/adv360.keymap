@@ -275,11 +275,11 @@ Some configuration was taken from Urob's base keymap config:
 
         /* Vertical combos - right hand */
 
-        caret {
+        star {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <22 40>;
-            bindings              = <&kp CARET>;
+            bindings              = <&kp STAR>;
             layers                = <COMBOLAYERS>;
         };
         plus {
@@ -303,11 +303,11 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp AMPS>;
             layers                = <COMBOLAYERS>;
         };
-        star {
+        caret {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <26 44>;
-            bindings              = <&kp STAR>;
+            bindings              = <&kp CARET>;
             layers                = <COMBOLAYERS>;
         };
         grave {
