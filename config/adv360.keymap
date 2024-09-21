@@ -321,7 +321,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 55>;
-            bindings              = <&kp MINUS>;
+            bindings              = <&td_minus>;
             layers                = <COMBOLAYERS>;
         };
         slash {
@@ -494,6 +494,12 @@ Some configuration was taken from Urob's base keymap config:
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings       = <&kp LBKT>, <&kp RBKT>;
+        };
+
+        td_minus: td_minus {
+            compatible     = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings       = <&kp MINUS>, <&kp UNDER>;
         };
     };
 
