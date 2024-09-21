@@ -130,7 +130,7 @@ Some configuration was taken from Urob's base keymap config:
             layers                = <COMBOLAYERS>;
         };
         space {
-            timeout-ms            = <COMBO_TERM_FAST>;
+            timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <16 18>;
             bindings              = <&kp SPACE>;
