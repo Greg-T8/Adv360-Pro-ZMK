@@ -478,7 +478,7 @@ Some configuration was taken from Urob's base keymap config:
         td_paren: td_paren {
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings       = <&mm_lpar>, <&mm_rpar>;
+            bindings       = <&kp LPAR>, <&kp RPAR>;
         };
         td_bracket: td_bracket {
             compatible     = "zmk,behavior-tap-dance";
