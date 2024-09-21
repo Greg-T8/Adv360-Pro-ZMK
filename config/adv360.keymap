@@ -250,10 +250,24 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&td_paren>;
             layers                = <COMBOLAYERS>;
         };
-        lbracket {
+        angle {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <42 43>;
+            bindings              = <&td_angle>;
+            layers                = <COMBOLAYERS>;
+        };
+        brace {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <55 56>;
+            bindings              = <&td_brace>;
+            layers                = <COMBOLAYERS>;
+        };
+        bracket {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <56 57>;
             bindings              = <&td_bracket>;
             layers                = <COMBOLAYERS>;
         };
@@ -289,6 +303,13 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp AMPS>;
             layers                = <COMBOLAYERS>;
         };
+        equal {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions         = <26 44>;
+            bindings              = <&kp EQUAL>;
+            layers                = <COMBOLAYERS>;
+        };
 
         grave {
             timeout-ms            = <COMBO_TERM_SLOW>;
@@ -316,6 +337,13 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <43 57>;
             bindings              = <&kp PIPE>;
+            layers                = <COMBOLAYERS>;
+        };
+        backslash {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions         = <44 58>;
+            bindings              = <&kp BSLH>;
             layers                = <COMBOLAYERS>;
         };
     };
@@ -440,25 +468,13 @@ Some configuration was taken from Urob's base keymap config:
             mods           = <(MOD_LSFT)>;
         };
         
-        mm_lpar: mm_lpar {
-            compatible     = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings       = <&kp LPAR>, <&kp LESS_THAN>;
-            mods           = <(MOD_LSFT)>;
-        };
-        mm_rpar: mm_rpar {
-            compatible     = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings       = <&kp RPAR>, <&kp GREATER_THAN>;
-            mods           = <(MOD_LSFT)>;
-        };
-        
         mm_slash: mm_slash {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings       = <&kp SLASH>, <&mm_pipe>;
             mods           = <(MOD_LSFT)>;
         };
+
         mm_pipe: mm_pipe {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -490,6 +506,16 @@ Some configuration was taken from Urob's base keymap config:
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings       = <&kp LBKT>, <&kp RBKT>;
+        };
+        td_brace: td_brace {
+            compatible     = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings       = <&kp LBRC>, <&kp RBRC>;
+        };
+        td_angle: td_angle {
+            compatible     = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings       = <&kp GT>, <&kp LT>;
         };
     };
 
