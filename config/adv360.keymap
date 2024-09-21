@@ -289,11 +289,11 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp PLUS>;
             layers                = <COMBOLAYERS>;
         };
-        star {
+        equal {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <24 42>;
-            bindings              = <&kp STAR>;
+            bindings              = <&kp EQUAL>;
             layers                = <COMBOLAYERS>;
         };
         ampersand {
@@ -303,11 +303,11 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp AMPS>;
             layers                = <COMBOLAYERS>;
         };
-        equal {
+        star {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <26 44>;
-            bindings              = <&kp EQUAL>;
+            bindings              = <&kp STAR>;
             layers                = <COMBOLAYERS>;
         };
         grave {
