@@ -480,20 +480,20 @@ Some configuration was taken from Urob's base keymap config:
             #binding-cells = <0>;
             bindings       = <&kp LPAR>, <&kp RPAR>;
         };
-        td_bracket: td_bracket {
+        td_angle: td_angle {
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings       = <&kp LBKT>, <&kp RBKT>;
+            bindings       = <&kp LT>, <&kp GT>;
         };
         td_brace: td_brace {
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings       = <&kp LBRC>, <&kp RBRC>;
         };
-        td_angle: td_angle {
+        td_bracket: td_bracket {
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings       = <&kp GT>, <&kp LT>;
+            bindings       = <&kp LBKT>, <&kp RBKT>;
         };
     };
 
