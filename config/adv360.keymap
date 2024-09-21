@@ -243,32 +243,18 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp SQT>;
             layers                = <COMBOLAYERS>;
         };
-        lpar {
+        paren {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
-            bindings              = <&mm_lpar>;
-            layers                = <COMBOLAYERS>;
-        };
-        rpar {
-            timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions         = <42 43>;
-            bindings              = <&mm_rpar>;
+            bindings              = <&td_paren>;
             layers                = <COMBOLAYERS>;
         };
         lbracket {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <55 56>;
-            bindings              = <&kp LBKT>;
-            layers                = <COMBOLAYERS>;
-        };
-        rbracket {
-            timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions         = <56 57>;
-            bindings              = <&kp RBKT>;
+            bindings              = <&td_bracket>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -492,6 +478,19 @@ Some configuration was taken from Urob's base keymap config:
             bindings       = <&kp END>, <&kp END>;
             mods           = <(MOD_LCTL)>;
         }; 
+        
+        /* Tap Dance */
+
+        td_paren: td_paren {
+            compatible     = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings       = <&mm_lpar>, <&mm_rpar>;
+        };
+        td_bracket: td_bracket {
+            compatible     = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings       = <&kp LBKT>, <&kp RBKT>;
+        };
     };
 
     keymap {
