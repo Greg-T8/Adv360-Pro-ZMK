@@ -13,11 +13,11 @@ Some configuration was taken from Urob's base keymap config:
 #include <dt-bindings/zmk/backlight.h>
 
 #define DEFAULT 0
-#define NAV     1
-#define FN      2
-#define NUM     3
-#define GAME    4
-#define CMK     5
+#define CMK     1
+#define NAV     2
+#define FN      3
+#define NUM     4
+#define GAME    5
 #define MOD     6
 
 #define COMBOLAYERS DEFAULT NAV FN NUM CMK
@@ -505,6 +505,15 @@ Some configuration was taken from Urob's base keymap config:
                 XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX           XXX          XXX             XXX
             >;
         }; 
+        cmk {
+            bindings = <
+                XXX  XXX          XXX          XXX           XXX           XXX        ___                                                                 &mo MOD  XXX    XXX           XXX            XXX          XXX            ___
+                XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U          &kp Y        &kp SQT        XXX
+                XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E   &hmr RALT I  &hmr RGUI O    XXX
+                XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &mm_cmk_comma  &mm_cmk_dot  &mm_cmk_qmark  XXX
+                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX            XXX          XXX            XXX
+            >;
+        }; 
         nav {
             bindings = <
                 ___  ___  ___  ___  ___  ___  XXX                                &mo MOD  ___               ___               ___              ___                 ___  ___
@@ -541,15 +550,6 @@ Some configuration was taken from Urob's base keymap config:
                 XXX       XXX       XXX      XXX      XXX                      &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
             >;
         };
-        cmk {
-            bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        ___                                                                 &mo MOD  XXX    XXX           XXX            XXX          XXX            ___
-                XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U          &kp Y        &kp SQT        XXX
-                XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E   &hmr RALT I  &hmr RGUI O    XXX
-                XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &mm_cmk_comma  &mm_cmk_dot  &mm_cmk_qmark  XXX
-                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX            XXX          XXX            XXX
-            >;
-        }; 
         mod {
             bindings = <
                 XXX &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 XXX                                                       ___                     XXX  XXX         XXX         XXX  XXX  XXX
