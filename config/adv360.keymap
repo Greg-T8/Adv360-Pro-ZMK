@@ -405,7 +405,7 @@ Some configuration was taken from Urob's base keymap config:
         mtp: mod_tap_space {
             compatible            = "zmk,behavior-hold-tap";
             #binding-cells        = <2>;
-            flavor                = "hold-preferred";
+            flavor                = "balanced";
             tapping-term-ms       = <TAPPING_TERM>;
             quick-tap-ms          = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
