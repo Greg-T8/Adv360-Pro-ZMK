@@ -14,10 +14,10 @@ Some configuration was taken from Urob's base keymap config:
 
 #define DEFAULT 0
 #define CMK     1
-#define NAV     2
-#define FN      3
-#define NUM     4
-#define GAME    5
+#define GAME    2
+#define NUM     3
+#define NAV     4
+#define FN      5
 #define MOD     6
 
 #define COMBOLAYERS DEFAULT NAV FN NUM CMK
@@ -514,6 +514,24 @@ Some configuration was taken from Urob's base keymap config:
                 XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX            XXX          XXX            XXX
             >;
         }; 
+        game {
+            bindings = <
+                &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 ___                                                                   &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   ___
+                &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp I                                                                 &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+                &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+                &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                               XXX        &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                XXX       XXX       XXX      XXX      XXX                      &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+            >;
+        };
+        num {
+            bindings = <
+                ___  ___     ___     ___     ___     ___  XXX                                &mo MOD  ___  ___  ___  ___  ___        ___
+                ___  ___     &kp N7  &kp N8  &kp N9  ___  ___                                ___      ___  ___  ___  ___  ___        ___
+                ___  &kp N0  &kp N4  &kp N5  &kp N6  ___  ___       ___  ___  ___  ___       ___      ___  ___  ___  ___  &kp COLON  ___
+                ___  ___     &kp N1  &kp N2  &kp N3  ___                 ___  ___                     ___  ___  ___  ___  ___        ___
+                ___  ___     ___     ___     ___               ___  ___  ___  ___  ___  ___                ___  ___  ___  ___        ___
+            >;
+        };
         nav {
             bindings = <
                 ___  ___  ___  ___  ___  ___  XXX                                &mo MOD  ___               ___               ___              ___                 ___  ___
@@ -530,24 +548,6 @@ Some configuration was taken from Urob's base keymap config:
                 ___  &kp F11  &kp F4  &kp F5  &kp F6  ___  ___       ___  ___  ___  ___        ___      ___  ___  ___  ___  ___  ___
                 ___  &kp F10  &kp F1  &kp F2  &kp F3  ___                 ___  ___                      ___  ___  ___  ___  ___  ___
                 ___  ___      ___     ___     ___               ___  ___  ___  ___  ___  ___                 ___  ___  ___  ___  ___
-            >;
-        };
-        num {
-            bindings = <
-                ___  ___     ___     ___     ___     ___  XXX                                &mo MOD  ___  ___  ___  ___  ___        ___
-                ___  ___     &kp N7  &kp N8  &kp N9  ___  ___                                ___      ___  ___  ___  ___  ___        ___
-                ___  &kp N0  &kp N4  &kp N5  &kp N6  ___  ___       ___  ___  ___  ___       ___      ___  ___  ___  ___  &kp COLON  ___
-                ___  ___     &kp N1  &kp N2  &kp N3  ___                 ___  ___                     ___  ___  ___  ___  ___        ___
-                ___  ___     ___     ___     ___               ___  ___  ___  ___  ___  ___                ___  ___  ___  ___        ___
-            >;
-        };
-        game {
-            bindings = <
-                &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 ___                                                                   &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   ___
-                &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp I                                                                 &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-                &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-                &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                               XXX        &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                XXX       XXX       XXX      XXX      XXX                      &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
             >;
         };
         mod {
