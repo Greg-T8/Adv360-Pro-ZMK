@@ -129,6 +129,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp TAB>;
             layers                = <COMBOLAYERS>;
         };
+
         esc {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -136,6 +137,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp ESC>;
             layers                = <COMBOLAYERS>;
         };
+        
         undo {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -196,7 +198,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp HASH>;
             layers                = <COMBOLAYERS>;
         };
-
+        
         select-all {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -257,6 +259,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&td_angle>;
             layers                = <COMBOLAYERS>;
         };
+
         brace {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
@@ -310,6 +313,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp CARET>;
             layers                = <COMBOLAYERS>;
         };
+
         grave {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
@@ -321,7 +325,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 55>;
-            bindings              = <&td_minus>;
+            bindings              = <&kp MINUS>;
             layers                = <COMBOLAYERS>;
         };
         slash {
@@ -363,7 +367,6 @@ Some configuration was taken from Urob's base keymap config:
             hold-trigger-on-release;                                                    // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
             //hold-while-undecided;                                                     // allows immediate usage of mouse with modifiers without waiting for tapping term to expire; prevents sticky shift on tap
         };
-
         hmr: home_row_mod_right {
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
@@ -385,7 +388,6 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms = <PRIOR_IDLE>;
             bindings              = <&mo>, <&sl>;
         };
-
         mts: mod_tap_shift {
             compatible            = "zmk,behavior-hold-tap";
             #binding-cells        = <2>;
@@ -404,7 +406,6 @@ Some configuration was taken from Urob's base keymap config:
             quick_tap_ms    = <125>;
             bindings        = <&caps_word>, <&kp>;
         };
-        
         nw: num_word {
             compatible      = "zmk,behavior-hold-tap";
             #binding-cells  = <2>;
@@ -445,14 +446,12 @@ Some configuration was taken from Urob's base keymap config:
             bindings       = <&kp COMMA>, <&kp SEMI>;
             mods           = <(MOD_LSFT)>;
         };
-        
         mm_cmk_dot: mm_cmk_dot {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings       = <&kp PERIOD>, <&kp COLON>;
             mods           = <(MOD_LSFT)>;
         };
-        
         mm_cmk_qmark: mm_cmk_qmark {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -494,12 +493,6 @@ Some configuration was taken from Urob's base keymap config:
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings       = <&kp LBKT>, <&kp RBKT>;
-        };
-
-        td_minus: td_minus {
-            compatible     = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings       = <&kp MINUS>, <&kp UNDER>;
         };
     };
 
