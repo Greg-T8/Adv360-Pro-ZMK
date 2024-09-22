@@ -129,13 +129,6 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp TAB>;
             layers                = <COMBOLAYERS>;
         };
-        space {
-            timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions         = <16 18>;
-            bindings              = <&kp SPACE>;
-            layers                = <COMBOLAYERS>;
-        };
         esc {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -400,16 +393,7 @@ Some configuration was taken from Urob's base keymap config:
             tapping-term-ms       = <TAPPING_TERM>;
             quick-tap-ms          = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            bindings              = <&mo>, <&sk>;
-        };
-        mtp: mod_tap_space {
-            compatible            = "zmk,behavior-hold-tap";
-            #binding-cells        = <2>;
-            flavor                = "hold-preferred";
-            tapping-term-ms       = <TAPPING_TERM>;
-            quick-tap-ms          = <QUICK_TAP>;
-            require-prior-idle-ms = <PRIOR_IDLE>;
-            bindings              = <&kp>, <&kp>;
+            bindings              = <&kp>, <&sk>;
         };
 
         cw: cap_word {
@@ -524,11 +508,11 @@ Some configuration was taken from Urob's base keymap config:
 
         default_layer {
             bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                            &mo MOD  XXX    XXX           XXX           XXX          XXX             &tog CMK
-                XXX  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      XXX                                                                  XXX      &kp Y  &kp U         &kp I         &kp O        &kp P           XXX
-                XXX  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX             XXX           XXX      XXX      XXX                  XXX      &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
-                XXX  &kp Z        &kp X        &kp C         &kp V         &kp B                                    XXX      XXX                                    &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        XXX
-                XXX  XXX          XXX          XXX           XXX                      &mts NAV LSHFT  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mtp LSHFT SPACE        XXX           XXX           XXX          XXX             XXX
+                XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX             &tog CMK
+                XXX  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      XXX                                                                 XXX      &kp Y  &kp U         &kp I         &kp O        &kp P           XXX
+                XXX  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
+                XXX  &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        XXX
+                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX           XXX          XXX             XXX
             >;
         }; 
         cmk {
