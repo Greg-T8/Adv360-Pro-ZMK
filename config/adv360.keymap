@@ -20,7 +20,7 @@ Some configuration was taken from Urob's base keymap config:
 #define FN      5
 #define MOD     6
 
-#define COMBOLAYERS DEFAULT QWERTY NAV FN NUM CMK
+#define COMBOLAYERS DEFAULT QWERTY NAV FN NUM
 
 #define XXX &none
 #define ___ &trans
