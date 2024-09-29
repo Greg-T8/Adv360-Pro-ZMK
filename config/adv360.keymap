@@ -110,7 +110,7 @@ Some configuration was taken from Urob's base keymap config:
             key-positions         = <17 29>;
             bindings              = <&kp LA(E)>;
             layers                = <COMBOLAYERS>;
-        }
+        };
         left-hand-num-layer-activation {
             timeout-ms            = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
