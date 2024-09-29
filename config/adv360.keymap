@@ -501,7 +501,7 @@ Some configuration was taken from Urob's base keymap config:
 
         default_layer {
             bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        ___                                                                 &mo MOD  XXX    XXX           XXX            XXX          XXX            ___
+                XXX  XXX          XXX          XXX           XXX           XXX        ___                                                                 &mo MOD  XXX    XXX           XXX            XXX          XXX            &tog CMK
                 XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U          &kp Y        &kp SQT        XXX
                 XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E   &hmr RALT I  &hmr RGUI O    XXX
                 XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &mm_cmk_comma  &mm_cmk_dot  &mm_cmk_qmark  XXX
@@ -510,7 +510,7 @@ Some configuration was taken from Urob's base keymap config:
         }; 
         qwerty {
             bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX             &tog CMK
+                XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX             ___
                 XXX  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      XXX                                                                 XXX      &kp Y  &kp U         &kp I         &kp O        &kp P           XXX
                 XXX  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
                 XXX  &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        XXX
