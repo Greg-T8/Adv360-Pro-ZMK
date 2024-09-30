@@ -111,6 +111,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&mo NUM>;
             layers                = <COMBOLAYERS>;
         };
+         
 
         /* Horizontal combos - left hand */
 
@@ -464,6 +465,12 @@ Some configuration was taken from Urob's base keymap config:
             bindings       = <&kp MINUS>, <&kp MINUS>;
             mods           = <(MOD_LSFT)>;
         };
+        mm_under: mm_under {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp UNDER>, <&kp UNDER>;
+            mods           = <(MOD_LSFT)>;
+        };
         
         mm_home: mm_home {
             compatible     = "zmk,behavior-mod-morph";
@@ -508,7 +515,7 @@ Some configuration was taken from Urob's base keymap config:
         default_layer {
             bindings = <
                 XXX  XXX          XXX          XXX           XXX           XXX        ___                                                                 &mo MOD  XXX    XXX           XXX            XXX          XXX            &tog QWERTY
-                XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U          &kp Y        &kp UNDER      XXX
+                XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U          &kp Y        &mm_under      XXX
                 XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E   &hmr RALT I  &hmr RGUI O    XXX
                 XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &mm_cmk_comma  &mm_cmk_dot  &mm_cmk_qmark  XXX
                 XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX            XXX          XXX            XXX
