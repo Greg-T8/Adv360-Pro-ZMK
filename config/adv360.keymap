@@ -249,7 +249,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
-            bindings              = <&td_paren>;
+            bindings              = <&csr RC(R_SHIFT) &td_paren>;
             layers                = <COMBOLAYERS>;
         };
         angle {
@@ -376,6 +376,18 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms      = <PRIOR_IDLE>;
             quick-tap-ms               = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-on-release;
+        };
+
+        csr: control_shift_right {
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            bindings                   = <&kp>, <&kp>;
+            flavor                     = "balanced";
+            tapping-term-ms            = <TAPPING_TERM>;
+            require-prior-idle-ms      = <PRIOR_IDLE>;
+            quick-tap-ms               = <QUICK_TAP>;
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
         };
         
