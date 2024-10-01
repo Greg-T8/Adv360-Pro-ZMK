@@ -249,7 +249,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
-            bindings              = <&csr RC(RIGHT_SHIFT) &td_paren>;
+            bindings              = <&csr RC(RIGHT_SHIFT) 0>;
             layers                = <COMBOLAYERS>;
         };
         angle {
@@ -382,7 +382,7 @@ Some configuration was taken from Urob's base keymap config:
         csr: control_shift_right {
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
-            bindings                   = <&kp>, <&kp>;
+            bindings                   = <&kp>, <&td_paren>;
             flavor                     = "balanced";
             tapping-term-ms            = <TAPPING_TERM>;
             require-prior-idle-ms      = <PRIOR_IDLE>;
