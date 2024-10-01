@@ -495,6 +495,12 @@ Some configuration was taken from Urob's base keymap config:
             bindings       = <&td_brace>, <&td_bracket>;
             mods           = <(MOD_LSFT)>;
         };
+        mm_lbracket: mm_lbracket {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp LBKT>, <&kp LBKT>;
+            mods           = <(MOD_LSFT)>;
+        };
         
         /* Tap Dance */
 
@@ -516,7 +522,7 @@ Some configuration was taken from Urob's base keymap config:
         td_bracket: td_bracket {
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings       = <&kp LBKT>, <&kp RBKT>;
+            bindings       = <&mm_lbracket>, <&kp RBKT>;
         };
     };
 
