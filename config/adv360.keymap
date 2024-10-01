@@ -249,7 +249,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
-            bindings              = <&csr RC(RIGHT_SHIFT) 0>;
+            bindings              = <&paren_csr RC(RIGHT_SHIFT) 0>;
             layers                = <COMBOLAYERS>;
         };
         angle {
@@ -355,6 +355,18 @@ Some configuration was taken from Urob's base keymap config:
         #include "macros.dtsi"
         #include "version.dtsi"
 
+        hmlt: home_row_mod_left_test {
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            bindings                   = <&kp>, <&kp>;
+            flavor                     = "tap-preferred";
+            tapping-term-ms            = <HMR_TAPPING_TERM>;
+            require-prior-idle-ms      = <PRIOR_IDLE>;                                  // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
+            quick-tap-ms               = <QUICK_TAP>;
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT 17>;      // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
+            hold-trigger-on-release;                                                    // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
+            hold-while-undecided;                                                     // allows immediate usage of mouse with modifiers without waiting for tapping term to expire; prevents sticky shift on tap
+        };
         hml: home_row_mod_left {
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
@@ -379,10 +391,10 @@ Some configuration was taken from Urob's base keymap config:
             hold-trigger-on-release;
         };
 
-        csr: control_shift_right {
+        paren_csr: paren_control_shift_right {
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
-            bindings                   = <&kp>, <&td_paren>;
+            bindings                   = <&kp>, <&td_paren>;                            // first position produces a hold (for ctrl+shift), second position produces a tap (for parenthesis tap dance)
             flavor                     = "balanced";
             tapping-term-ms            = <TAPPING_TERM>;
             require-prior-idle-ms      = <PRIOR_IDLE>;
