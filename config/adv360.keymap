@@ -516,7 +516,7 @@ Some configuration was taken from Urob's base keymap config:
         td_bracket: td_bracket {
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings       = <&kp LBKT>, <&kp RBKT>;
+            bindings       = <&kp E>, <&kp RBKT>;
         };
     };
 
