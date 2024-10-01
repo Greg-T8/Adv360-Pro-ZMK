@@ -252,26 +252,12 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&paren_csr RC(RIGHT_SHIFT) 0>;
             layers                = <COMBOLAYERS>;
         };
-        angle {
-            timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions         = <42 43>;
-            bindings              = <&td_angle>;
-            layers                = <COMBOLAYERS>;
-        };
 
         brace {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <55 56>;
             bindings              = <&td_brace>;
-            layers                = <COMBOLAYERS>;
-        };
-        bracket {
-            timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions         = <56 57>;
-            bindings              = <&td_bracket>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -382,7 +368,7 @@ Some configuration was taken from Urob's base keymap config:
         paren_csr: paren_control_shift_right {
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
-            bindings                   = <&kp>, <&td_paren>;                            // first position produces a hold (for ctrl+shift), second position produces a tap (for parenthesis tap dance)
+            bindings                   = <&kp>, <&mm_paren>;                            // first position produces a hold (for ctrl+shift), second position produces a tap (for parenthesis mod-morph tap dance)
             flavor                     = "balanced";
             tapping-term-ms            = <TAPPING_TERM>;
             require-prior-idle-ms      = <PRIOR_IDLE>;
@@ -496,6 +482,19 @@ Some configuration was taken from Urob's base keymap config:
             bindings       = <&kp END>, <&kp END>;
             mods           = <(MOD_LCTL)>;
         }; 
+
+        mm_paren: mm_paren {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&td_paren>, <&td_angle>;
+            mods           = <(MOD_LSFT)>;
+        };
+        mm_brace: mm_brace {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&td_brace>, <&td_bracket>;
+            mods           = <(MOD_LSFT)>;
+        };
         
         /* Tap Dance */
 
