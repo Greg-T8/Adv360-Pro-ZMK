@@ -257,7 +257,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <55 56>;
-            bindings              = <&td_brace>;
+            bindings              = <&mm_brace>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -473,7 +473,7 @@ Some configuration was taken from Urob's base keymap config:
         mm_home: mm_home {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&kp HOME>, <&kp HOME>;    // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
+            bindings       = <&kp HOME>, <&kp HOME>;                                                // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
             mods           = <(MOD_LCTL)>;
         };
         mm_end: mm_end {
