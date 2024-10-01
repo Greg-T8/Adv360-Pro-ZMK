@@ -359,7 +359,7 @@ Some configuration was taken from Urob's base keymap config:
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
             bindings                   = <&kp>, <&kp>;
-            flavor                     = "tap-preferred";
+            flavor                     = "hold-preferred";
             tapping-term-ms            = <HMR_TAPPING_TERM>;
             require-prior-idle-ms      = <PRIOR_IDLE>;                                  // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
             quick-tap-ms               = <QUICK_TAP>;
