@@ -522,7 +522,7 @@ Some configuration was taken from Urob's base keymap config:
         td_bracket: td_bracket {
             compatible     = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings       = <&mm_lbracket>, <&kp RBKT>;
+            bindings       = <&mm_lbracket>, <&kp RBKT>;                                        // Left bracket requires a mod-morph to avoid triggering a brace during SHIFT. Seems like a bug in ZMK.
         };
     };
 
