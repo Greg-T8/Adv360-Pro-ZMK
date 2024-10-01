@@ -249,7 +249,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
-            bindings              = <&csr K &td_paren>;
+            bindings              = <&csr LC(LEFT_SHIFT) &td_paren>;
             layers                = <COMBOLAYERS>;
         };
         angle {
