@@ -1,7 +1,7 @@
 /*
 
-This is my keymap for the Kinesis Advantage 360 keyboard. 
-Some configuration was taken from Urob's base keymap config: 
+This is my keymap for the Kinesis Advantage 360 keyboard.
+Some configuration was taken from Urob's base keymap config:
 - https://github.com/urob/zmk-config/blob/main/config/base.keymap
 */
 
@@ -47,7 +47,7 @@ Some configuration was taken from Urob's base keymap config:
 #define COMBO_TERM_FAST 15
 #define COMBO_TERM_SLOW 200
 
-// Larger idle time reduces accidental combos when typing fast 
+// Larger idle time reduces accidental combos when typing fast
 #define COMBO_IDLE_FAST 120
 #define COMBO_IDLE_SLOW 250
 
@@ -72,9 +72,9 @@ Some configuration was taken from Urob's base keymap config:
     quick-release;              // no double capitalization when rolling keys
 };
 
-&caps_word { 
+&caps_word {
     continue-list = <UNDERSCORE MINUS DEL BSPC>;
-}; 
+};
 
 / {
 
@@ -111,7 +111,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&mo NUM>;
             layers                = <COMBOLAYERS>;
         };
-         
+
 
         /* Horizontal combos - left hand */
 
@@ -137,7 +137,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp ESC>;
             layers                = <COMBOLAYERS>;
         };
-        
+
         undo {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -159,9 +159,9 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&mt LC(BSPC) BSPC>;
             layers                = <COMBOLAYERS>;
         };
-        
 
-        /* Vertical combos - left hand */ 
+
+        /* Vertical combos - left hand */
 
         exclamation {
             timeout-ms            = <COMBO_TERM_SLOW>;
@@ -198,7 +198,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp HASH>;
             layers                = <COMBOLAYERS>;
         };
-        
+
         select-all {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -245,19 +245,33 @@ Some configuration was taken from Urob's base keymap config:
             bindings              = <&kp SQT>;
             layers                = <COMBOLAYERS>;
         };
-        paren {
+        lparen {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 42>;
-            bindings              = <&paren_csr RC(RIGHT_SHIFT) 0>;
+            bindings              = <&lparen_csr RC(RIGHT_SHIFT) 0>;
+            layers                = <COMBOLAYERS>;
+        };
+        rparen {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <42 43>;
+            bindings              = <&mm_rparen>;
             layers                = <COMBOLAYERS>;
         };
 
-        brace {
+        lbrace {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <55 56>;
-            bindings              = <&mm_brace>;
+            bindings              = <&mm_lbrace>;
+            layers                = <COMBOLAYERS>;
+        };
+        rbrace {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <56 57>;
+            bindings              = <&mm_rbrace>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -350,7 +364,7 @@ Some configuration was taken from Urob's base keymap config:
             require-prior-idle-ms      = <PRIOR_IDLE>;                                  // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
             quick-tap-ms               = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT 17>;      // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
-            hold-trigger-on-release;                                                    // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released                               
+            hold-trigger-on-release;                                                    // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released
             //hold-while-undecided;                                                     // allows immediate usage of mouse with modifiers without waiting for tapping term to expire; prevents sticky shift on tap
         };
         hmr: home_row_mod_right {
@@ -365,10 +379,10 @@ Some configuration was taken from Urob's base keymap config:
             hold-trigger-on-release;
         };
 
-        paren_csr: paren_control_shift_right {
+        lparen_csr: lparen_control_shift_right {
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
-            bindings                   = <&kp>, <&mm_paren>;                            // first position produces a hold (for ctrl+shift), second position produces a tap (for parenthesis mod-morph tap dance)
+            bindings                   = <&kp>, <&mm_lparen>;                            // first position produces a hold (for ctrl+shift), second position produces a tap (for parenthesis mod-morph tap dance)
             flavor                     = "balanced";
             tapping-term-ms            = <TAPPING_TERM>;
             require-prior-idle-ms      = <PRIOR_IDLE>;
@@ -376,7 +390,7 @@ Some configuration was taken from Urob's base keymap config:
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
         };
-        
+
         mtn: mod_tap_num {
             compatible            = "zmk,behavior-hold-tap";
             #binding-cells        = <2>;
@@ -413,7 +427,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings        = <&tog>, <&kp>;
         };
 
-        
+
         /* Navigation */
 
         nav_left: nav_left {
@@ -437,7 +451,7 @@ Some configuration was taken from Urob's base keymap config:
 
 
         /* Mod Morphs */
-        
+
         mm_cmk_comma: mm_cmk_comma {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -469,7 +483,7 @@ Some configuration was taken from Urob's base keymap config:
             bindings       = <&kp UNDER>, <&kp UNDER>;
             mods           = <(MOD_LSFT)>;
         };
-        
+
         mm_home: mm_home {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -481,18 +495,24 @@ Some configuration was taken from Urob's base keymap config:
             #binding-cells = <0>;
             bindings       = <&kp END>, <&kp END>;
             mods           = <(MOD_LCTL)>;
-        }; 
+        };
 
-        mm_paren: mm_paren {
+        mm_lparen: mm_lparen {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&td_paren>, <&td_angle>;
+            bindings       = <&kp LPAR>, <&kp LT>;
             mods           = <(MOD_LSFT)>;
         };
-        mm_brace: mm_brace {
+        mm_rparen: mm_rparen {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&td_brace>, <&td_bracket>;
+            bindings       = <&kp RPAR>, <&kp GT>;
+            mods           = <(MOD_LSFT)>;
+        };
+        mm_lbrace: mm_lbrace {
+            compatible     = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings       = <&kp LBRC>, <&kp LBKT>;
             mods           = <(MOD_LSFT)>;
         };
         mm_lbracket: mm_lbracket {
@@ -501,28 +521,17 @@ Some configuration was taken from Urob's base keymap config:
             bindings       = <&kp LBKT>, <&kp LBKT>;
             mods           = <(MOD_LSFT)>;
         };
-        
-        /* Tap Dance */
-
-        td_paren: td_paren {
-            compatible     = "zmk,behavior-tap-dance";
+        mm_rbrace: mm_rbrace {
+            compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&kp LPAR>, <&kp RPAR>;
+            bindings       = <&kp RBRC>, <&kp RBKT>;
+            mods           = <(MOD_LSFT)>;
         };
-        td_angle: td_angle {
-            compatible     = "zmk,behavior-tap-dance";
+        mm_rbracket: mm_rbracket {
+            compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&kp LT>, <&kp GT>;
-        };
-        td_brace: td_brace {
-            compatible     = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings       = <&kp LBRC>, <&kp RBRC>;
-        };
-        td_bracket: td_bracket {
-            compatible     = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings       = <&mm_lbracket>, <&kp RBKT>;                                        // Left bracket requires a mod-morph to avoid triggering a brace during SHIFT. Seems like a bug in ZMK.
+            bindings       = <&kp RBKT>, <&kp RBKT>;
+            mods           = <(MOD_LSFT)>;
         };
     };
 
@@ -537,7 +546,7 @@ Some configuration was taken from Urob's base keymap config:
                 XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &mm_cmk_comma  &mm_cmk_dot  &mm_cmk_qmark  XXX
                 XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX            XXX          XXX            XXX
             >;
-        }; 
+        };
         qwerty {
             bindings = <
                 XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX             ___
@@ -546,7 +555,7 @@ Some configuration was taken from Urob's base keymap config:
                 XXX  &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        XXX
                 XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX           XXX          XXX             XXX
             >;
-        }; 
+        };
         game {
             bindings = <
                 &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 ___                                                                   &mo MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   ___
