@@ -13,14 +13,13 @@ Some configuration was taken from Urob's base keymap config:
 #include <dt-bindings/zmk/backlight.h>
 
 #define DEFAULT 0
-#define QWERTY  1
-#define GAME    2
-#define NUM     3
-#define NAV     4
-#define FN      5
-#define MOD     6
+#define GAME    1
+#define NUM     2
+#define NAV     3
+#define FN      4
+#define MOD     5
 
-#define COMBOLAYERS DEFAULT QWERTY NAV FN NUM
+#define COMBOLAYERS DEFAULT NAV FN NUM
 
 #define XXX &none
 #define ___ &trans
@@ -260,6 +259,13 @@ Some configuration was taken from Urob's base keymap config:
             layers                = <COMBOLAYERS>;
         };
 
+        underscore {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <54 55>;
+            bindings              = <&mm_under>;
+            layers                = <COMBOLAYERS>;
+        };
         lbrace {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
@@ -452,25 +458,6 @@ Some configuration was taken from Urob's base keymap config:
 
         /* Mod Morphs */
 
-        mm_cmk_comma: mm_cmk_comma {
-            compatible     = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings       = <&kp COMMA>, <&kp SEMI>;
-            mods           = <(MOD_LSFT)>;
-        };
-        mm_cmk_dot: mm_cmk_dot {
-            compatible     = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings       = <&kp PERIOD>, <&kp COLON>;
-            mods           = <(MOD_LSFT)>;
-        };
-        mm_cmk_qmark: mm_cmk_qmark {
-            compatible     = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings       = <&kp QMARK>, <&kp EXCL>;
-            mods           = <(MOD_LSFT)>;
-        };
-
         mm_minus: mm_minus {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -539,15 +526,6 @@ Some configuration was taken from Urob's base keymap config:
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        ___                                                                 &mo MOD  XXX    XXX           XXX            XXX          XXX            &tog QWERTY
-                XXX  &kp Q        &cw 0 W      &kp F         &kp P         &kp B      XXX                                                                 XXX      &kp J  &kp L         &kp U          &kp Y        &mm_under      XXX
-                XXX  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHFT T  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp M  &hmr RSHFT N  &hmr RCTRL E   &hmr RALT I  &hmr RGUI O    XXX
-                XXX  &kp Z        &kp X        &kp C         &kp D         &kp V                                   XXX      XXX                                    &kp K  &kp H         &mm_cmk_comma  &mm_cmk_dot  &mm_cmk_qmark  XXX
-                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX            XXX          XXX            XXX
-            >;
-        };
-        qwerty {
             bindings = <
                 XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX             ___
                 XXX  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      XXX                                                                 XXX      &kp Y  &kp U         &kp I         &kp O        &kp P           XXX
