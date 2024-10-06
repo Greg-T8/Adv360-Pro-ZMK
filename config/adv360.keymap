@@ -234,7 +234,6 @@ Some configuration was taken from Urob's base keymap config:
             layers                = <COMBOLAYERS>;
         };
 
-
         /* Horizontal combos - right hand */
 
         quote {
@@ -255,7 +254,7 @@ Some configuration was taken from Urob's base keymap config:
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <42 43>;
-            bindings              = <&mm_rparen>;
+            bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -389,6 +388,17 @@ Some configuration was taken from Urob's base keymap config:
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
             bindings                   = <&kp>, <&mm_lparen>;                            // first position produces a hold (for ctrl+shift), second position produces a tap (for parenthesis mod-morph tap dance)
+            flavor                     = "balanced";
+            tapping-term-ms            = <TAPPING_TERM>;
+            require-prior-idle-ms      = <PRIOR_IDLE>;
+            quick-tap-ms               = <QUICK_TAP>;
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-on-release;
+        };
+            rparen_csr: rparen_control_shift_right {                                    // first position produces a hold (for alr+shift), second position produces a tap (for parenthesis mod-morph tap dance)
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            bindings                   = <&kp>, <&mm_rparen>;
             flavor                     = "balanced";
             tapping-term-ms            = <TAPPING_TERM>;
             require-prior-idle-ms      = <PRIOR_IDLE>;
