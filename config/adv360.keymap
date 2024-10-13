@@ -13,13 +13,14 @@ Some configuration was taken from Urob's base keymap config:
 #include <dt-bindings/zmk/backlight.h>
 
 #define DEFAULT 0
-#define GAME    1
-#define NUM     2
-#define NAV     3
-#define FN      4
-#define MOD     5
+#define GALLIUM 1
+#define GAME    2
+#define NUM     3
+#define NAV     4
+#define FN      5
+#define MOD     6
 
-#define COMBOLAYERS DEFAULT NAV FN NUM
+#define COMBOLAYERS DEFAULT GALLIUM NAV FN NUM
 
 #define XXX &none
 #define ___ &trans
@@ -537,11 +538,20 @@ Some configuration was taken from Urob's base keymap config:
 
         default_layer {
             bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX             ___
+                XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX             &tog GALLIUM
                 XXX  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      XXX                                                                 XXX      &kp Y  &kp U         &kp I         &kp O        &kp P           XXX
                 XXX  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
                 XXX  &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        XXX
                 XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX           XXX          XXX             XXX
+            >;
+        };
+        gallium {
+            bindings = <
+                XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX          ___
+                XXX  &kp B        &cw 0 L      &kp D         &kp C         &kp V      XXX                                                                 XXX      &kp J  &kp Y         &kp O         &kp U        &kp SEMI     XXX
+                XXX  &hml LGUI N  &hml LALT R  &hml LCTRL T  &hml LSHFT S  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp P  &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E  &hmr RGUI I  XXX
+                XXX  &kp X        &kp Q        &kp M         &kp W         &kp Z                                   XXX      XXX                                    &kp K  &kp F         &kp COMMA     &kp DOT      &kp FSLH     XXX
+                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX           XXX          XXX          XXX
             >;
         };
         game {
