@@ -548,9 +548,9 @@ Some configuration was taken from Urob's base keymap config:
         gallium {
             bindings = <
                 XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX          ___
-                XXX  &kp B        &cw 0 L      &kp D         &kp C         &kp V      XXX                                                                 XXX      &kp J  &kp Y         &kp O         &kp U        &kp SEMI     XXX
-                XXX  &hml LGUI N  &hml LALT R  &hml LCTRL T  &hml LSHFT S  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp P  &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E  &hmr RGUI I  XXX
-                XXX  &kp X        &kp Q        &kp M         &kp W         &kp Z                                   XXX      XXX                                    &kp K  &kp F         &kp COMMA     &kp DOT      &kp FSLH     XXX
+                XXX  &kp B        &cw 0 L      &kp D         &kp C         &kp V      XXX                                                                 XXX      &kp J  &kp F         &kp O         &kp U        &kp SEMI     XXX
+                XXX  &hml LGUI N  &hml LALT R  &hml LCTRL T  &hml LSHFT S  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp Y  &hmr RSHFT H  &hmr RCTRL A  &hmr RALT E  &hmr RGUI I  XXX
+                XXX  &kp X        &kp Q        &kp M         &kp W         &kp Z                                   XXX      XXX                                    &kp K  &kp P         &kp COMMA     &kp DOT      &kp FSLH     XXX
                 XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX           XXX          XXX          XXX
             >;
         };
