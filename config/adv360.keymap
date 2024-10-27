@@ -19,7 +19,7 @@ Some configuration was taken from Urob's base keymap config:
 #define FN      4
 #define MOD     5
 
-#define COMBOLAYERS DEFAULT GALLIUM NAV FN NUM
+#define COMBOLAYERS DEFAULT NAV FN NUM
 
 #define XXX &none
 #define ___ &trans
