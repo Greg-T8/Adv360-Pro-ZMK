@@ -278,7 +278,7 @@
 
         star {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <22 40>;
             bindings              = <&kp STAR>;
             layers                = <COMBOLAYERS>;
@@ -314,14 +314,14 @@
 
         grave {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <40 54>;
             bindings              = <&kp GRAVE>;
             layers                = <COMBOLAYERS>;
         };
         minus {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <41 55>;
             bindings              = <&mm_minus>;
             layers                = <COMBOLAYERS>;
@@ -335,7 +335,7 @@
         };
         pipe {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <43 57>;
             bindings              = <&kp PIPE>;
             layers                = <COMBOLAYERS>;
