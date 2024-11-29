@@ -292,7 +292,7 @@
         };
         equal {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAS>;
             key-positions         = <24 42>;
             bindings              = <&kp EQUAL>;
             layers                = <COMBOLAYERS>;
