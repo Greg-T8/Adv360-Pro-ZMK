@@ -41,7 +41,7 @@
 
 // Larger idle time reduces accidental combos when typing fast
 #define COMBO_IDLE_FAST 120
-#define COMBO_IDLE_SLOW 250
+#define COMBO_IDLE_SLOW 150
 
 // Layer-tap settings
 &lt {
