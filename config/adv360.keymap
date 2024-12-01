@@ -278,35 +278,35 @@
 
         star {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            // require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <22 40>;
             bindings              = <&kp STAR>;
             layers                = <COMBOLAYERS>;
         };
         plus {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            // require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <23 41>;
             bindings              = <&kp PLUS>;
             layers                = <COMBOLAYERS>;
         };
         equal {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            // require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <24 42>;
             bindings              = <&kp EQUAL>;
             layers                = <COMBOLAYERS>;
         };
         ampersand {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            // require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <25 43>;
             bindings              = <&kp AMPS>;
             layers                = <COMBOLAYERS>;
         };
         caret {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            // require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <26 44>;
             bindings              = <&kp CARET>;
             layers                = <COMBOLAYERS>;
@@ -314,35 +314,35 @@
 
         grave {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            // require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <40 54>;
             bindings              = <&kp GRAVE>;
             layers                = <COMBOLAYERS>;
         };
         minus {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            // require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <41 55>;
             bindings              = <&mm_minus>;
             layers                = <COMBOLAYERS>;
         };
         slash {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            //require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            // require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <42 56>;
             bindings              = <&kp SLASH>;
             layers                = <COMBOLAYERS>;
         };
         pipe {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            // require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <43 57>;
             bindings              = <&kp PIPE>;
             layers                = <COMBOLAYERS>;
         };
         backslash {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            // require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <44 58>;
             bindings              = <&kp BSLH>;
             layers                = <COMBOLAYERS>;
