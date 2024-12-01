@@ -328,7 +328,7 @@
         };
         slash {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <42 56>;
             bindings              = <&kp SLASH>;
             layers                = <COMBOLAYERS>;
