@@ -245,7 +245,7 @@
         };
         rparen {
             timeout-ms            = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <0>;
             key-positions         = <42 43>;
             bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
             layers                = <COMBOLAYERS>;
