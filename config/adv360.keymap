@@ -237,8 +237,8 @@
             layers                = <COMBOLAYERS>;
         };
         lparen {
-            timeout-ms            = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <0>;
             key-positions         = <41 42>;
             bindings              = <&lparen_csr RC(RIGHT_SHIFT) 0>;
             layers                = <COMBOLAYERS>;
