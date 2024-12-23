@@ -126,7 +126,7 @@
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <30 31>;
-            bindings              = <&kp ESC>;
+            bindings              = <&esc_acl LA(LEFT_CTRL) ESC>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -392,6 +392,18 @@
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
             bindings                   = <&kp>, <&mm_rparen>;
+            flavor                     = "balanced";
+            tapping-term-ms            = <TAPPING_TERM>;
+            require-prior-idle-ms      = <PRIOR_IDLE>;
+            quick-tap-ms               = <QUICK_TAP>;
+            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-on-release;
+        };
+
+        esc_acl: esc_alt_ctrl_left {
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            bindings                   = <&kp>, <&kp>;
             flavor                     = "balanced";
             tapping-term-ms            = <TAPPING_TERM>;
             require-prior-idle-ms      = <PRIOR_IDLE>;
