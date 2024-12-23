@@ -126,7 +126,7 @@
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <30 31>;
-            bindings              = <&esc_acl LA(LEFT_CTRL) ESC>;
+            bindings              = <&esc_acl LA(LCTRL) ESC>;
             layers                = <COMBOLAYERS>;
         };
 
