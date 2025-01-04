@@ -5,12 +5,13 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#define DEFAULT 0
-#define GAME    1
-#define NUM     2
-#define NAV     3
-#define FN      4
-#define MOD     5
+#define DEFAULT    0
+#define GAME       1
+#define WT         2
+#define NUM        3
+#define NAV        4
+#define FN         5
+#define MOD        6
 
 #define COMBOLAYERS DEFAULT NAV FN NUM
 
@@ -122,6 +123,7 @@
             layers                = <COMBOLAYERS>;
         };
 
+        // Hold for ALT+LCTRL, tap for ESC
         esc {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -236,6 +238,7 @@
             bindings              = <&kp SQT>;
             layers                = <COMBOLAYERS>;
         };
+        // Hold for CTRL+SHIFT, tap for tap for parenthesis
         lparen {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <0>;
@@ -243,6 +246,7 @@
             bindings              = <&lparen_csr RC(RIGHT_SHIFT) 0>;
             layers                = <COMBOLAYERS>;
         };
+        // Hold for ALT+CTRL, tap for tap for parenthesis
         rparen {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <0>;
@@ -542,11 +546,11 @@
 
         default_layer {
             bindings = <
-                XXX  XXX          XXX          XXX           XXX           XXX        &tog GAME                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX             XXX
-                XXX  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      XXX                                                                 XXX      &kp Y  &kp U         &kp I         &kp O        &kp P           XXX
-                XXX  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
-                XXX  &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        XXX
-                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT        XXX           XXX           XXX          XXX             XXX
+                XXX  XXX          XXX          XXX           XXX           XXX        XXX                                                                 &mo MOD  &tog GAME  &tog WT       XXX           XXX          XXX             XXX
+                XXX  &kp Q        &cw 0 W      &kp E         &kp R         &kp T      XXX                                                                 XXX      &kp Y      &kp U         &kp I         &kp O        &kp P           XXX
+                XXX  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX            XXX           XXX      XXX      XXX                  XXX      &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
+                XXX  &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH        XXX
+                XXX  XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT            XXX           XXX           XXX          XXX             XXX
             >;
         };
         game {
@@ -556,6 +560,15 @@
                 &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none   &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
                 &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                               XXX        &kp PG_UP                             &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
                 XXX       XXX       XXX      XXX      XXX                      &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+            >;
+        };
+        warthunder {
+            bindings = <
+                &kp ESC   &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 ___                                                                   &mo MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   ___
+                &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &kp I                                                                 &none   &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+                &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none   &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+                &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                               XXX        &kp PG_UP                             &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                XXX       &kp L     XXX      XXX      XXX                      &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
             >;
         };
         num {
