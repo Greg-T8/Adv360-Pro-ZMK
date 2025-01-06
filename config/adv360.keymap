@@ -241,7 +241,7 @@
         // Hold for CTRL+SHIFT, tap for tap for parenthesis
         lparen {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <0>;
+            require-prior-idle-ms = <20>;
             key-positions         = <41 42>;
             bindings              = <&lparen_csr RC(RIGHT_SHIFT) 0>;
             layers                = <COMBOLAYERS>;
@@ -249,7 +249,7 @@
         // Hold for ALT+CTRL, tap for tap for parenthesis
         rparen {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <0>;
+            require-prior-idle-ms = <20>;
             key-positions         = <42 43>;
             bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
             layers                = <COMBOLAYERS>;
