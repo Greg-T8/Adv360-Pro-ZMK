@@ -72,8 +72,7 @@
 / {
 
     macros {
-
-        alt-tab: alt-tab {
+        alttab: alttab {
             compatible     = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>;
@@ -83,7 +82,6 @@
                 , <&macro_tap     &kp TAB>
                 ;
         };
-
         endash: endash {
             compatible     = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -595,7 +593,7 @@
             bindings = <
                 ___  ___  ___  ___        ___  ___  XXX                                &mo MOD  ___               ___               ___              ___                 ___  ___
                 ___  ___  ___  &kp LG(E)  ___  ___  ___                                ___      ___               ___               ___              ___                 ___  ___
-                ___  ___  ___  &alt-tab   ___  ___  ___       ___  ___  ___  ___       ___      &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  ___  ___
+                ___  ___  ___  ___        ___  ___  ___       ___  ___  ___  ___       ___      &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  ___  ___
                 ___  ___  ___  ___        ___  ___                 ___  ___                     ___               &kp PG_UP         &kp PG_DN        ___                 ___  ___
                 ___  ___  ___  ___        ___            ___  ___  ___  ___  ___  ___                             ___               ___              ___                 ___  ___
             >;
