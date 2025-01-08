@@ -73,6 +73,17 @@
 
     macros {
 
+        alt-tab: alt-tab {
+            compatible     = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms  = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp TAB>
+                ;
+        };
+
         endash: endash {
             compatible     = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -582,11 +593,11 @@
         };
         nav {
             bindings = <
-                ___  ___  ___              ___          ___  ___  XXX                                &mo MOD  ___               ___               ___              ___                 ___  ___
-                ___  ___  ___              &kp LG(E)    ___  ___  ___                                ___      ___               ___               ___              ___                 ___  ___
-                ___  ___  &kp LS(LA(TAB))  &kp LA(TAB)  ___  ___  ___       ___  ___  ___  ___       ___      &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  ___  ___
-                ___  ___  &kp LS(LG(TAB))  &kp LG(TAB)  ___  ___                 ___  ___                     ___               &kp PG_UP         &kp PG_DN        ___                 ___  ___
-                ___  ___  ___              ___          ___            ___  ___  ___  ___  ___  ___                             ___               ___              ___                 ___  ___
+                ___  ___  ___  ___        ___  ___  XXX                                &mo MOD  ___               ___               ___              ___                 ___  ___
+                ___  ___  ___  &kp LG(E)  ___  ___  ___                                ___      ___               ___               ___              ___                 ___  ___
+                ___  ___  ___  &alt-tab   ___  ___  ___       ___  ___  ___  ___       ___      &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  ___  ___
+                ___  ___  ___  ___        ___  ___                 ___  ___                     ___               &kp PG_UP         &kp PG_DN        ___                 ___  ___
+                ___  ___  ___  ___        ___            ___  ___  ___  ___  ___  ___                             ___               ___              ___                 ___  ___
             >;
         };
         fn {
