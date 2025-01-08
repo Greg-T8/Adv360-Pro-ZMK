@@ -240,7 +240,7 @@
         };
         // Hold for CTRL+SHIFT, tap for tap for parenthesis
         lparen {
-            timeout-ms            = <100>;
+            timeout-ms            = <50>;
             require-prior-idle-ms = <20>;
             key-positions         = <41 42>;
             bindings              = <&lparen_csr RC(RIGHT_SHIFT) 0>;
@@ -248,7 +248,7 @@
         };
         // Hold for ALT+CTRL, tap for tap for parenthesis
         rparen {
-            timeout-ms            = <100>;
+            timeout-ms            = <50>;
             require-prior-idle-ms = <20>;
             key-positions         = <42 43>;
             bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
