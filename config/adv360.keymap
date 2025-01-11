@@ -585,11 +585,11 @@
         };
         warthunder_alt1 {
             bindings = <
-                &kp ESC    &kp N7  &kp N8  &kp N9  &kp N0  &kp N5  &kp N6                                                                   &mo MOD  ___    ___    &kp N8    &kp N9   &kp N0   ___
-                &kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T   &kp I                                                                 &none    &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-                &kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G   &kp M            &kp LALT    ___        &kp LGUI  &kp RCTRL           &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-                &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                                XXX        &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                ___        &kp L   XXX     XXX     XXX                    &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+                &kp ESC    &kp N7  &kp N8  &kp N9     &kp N0     &kp N5  &kp N6                                                                   &mo MOD  ___    ___    &kp N8    &kp N9   &kp N0   ___
+                &kp TAB    &kp Q   &kp W   &kp E      &kp R      &kp T   &kp I                                                                 &none    &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+                &kp CAPS   &kp A   &kp S   &kp D      &kp F      &kp G   &kp M            &kp LALT    ___        &kp LGUI  &kp RCTRL           &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+                &kp LSHFT  &kp Z   &kp X   &kp LC(C)  &kp LC(V)  &kp B                                XXX        &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                ___        &kp L   XXX     XXX        XXX                       &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
             >;
         };
         num {
