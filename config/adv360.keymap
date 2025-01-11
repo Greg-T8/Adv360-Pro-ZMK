@@ -8,12 +8,10 @@
 #define DEFAULT    0
 #define GAME       1
 #define WT         2
-#define WT_ALT1    3
-#define WT_ALT2    4
-#define NUM        5
-#define NAV        6
-#define FN         7
-#define MOD        8
+#define NUM        3
+#define NAV        4
+#define FN         5
+#define MOD        6
 
 #define COMBOLAYERS DEFAULT NAV FN NUM
 
@@ -465,6 +463,15 @@
             bindings        = <&tog>, <&kp>;
         };
 
+        wt: warthunder {
+            compatible      = "zmk,behavior-hold-tap";
+            #binding-cells  = <2>;
+            flavor          = "hold-preferred";
+            tapping-term-ms = <125>;
+            quick_tap_ms    = <125>;
+            bindings        = <&kp>, <&kp>;
+        };
+
 
         /* Navigation */
 
@@ -579,27 +586,9 @@
             bindings = <
                 &kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6                                                                               &mo MOD  ___    ___    &kp N8    &kp N9   &kp N0   ___
                 &kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T   &kp I                                                                                &none    &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-                &kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G   &kp M                            &kp INS     ___       &kp LGUI  &kp RCTRL           &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-                &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                                                &kp BSPC  &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                ___        &kp L   XXX     XXX     XXX                    &lt WT_ALT1 SPACE &lt WT_ALT2 LSHIFT  &kp DEL   &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
-            >;
-        };
-        warthunder_alt1 {
-            bindings = <
-                &kp ESC    &kp N7  &kp N8  &kp N9     &kp N0     &kp N5  &kp N6                                                                   &mo MOD  ___    ___    &kp N8    &kp N9   &kp N0   ___
-                &kp TAB    &kp Q   &kp W   &kp E      &kp R      &kp T   &kp I                                                                 &none    &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-                &kp CAPS   &kp A   &kp S   &kp D      &kp F      &kp G   &kp M            &kp LALT    ___        &kp LGUI  &kp RCTRL           &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-                &kp LSHFT  &kp Z   &kp X   &kp LC(C)  &kp LC(V)  &kp B                                XXX        &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                ___        &kp L   XXX     XXX        XXX                       &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
-            >;
-        };
-        warthunder_alt2 {
-            bindings = <
-                &kp ESC    &kp N7  &kp N8  &kp N9     &kp N0     &kp N5  &kp N6                                                                   &mo MOD  ___    ___    &kp N8    &kp N9   &kp N0   ___
-                &kp TAB    &kp Q   &kp W   &kp E      &kp R      &kp T   &kp I                                                                 &none    &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-                &kp CAPS   &kp A   &kp S   &kp D      &kp F      &kp G   &kp M            &kp LALT    ___        &kp LGUI  &kp RCTRL           &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-                &kp LSHFT  &kp Z   &kp X   &kp LC(C)  &kp LC(V)  &kp B                                XXX        &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                ___        &kp L   XXX     XXX        XXX                       &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+                &kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G   &kp M                  &kp INS   ___       &kp LGUI  &kp RCTRL           &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+                &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                                    &kp BSPC  &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                ___        &kp L   XXX     XXX     XXX                    &wt LCTRL SPACE &kp LALT  &kp DEL   &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
             >;
         };
         num {
