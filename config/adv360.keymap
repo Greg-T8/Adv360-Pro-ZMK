@@ -253,7 +253,7 @@
         /* Horizontal combos - right hand */
 
         arrow {
-            timeout-ms            = <COMBO_TERM_FAST>;
+            timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <22 23>;
             bindings              = <&arrow>;
