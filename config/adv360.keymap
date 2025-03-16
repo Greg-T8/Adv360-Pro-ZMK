@@ -260,14 +260,14 @@
             layers                = <COMBOLAYERS>;
         };
         left_bracket {
-            timeout-ms            = <COMBO_TERM_FAST>;
+            timeout-ms            = <25>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <23 24>;
             bindings              = <&kp LBKT>;
             layers                = <COMBOLAYERS>;
         };
         right_bracket {
-            timeout-ms            = <COMBO_TERM_FAST>;
+            timeout-ms            = <25>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <24 25>;
             bindings              = <&kp RBKT>;
