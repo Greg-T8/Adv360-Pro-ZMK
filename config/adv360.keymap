@@ -147,7 +147,7 @@
         // Hold for ALT+LCTRL, tap for ESC
         esc {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <170>;
+            require-prior-idle-ms = <250>;
             key-positions         = <30 31>;
             bindings              = <&esc_acl LA(LCTRL) ESC>;
             layers                = <COMBOLAYERS>;
@@ -403,8 +403,8 @@
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
             bindings                   = <&kp>, <&kp>;
-            flavor                     = "tap-preferred";
-            tapping-term-ms            = <HMR_TAPPING_TERM>;
+            flavor                     = "balanced";
+            tapping-term-ms            = <280>;
             require-prior-idle-ms      = <PRIOR_IDLE>;                                  // prevents accidental activation of modifiers when typing fast; larger the value, the harder it is to activate
             quick-tap-ms               = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT 17>;      // keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
@@ -415,8 +415,8 @@
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
             bindings                   = <&kp>, <&kp>;
-            flavor                     = "tap-preferred";
-            tapping-term-ms            = <HMR_TAPPING_TERM>;
+            flavor                     = "balanced";
+            tapping-term-ms            = <280>;
             require-prior-idle-ms      = <PRIOR_IDLE>;
             quick-tap-ms               = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
