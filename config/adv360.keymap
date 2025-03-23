@@ -273,6 +273,13 @@
             bindings              = <&kp RBKT>;
             layers                = <COMBOLAYERS>;
         };
+        left_angle_bracket {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <23 25>;
+            bindings              = <&kp LT>;
+            layers                = <COMBOLAYERS>;
+        };
         quote {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
@@ -296,6 +303,13 @@
             bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
             layers                = <COMBOLAYERS>;
         };
+        double_quote {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <41 43>;
+            bindings              = <&kp DQT>;
+            layers                = <COMBOLAYERS>;
+        }
 
         underscore {
             timeout-ms            = <COMBO_TERM_SLOW>;
@@ -316,6 +330,13 @@
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <56 57>;
             bindings              = <&mm_rbrace>;
+            layers                = <COMBOLAYERS>;
+        };
+        right_angle_bracket {
+            timeout-ms            = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            key-positions         = <55 57>;
+            bindings              = <&kp GT>;
             layers                = <COMBOLAYERS>;
         };
 
