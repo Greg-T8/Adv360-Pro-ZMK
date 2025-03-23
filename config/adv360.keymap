@@ -274,7 +274,7 @@
             layers                = <COMBOLAYERS>;
         };
         left_angle_bracket {
-            timeout-ms            = <COMBO_TERM_SLOW>;
+            timeout-ms            = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <23 25>;
             bindings              = <&kp LT>;
@@ -333,7 +333,7 @@
             layers                = <COMBOLAYERS>;
         };
         right_angle_bracket {
-            timeout-ms            = <COMBO_TERM_SLOW>;
+            timeout-ms            = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <55 57>;
             bindings              = <&kp GT>;
