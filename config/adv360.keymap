@@ -309,7 +309,7 @@
             key-positions         = <41 43>;
             bindings              = <&kp DQT>;
             layers                = <COMBOLAYERS>;
-        }
+        };
 
         underscore {
             timeout-ms            = <COMBO_TERM_SLOW>;
