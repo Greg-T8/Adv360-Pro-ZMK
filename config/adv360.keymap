@@ -307,7 +307,7 @@
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <41 43>;
-            bindings              = <&kp DQT>;
+            bindings              = <&dblquote_asr RA(RIGHT_SHIFT) &kp DQT>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -452,10 +452,10 @@
             tapping-term-ms            = <TAPPING_TERM>;
             require-prior-idle-ms      = <PRIOR_IDLE>;
             quick-tap-ms               = <QUICK_TAP>;
-            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
         };
-            rparen_csr: rparen_control_shift_right {                                    // first position produces a hold (for alr+shift), second position produces a tap (for parenthesis mod-morph tap dance)
+        rparen_csr: rparen_control_shift_right {                                    // first position produces a hold (for alr+shift), second position produces a tap (for parenthesis mod-morph tap dance)
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
             bindings                   = <&kp>, <&mm_rparen>;
@@ -463,7 +463,18 @@
             tapping-term-ms            = <TAPPING_TERM>;
             require-prior-idle-ms      = <PRIOR_IDLE>;
             quick-tap-ms               = <QUICK_TAP>;
-            hold-trigger-key-positions = <KEYS_RIGHT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-on-release;
+        };
+        dblquote_asr: double_quote_alt_shift_right {                                    // first position produces a hold (for alr+shift), second position produces a tap (for parenthesis mod-morph tap dance)
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            bindings                   = <&kp>, <&kp>;
+            flavor                     = "balanced";
+            tapping-term-ms            = <TAPPING_TERM>;
+            require-prior-idle-ms      = <PRIOR_IDLE>;
+            quick-tap-ms               = <QUICK_TAP>;
+            hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
         };
 
