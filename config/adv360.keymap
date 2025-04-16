@@ -147,7 +147,7 @@
         // Hold for ALT+LCTRL, tap for ESC
         esc {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <250>;
+            require-prior-idle-ms = <230>;
             key-positions         = <30 31>;
             bindings              = <&esc_acl LA(LCTRL) ESC>;
             layers                = <COMBOLAYERS>;
