@@ -625,7 +625,7 @@
 		mm_comma: mm_comma {
 			compatible     = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
-			bindings       = <&kp COMM>, <&kp COMM>;
+			bindings       = <&kp COMMA>, <&kp COMMA>;
 			mods           = <(MOD_LSFT)>;
 		};
 		mm_dot: mm_dot {
