@@ -622,6 +622,18 @@
             bindings       = <&kp RBKT>, <&kp RBKT>;
             mods           = <(MOD_LSFT)>;
         };
+		mm_comma: mm_comma {
+			compatible     = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings       = <&kp COMM>, <&kp COMM>;
+			mods           = <(MOD_LSFT)>;
+		};
+		mm_dot: mm_dot {
+			compatible     = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings       = <&kp DOT>, <&kp DOT>;
+			mods           = <(MOD_LSFT)>;
+		};
     };
 
     keymap {
@@ -632,7 +644,7 @@
                 XXX      XXX          XXX          XXX           XXX           XXX        XXX                                                                 &mo MOD  XXX        XXX           XXX           XXX          XXX             &tog GAME
                 XXX      &kp Q        &cw 0 W      &kp E         &kp R         &kp T      XXX                                                                 XXX      &kp Y      &kp U         &kp I         &kp O        &kp P           XXX
                 XXX      &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX            XXX           &tog WT  XXX      XXX                  XXX      &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
-                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N      &kp M         &kp COMMA     &kp DOT      &kp FSLH        XXX
+                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N      &kp M         &mm_comma     &mm_dot      &kp FSLH        XXX
                 XXX      XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT            XXX           XXX           XXX          XXX             XXX
             >;
         };
