@@ -634,18 +634,18 @@
             bindings       = <&kp RBKT>, <&kp RBKT>;
             mods           = <(MOD_LSFT)>;
         };
-		mm_comma: mm_comma {
-			compatible     = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings       = <&kp COMMA>, <&kp COMMA>;
-			mods           = <(MOD_LSFT)>;
-		};
-		mm_dot: mm_dot {
-			compatible     = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings       = <&kp DOT>, <&kp DOT>;
-			mods           = <(MOD_LSFT)>;
-		};
+				mm_comma: mm_comma {
+					compatible     = "zmk,behavior-mod-morph";
+					#binding-cells = <0>;
+					bindings       = <&kp COMMA>, <&kp COMMA>;
+					mods           = <(MOD_LSFT)>;
+				};
+				mm_dot: mm_dot {
+					compatible     = "zmk,behavior-mod-morph";
+					#binding-cells = <0>;
+					bindings       = <&kp DOT>, <&kp DOT>;
+					mods           = <(MOD_LSFT)>;
+				};
     };
 
     keymap {
