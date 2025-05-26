@@ -653,11 +653,11 @@
 
         default_layer {
             bindings = <
-                XXX      XXX          XXX          XXX           XXX           XXX        XXX                                                                 &mo MOD  XXX        XXX           XXX           XXX          XXX             &tog GAME
-                XXX      &kp Q        &kp W     	 &kp E         &kp R         &kp T      XXX                                                                 XXX      &kp Y      &kp U         &kp I         &kp O        &kp P           XXX
-                XXX      &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX            XXX           &tog WT  XXX      XXX                  XXX      &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
-                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                    &kp N      &kp M         &mm_comma     &mm_dot      &kp FSLH        XXX
-                XXX      XXX          XXX          XXX           XXX                      &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mtn NUM NUM &mts LSHFT LSHFT            XXX           XXX           XXX          XXX             XXX
+                XXX      XXX          XXX          XXX           XXX           XXX        XXX                                                                         &mo MOD  XXX    XXX           XXX           XXX          XXX             &tog GAME
+                XXX      &kp Q        &kp W     	 &kp E         &kp R         &kp T      XXX                                                                         XXX      &kp Y  &kp U         &kp I         &kp O        &kp P           XXX
+                XXX      &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX           XXX            XXX      XXX      XXX                          XXX      &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
+                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX                                            &kp N  &kp M         &mm_comma     &mm_dot      &kp FSLH        XXX
+                XXX      XXX          XXX          XXX           XXX                      &lt NAV BSPC  &lt NUM ENTER  &kp DEL  &kp DEL  &mts LSHFT LSHFT  &lt FN SPACE        			  XXX           XXX           XXX          XXX             XXX
             >;
         };
         game {
@@ -680,11 +680,11 @@
         };
         num {
             bindings = <
-                ___  ___     ___     ___     ___     ___  XXX                                &mo MOD  ___  ___  ___  ___  ___        ___
-                ___  ___     &kp N7  &kp N8  &kp N9  ___  ___                                ___      ___  ___  ___  ___  ___        ___
-                ___  &kp N0  &kp N4  &kp N5  &kp N6  ___  ___       ___  ___  ___  ___       ___      ___  ___  ___  ___  &kp COLON  ___
-                ___  ___     &kp N1  &kp N2  &kp N3  ___                 ___  ___                     ___  ___  ___  ___  ___        ___
-                ___  ___     ___     ___     ___               ___  ___  ___  ___  ___  ___                ___  ___  ___  ___        ___
+                ___  ___     ___     ___     ___     ___  XXX                                &mo MOD  ___  		___  		___  		___  		___        ___
+                ___  ___     &kp N7  &kp N8  &kp N9  ___  ___                                ___      ___  		&kp N7  &kp N8  &kp N9  ___        ___
+                ___  &kp N0  &kp N4  &kp N5  &kp N6  ___  ___       ___  ___  ___  ___       ___      &kp N0  &kp N4  &kp N5  &kp N6  &kp COLON  ___
+                ___  ___     &kp N1  &kp N2  &kp N3  ___                 ___  ___                     ___  		&kp N1  &kp N2  &kp N3  ___        ___
+                ___  ___     ___     ___     ___               ___  ___  ___  ___  ___  ___                		___  		___  		___  		___        ___
             >;
         };
         nav {
@@ -698,11 +698,11 @@
         };
         fn {
             bindings = <
-                ___  ___      ___     ___     ___     ___  XXX                                 &mo MOD  ___  ___  ___  ___  ___  ___
-                ___  &kp F12  &kp F7  &kp F8  &kp F9  ___  ___                                 ___      ___  ___  ___  ___  ___  ___
-                ___  &kp F11  &kp F4  &kp F5  &kp F6  ___  ___       ___  ___  ___  ___        ___      ___  ___  ___  ___  ___  ___
-                ___  &kp F10  &kp F1  &kp F2  &kp F3  ___                 ___  ___                      ___  ___  ___  ___  ___  ___
-                ___  ___      ___     ___     ___               ___  ___  ___  ___  ___  ___                 ___  ___  ___  ___  ___
+                ___  ___      ___     ___     ___     ___  XXX                                 &mo MOD  ___  ___  	 ___     ___     ___      ___
+                ___  &kp F12  &kp F7  &kp F8  &kp F9  ___  ___                                 ___      ___  &kp F7  &kp F8  &kp F9  &kp F12  ___
+                ___  &kp F11  &kp F4  &kp F5  &kp F6  ___  ___       ___  ___  ___  ___        ___      ___  &kp F4  &kp F5  &kp F6  &kp F11  ___
+                ___  &kp F10  &kp F1  &kp F2  &kp F3  ___                 ___  ___                      ___  &kp F1  &kp F2  &kp F3  &kp F10  ___
+                ___  ___      ___     ___     ___               ___  ___  ___  ___  ___  ___                 ___     ___     ___     ___      ___
             >;
         };
         mod {
