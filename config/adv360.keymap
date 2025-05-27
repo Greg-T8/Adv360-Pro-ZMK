@@ -547,15 +547,6 @@
             bindings        = <&kp>, <&kp>;
         };
 
-				/* Tap dances */
-				td0: td_shift {
-				compatible = "zmk,behavior-tap-dance";
-				#binding-cells = <0>;
-				tapping-term-ms = <200>;
-				bindings = <&kp n1>, <&kp n2>, <&kp n3>;
-				}
-
-
         /* Navigation */
 
         nav_left: nav_left {
