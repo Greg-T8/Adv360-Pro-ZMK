@@ -189,7 +189,7 @@
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <16 30>;
-            bindings              = <&kp PRCNT>;
+            bindings              = <&kp HASH>;
             layers                = <COMBOLAYERS>;
         };
         at {
@@ -210,7 +210,7 @@
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <19 33>;
-            bindings              = <&kp HASH>;
+            bindings              = <&kp PCT>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -252,11 +252,11 @@
 
         /* Horizontal combos - right hand */
 
-        arrow {
+        double_quotes {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <22 23>;
-            bindings              = <&arrow>;
+            bindings              = <&kp DQT>;
             layers                = <COMBOLAYERS>;
         };
         left_bracket {
@@ -267,7 +267,7 @@
             layers                = <COMBOLAYERS>;
         };
         right_bracket {
-            timeout-ms            = <25>;
+					Sj
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <24 25>;
             bindings              = <&kp RBKT>;
@@ -301,7 +301,7 @@
             require-prior-idle-ms = <20>;
             key-positions         = <42 43>;
             bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
-            layers                = <COMBOLAYERS>;
+						Rk
         };
         double_quote {
             timeout-ms            = <COMBO_TERM_SLOW>;
@@ -652,11 +652,11 @@
 
         default_layer {
             bindings = <
-                XXX      XXX          XXX          XXX           XXX           XXX        XXX                                                                         &mo MOD  XXX    XXX           XXX           XXX          XXX    				 &tog GAME
-                XXX      &kp Q        &kp W     	 &kp E         &kp R         &kp T      XXX                                                                         XXX      &kp Y  &kp U         &kp I         &kp O        &kp P  				 XXX
-                XXX      &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX        XXX           XXX      XXX      XXX               								XXX  		 &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI COLON  XXX
-                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                               XXX      XXX                                            	   &kp N  &kp M  				&mm_comma     &mm_dot      &kp FSLH        XXX
-                XXX      XXX          XXX          XXX           XXX                     &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mts LSHFT LSHFT  &lt NUM SPACE        					XXX           XXX           XXX          XXX             XXX
+                XXX      XXX          XXX          XXX           XXX           XXX        XXX                                                                         &mo MOD  XXX    XXX           XXX           XXX          XXX    				  &tog GAME
+                XXX      &kp Q        &kp W     	 &kp E         &kp R         &kp T      XXX                                                                         XXX      &kp Y  &kp U         &kp I         &kp O        &kp P  				  XXX
+                XXX      &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX           XXX           XXX      XXX      XXX               						XXX  		 &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI COLON  XXX
+                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                                  XXX      XXX                                         	   &kp N  &kp M  				&mm_comma     &mm_dot      &kp FSLH         XXX
+                XXX      XXX          XXX          XXX           XXX                     &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mts LSHFT LSHFT  &lt NUM SPACE      					XXX           XXX           XXX          XXX              XXX
             >;
         };
         game {
