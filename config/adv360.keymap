@@ -301,7 +301,7 @@
             require-prior-idle-ms = <20>;
             key-positions         = <42 43>;
             bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
-						Rk
+            layers                = <COMBOLAYERS>;
         };
         double_quote {
             timeout-ms            = <COMBO_TERM_SLOW>;
