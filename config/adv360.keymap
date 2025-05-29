@@ -645,6 +645,18 @@
 					bindings       = <&kp DOT>, <&kp DOT>;
 					mods           = <(MOD_LSFT)>;
 				};
+				mm_colon: mm_colon {
+					compatible     = "zmk,behavior-mod-morph";
+					#binding-cells = <0>;
+					bindings       = <&kp COLON>, <&kp SEMI>;
+					mods           = <(MOD_LSFT)>;
+				};
+				mm_dqt: mm_dqt {
+					compatible     = "zmk,behavior-mod-morph";
+					#binding-cells = <0>;
+					bindings       = <&kp DQT>, <&kp DQT>;
+					mods           = <(MOD_LSFT)>;
+				};
     };
 
     keymap {
