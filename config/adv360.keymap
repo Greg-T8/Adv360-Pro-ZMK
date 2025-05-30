@@ -303,7 +303,7 @@
 					key-positions         = <43 44>;
 					bindings              = <&mm_colon>;
 					layers                = <COMBOLAYERS>;
-				}
+				};
 
         underscore {
             timeout-ms            = <COMBO_TERM_SLOW>;
