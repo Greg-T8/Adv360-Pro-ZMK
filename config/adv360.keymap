@@ -273,13 +273,7 @@
             bindings              = <&kp RBKT>;
             layers                = <COMBOLAYERS>;
         };
-        left_angle_bracket {
-            timeout-ms            = <COMBO_TERM_FAST>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions         = <23 25>;
-            bindings              = <&kp LT>;
-            layers                = <COMBOLAYERS>;
-        };
+
         quote {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
@@ -303,13 +297,13 @@
             bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
             layers                = <COMBOLAYERS>;
         };
-        double_quote {
-            timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
-            key-positions         = <41 43>;
-            bindings              = <&dblquote_asr RA(RIGHT_SHIFT) &kp DQT>;
-            layers                = <COMBOLAYERS>;
-        };
+				colon {
+					timeout-ms            = <COMBO_TERM_SLOW>;
+					require-prior-idle-ms = <COMBO_IDLE_FAST>;
+					key-positions         = <43 44>;
+					bindings              = <&kp mm_colon>;
+					layers                = <COMBOLAYERS>;
+				}
 
         underscore {
             timeout-ms            = <COMBO_TERM_SLOW>;
@@ -330,13 +324,6 @@
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <56 57>;
             bindings              = <&mm_rbrace>;
-            layers                = <COMBOLAYERS>;
-        };
-        right_angle_bracket {
-            timeout-ms            = <25>;
-            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions         = <55 57>;
-            bindings              = <&kp GT>;
             layers                = <COMBOLAYERS>;
         };
 
@@ -659,7 +646,7 @@
 				mm_colon: mm_colon {
 					compatible     = "zmk,behavior-mod-morph";
 					#binding-cells = <0>;
-					bindings       = <&kp COLON>, <&kp SEMI>;
+					bindings       = <&kp COLON>, <&kp COLON>;
 					mods           = <(MOD_LSFT)>;
 				};
 				mm_dqt: mm_dqt {
@@ -737,11 +724,11 @@
 
         default_layer {
             bindings = <
-                XXX      XXX          XXX          XXX           XXX           XXX        XXX                                                                         &mo MOD  XXX    XXX           XXX           XXX          XXX								 &tog GAME
-                XXX      &kp Q        &kp W				 &kp E         &kp R         &kp T      XXX                                                                         XXX      &kp Y  &kp U         &kp I         &kp O        &kp P							 XXX
-                XXX      &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX           XXX           XXX      XXX      XXX														XXX			 &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmrw RGUI 0  XXX
-                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                                  XXX      XXX																						 &kp N  &kp M					&mm_comma     &mm_dot      &kp FSLH         	 XXX
-                XXX      XXX          XXX          XXX           XXX                     &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mts LSHFT LSHFT  &lt NUM SPACE								XXX           XXX           XXX          XXX              	 XXX
+                XXX      XXX          XXX          XXX           XXX           XXX        XXX                                                                         &mo MOD  XXX    XXX           XXX           XXX          XXX					   &tog GAME
+                XXX      &kp Q        &kp W				 &kp E         &kp R         &kp T      XXX                                                                         XXX      &kp Y  &kp U         &kp I         &kp O        &kp P				   XXX
+                XXX      &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX           XXX           XXX      XXX      XXX														XXX			 &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
+                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                                  XXX      XXX																						 &kp N  &kp M					&mm_comma     &mm_dot      &kp FSLH			   XXX
+                XXX      XXX          XXX          XXX           XXX                     &lt NAV SPACE  &lt FN ENTER  &kp DEL  &kp DEL  &mts LSHFT LSHFT  &lt NUM SPACE								XXX           XXX           XXX          XXX					   XXX
             >;
         };
         game {
