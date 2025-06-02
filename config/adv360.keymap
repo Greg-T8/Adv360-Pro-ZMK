@@ -740,38 +740,38 @@
 
         default_layer {
             bindings = <
-                XXX      XXX          XXX          XXX           XXX           XXX        XXX                                                                         &mo MOD  XXX    XXX           XXX           XXX          XXX					   &tog GAME
-                XXX      &kp Q        &kp W				 &kp E         &kp R         &kp T      XXX                                                                         XXX      &kp Y  &kp U         &kp I         &kp O        &kp P				   XXX
-                XXX      &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX           XXX           XXX      XXX      XXX														XXX			 &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
-                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                                  XXX      XXX																						 &kp N  &kp M					&mm_comma     &mm_dot      &kp FSLH			   XXX
+                XXX      XXX          XXX          XXX           XXX           XXX        XXX                                                                           &mo MOD  XXX    XXX           XXX           XXX          XXX					   &tog GAME
+                XXX      &kp Q        &kp W				 &kp E         &kp R         &kp T      XXX                                                                           XXX      &kp Y  &kp U         &kp I         &kp O        &kp P				   XXX
+                XXX      &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX           XXX            XXX      XXX      XXX														XXX			 &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  XXX
+                XXX      &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX      XXX																		  				 &kp N  &kp M					&mm_comma     &mm_dot      &kp FSLH			   XXX
                 XXX      XXX          XXX          XXX           XXX                     &lt NAV SPACE  &lts FN LSHFT  &kp DEL  &kp DEL  &mts LSHFT LSHFT  &lt NUM SPACE								XXX           XXX           XXX          XXX					   XXX
             >;
         };
         game {
             bindings = <
-                &kp ESC    &kp N1  &kp N2  &kp N3   &kp N4  &kp N5 ___                                                                   &mo MOD  ___    ___    &kp N8    &kp N9   &kp N0   ___
-                &kp TAB    &kp Q   &kp W   &kp E    &kp R   &kp T  &kp I                                                                 &none    &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-                &kp CAPS   &kp A   &kp S   &kp D    &kp F   &kp G  &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-                &kp LSHFT  &kp Z   &kp X   &kp C    &kp V   &kp B                               XXX        &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                ___        XXX     XXX     XXX      XXX                   &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+                &kp ESC    &kp N1  &kp N2  &kp N3   &kp N4  &kp N5  ___                                                                   &mo MOD  ___    ___     &kp N8     &kp N9    &kp N0    ___
+                &kp TAB    &kp Q   &kp W   &kp E    &kp R   &kp T   &kp I                                                                 &none    &kp Y  &kp U   &kp I      &kp O     &kp P     &kp BSLH
+                &kp CAPS   &kp A   &kp S   &kp D    &kp F   &kp G   &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none    &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+                &kp LSHFT  &kp Z   &kp X   &kp C    &kp V   &kp B                                XXX        &kp PG_UP                              &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                ___        XXX     XXX     XXX      XXX                    &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
         warthunder {
             bindings = <
-                &kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6                                                                               &mo MOD  ___    ___    &kp N8    &kp N9   &kp N0   ___
-                &kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T   &kp I                                                                                &none    &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-                &kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G   &kp M                  &kp INS   ___       &kp LGUI  &kp RCTRL           &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-                &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                                    &kp BSPC  &kp PG_UP                              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                ___        &kp L   XXX     XXX     XXX                    &wt LCTRL SPACE &kp LALT  &kp DEL   &kp PG_DN &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+                &kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6                                                                   &mo MOD  ___    ___     &kp N8     &kp N9    &kp N0    ___
+                &kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T   &kp I                                                                    &none    &kp Y  &kp U   &kp I      &kp O     &kp P     &kp BSLH
+                &kp CAPS   &kp A   &kp S   &kp D   &kp F   &kp G   &kp M                  &kp INS   ___       &kp LGUI  &kp RCTRL           &none    &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+                &kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                                    &kp BSPC  &kp PG_UP                              &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                ___        &kp L   XXX     XXX     XXX                    &wt LCTRL SPACE &kp LALT  &kp DEL   &kp PG_DN &kp ENTER &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
         num {
             bindings = <
-                ___  ___    ___    ___    ___    ___  XXX                                &mo MOD  ___  ___  ___  ___  ___  ___
-                ___  ___    &mm_7  &mm_8  &mm_9  ___  ___                                ___      ___  ___  ___  ___  ___  ___
-                ___  &mm_0  &mm_4  &mm_5  &mm_6  ___  ___       ___  ___  ___  ___       ___      ___  ___  ___  ___  &kp COLON  ___
-                ___  ___    &mm_1  &mm_2  &mm_3  ___                 ___  ___                     ___  ___  ___  ___  ___  ___
-                ___  ___    ___    ___    ___               ___  ___  ___  ___  ___  ___                ___  ___  ___  ___  ___
+                ___  ___    ___    ___    ___    ___  XXX                                &mo MOD  ___  ___  ___  ___  ___        ___
+                ___  ___    &mm_7  &mm_8  &mm_9  ___  ___                                ___      ___  ___  ___  ___  ___  			 ___
+                ___  &mm_0  &mm_4  &mm_5  &mm_6  ___  ___       ___  ___  ___  ___       ___      ___  ___  ___  ___  &mm_colon  ___
+                ___  ___    &mm_1  &mm_2  &mm_3  ___                 ___  ___                     ___  ___  ___  ___  ___        ___
+                ___  ___    ___    ___    ___              ___  ___  ___  ___  ___  ___                ___  ___  ___  ___  			 ___
             >;
         };
         nav {
@@ -785,11 +785,11 @@
         };
         fn {
             bindings = <
-                ___  ___      ___     ___     ___     ___  XXX                                 &mo MOD  ___  ___		 ___     ___     ___      ___
-                ___  &kp F12  &kp F7  &kp F8  &kp F9  ___  ___                                 ___      ___  &kp F7  &kp F8  &kp F9  &kp F12  ___
-                ___  &kp F11  &kp F4  &kp F5  &kp F6  ___  ___       ___  ___  ___  ___        ___      ___  &kp F4  &kp F5  &kp F6  &kp F11  ___
-                ___  &kp F10  &kp F1  &kp F2  &kp F3  ___                 ___  ___                      ___  &kp F1  &kp F2  &kp F3  &kp F10  ___
-                ___  ___      ___     ___     ___               ___  ___  ___  ___  ___  ___                 ___     ___     ___     ___      ___
+                ___  ___      ___     ___     ___     ___  XXX                                 &mo MOD  ___  ___	___  ___  ___  ___
+                ___  &kp F12  &kp F7  &kp F8  &kp F9  ___  ___                                 ___      ___  ___  ___  ___  ___  ___
+                ___  &kp F11  &kp F4  &kp F5  &kp F6  ___  ___       ___  ___  ___  ___        ___      ___  ___  ___  ___  ___  ___
+                ___  &kp F10  &kp F1  &kp F2  &kp F3  ___                 ___  ___                      ___  ___  ___  ___  ___  ___
+                ___  ___      ___     ___     ___               ___  ___  ___  ___  ___  ___                 ___  ___  ___  ___  ___
             >;
         };
         mod {
