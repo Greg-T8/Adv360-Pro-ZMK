@@ -304,13 +304,6 @@
             bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
             layers                = <COMBOLAYERS>;
         };
-				colon {
-					timeout-ms            = <COMBO_TERM_SLOW>;
-					require-prior-idle-ms = <COMBO_IDLE_FAST>;
-					key-positions         = <43 44>;
-					bindings              = <&mm_colon>;
-					layers                = <COMBOLAYERS>;
-				};
 
         underscore {
             timeout-ms            = <COMBO_TERM_SLOW>;
