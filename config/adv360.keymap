@@ -311,7 +311,7 @@
             key-positions         = <54 55>;
             bindings              = <&kp DQT>;
             layers                = <COMBOLAYERS>;
-        }
+        };
         lbrace {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
