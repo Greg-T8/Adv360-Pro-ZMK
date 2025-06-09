@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+  ],
+  "settings": {
+    "[plaintext]": {
+      "editor.wordWrap": "off"
+    }
+  }
+}
