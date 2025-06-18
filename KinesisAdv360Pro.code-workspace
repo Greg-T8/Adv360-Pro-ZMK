@@ -5,8 +5,5 @@
 		}
   ],
   "settings": {
-    "[plaintext]": {
-      "editor.wordWrap": "off"
-    }
   }
 }
