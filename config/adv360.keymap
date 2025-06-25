@@ -569,6 +569,16 @@
             bindings                   = <&mm_end>, <&kp>;
         };
 
+				atb: alt_tab {
+					compatible            = "zmk,behavior-hold-tap";
+					#binding-cells        = <2>;
+					flavor                = "hold-preferred";
+					tapping-term-ms       = <TAPPING_TERM>;
+					quick-tap-ms          = <QUICK_TAP>;
+					require-prior-idle-ms = <PRIOR_IDLE>;
+					bindings              = <&alt_tab>, <&kp>;
+				}
+
 
         /* Mod Morphs */
 
@@ -727,11 +737,11 @@
 
         default_layer {
             bindings = <
-                XXX       				&mm_1        &mm_2        &mm_3         &mm_4         &mm_5      XXX                                                                                    &mo MOD  &mm_6   &mm_7         &mm_8         &mm_9        &mm_0					  XXX
-                &kp TAB           &kp Q        &kp W				&kp E         &kp R         &kp T      XXX                                                                                    XXX      &kp Y   &kp U         &kp I         &kp O        &kp P				    XXX
-                &kp ENTER         &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX           XXX            XXX              &tog GAME  XXX														XXX			 &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp ENTER 
-                &mts LSHFT LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX           	 XXX			    														  			 &kp N   &kp M				 &mm_comma     &mm_dot      &kp FSLH			  &mts LSHFT LSHFT
-							  XXX      					XXX          XXX          XXX           XXX                     &lt NAV SPACE  &lts FN LSHFT  &mt &alttab DEL  &kp DEL    &mts LSHFT LSHFT  &lt NUM SPACE				  			 XXX           XXX           XXX          XXX					    XXX
+                XXX       				&mm_1        &mm_2        &mm_3         &mm_4         &mm_5      XXX                                                                                &mo MOD  &mm_6   &mm_7         &mm_8         &mm_9        &mm_0					  XXX
+                &kp TAB           &kp Q        &kp W				&kp E         &kp R         &kp T      XXX                                                                                XXX      &kp Y   &kp U         &kp I         &kp O        &kp P				    XXX
+                &kp ENTER         &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &nw NUM G  XXX           XXX            XXX         &tog GAME  XXX														XXX			 &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp ENTER 
+                &mts LSHFT LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                   XXX         XXX			    														  			   &kp N   &kp M				 &mm_comma     &mm_dot      &kp FSLH			  &mts LSHFT LSHFT
+							  XXX      					XXX          XXX          XXX           XXX                     &lt NAV SPACE  &lts FN LSHFT  &atb 0 DEL  &kp DEL    &mts LSHFT LSHFT  &lt NUM SPACE				  			 XXX           XXX           XXX          XXX					    XXX
             >;
         };
         game {
