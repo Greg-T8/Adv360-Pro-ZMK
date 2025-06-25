@@ -577,7 +577,7 @@
 					quick-tap-ms          = <QUICK_TAP>;
 					require-prior-idle-ms = <PRIOR_IDLE>;
 					bindings              = <&alt_tab>, <&kp>;
-				}
+				};
 
 
         /* Mod Morphs */
