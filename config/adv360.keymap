@@ -467,7 +467,7 @@
             bindings                   = <&kp>, <&mm_rparen>;
             flavor                     = "balanced";
             tapping-term-ms            = <TAPPING_TERM>;
-            require-prior-idle-ms      = <PRIOR_IDLE>;
+            require-prior-idle-ms      = <100>;
             quick-tap-ms               = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
