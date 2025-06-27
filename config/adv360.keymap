@@ -94,7 +94,7 @@
 						tap-ms  = <40>;
 						bindings
 								= <&macro_press   &kp LALT>
-								, <&macro_tap     &kp F4>
+								, <&macro_tap     &kp DEL>
 								, <&macro_release &kp LALT>
 								;
 				};
@@ -807,7 +807,7 @@
                 ___  ___  ___               ___     ___                 ___  XXX                                &mo MOD  ___               ___               ___              ___                 ___  ___
                 ___  ___  ___               ___     ___                 ___  ___                                ___      ___               ___               ___              ___                 ___  ___
                 ___  ___  &nav_left 0 LEFT  &close  &nav_right 0 RIGHT  ___  ___       ___  ___  ___  ___       ___      &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  ___  ___
-                ___  ___  ___  							___     ___  							 ___                 ___  ___                     ___               &kp PG_UP         &kp PG_DN        ___                 ___  ___
+                ___  ___  ___  							___     ___  							  ___                 ___  ___                     ___               &kp PG_UP         &kp PG_DN        ___                 ___  ___
                 ___  ___  ___               ___     ___                           ___  ___  ___  ___  ___  ___                             ___               ___              ___                 ___  ___
             >;
         };
