@@ -87,6 +87,17 @@
 								, <&macro_release &mo NAV2>
                 ;
         };
+				close: close {
+						compatible     = "zmk,behavior-macro";
+						#binding-cells = <0>;
+						wait-ms = <40>;
+						tap-ms  = <40>;
+						bindings
+								= <&macro_press   &kp LALT>
+								, <&macro_tap     &kp F4>
+								, <&macro_release &kp LALT>
+								;
+				};
         arrow: arrow {
             compatible     = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -793,11 +804,11 @@
         };
         nav2 {
             bindings = <
-                ___  ___  ___               ___    ___                 ___  XXX                                &mo MOD  ___               ___               ___              ___                 ___  ___
-                ___  ___  ___               ___    ___                 ___  ___                                ___      ___               ___               ___              ___                 ___  ___
-                ___  ___  &nav_left 0 LEFT  ___    &nav_right 0 RIGHT  ___  ___       ___  ___  ___  ___       ___      &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  ___  ___
-                ___  ___  ___  							___    ___  							 ___                 ___  ___                     ___               &kp PG_UP         &kp PG_DN        ___                 ___  ___
-                ___  ___  ___               ___    ___                           ___  ___  ___  ___  ___  ___                             ___               ___              ___                 ___  ___
+                ___  ___  ___               ___     ___                 ___  XXX                                &mo MOD  ___               ___               ___              ___                 ___  ___
+                ___  ___  ___               ___     ___                 ___  ___                                ___      ___               ___               ___              ___                 ___  ___
+                ___  ___  &nav_left 0 LEFT  &close  &nav_right 0 RIGHT  ___  ___       ___  ___  ___  ___       ___      &nav_left 0 LEFT  &mt LC(END) DOWN  &mt LC(HOME) UP  &nav_right 0 RIGHT  ___  ___
+                ___  ___  ___  							___     ___  							 ___                 ___  ___                     ___               &kp PG_UP         &kp PG_DN        ___                 ___  ___
+                ___  ___  ___               ___     ___                           ___  ___  ___  ___  ___  ___                             ___               ___              ___                 ___  ___
             >;
         };
         mod {
