@@ -288,11 +288,11 @@
             layers                = <COMBOLAYERS>;
         };
 
-        quote {
+        double_quotes {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <40 41>;
-            bindings              = <&kp SQT>;
+            bindings              = <&kp DQT>;
             layers                = <COMBOLAYERS>;
         };
         // Hold for CTRL+SHIFT, tap for tap for parenthesis
@@ -312,11 +312,11 @@
             layers                = <COMBOLAYERS>;
         };
 
-        double_quotes {
+        quote {
             timeout-ms            = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_FAST>;
             key-positions         = <54 55>;
-            bindings              = <&kp DQT>;
+            bindings              = <&kp SQT>;
             layers                = <COMBOLAYERS>;
         };
         lbrace {
@@ -599,7 +599,7 @@
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings       = <&kp MINUS>, <&kp MINUS>;
-            mods           = <(MOD_LSFT)>;
+            mods           = <()>;
         };
         mm_under: mm_under {
             compatible     = "zmk,behavior-mod-morph";
