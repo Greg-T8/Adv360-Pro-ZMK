@@ -599,7 +599,7 @@
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings       = <&kp MINUS>, <&kp MINUS>;
-            mods           = <()>;
+						mods           = <(MOD_LSFT)>;
         };
         mm_under: mm_under {
             compatible     = "zmk,behavior-mod-morph";
