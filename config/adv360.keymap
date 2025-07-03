@@ -47,9 +47,9 @@
 
 // Layer-tap settings
 &lt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick_tap_ms = <175>;
+    flavor = "balanced";
+    tapping-term-ms = <175>;
+    quick_tap_ms = <200>;
 };
 
 // Mod-tap settings. Used by navigation combos.
