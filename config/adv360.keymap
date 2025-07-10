@@ -161,7 +161,7 @@
         // Hold for ALT+LCTRL, tap for ESC
         esc {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <230>;  // previously set from 250 to 230 to prevent accidental activation of ESC when typing fast
+            require-prior-idle-ms = <200>;							// previous values: 250 -> 230 -> 200
             key-positions         = <30 31>;
             bindings              = <&esc_acl LA(LCTRL) ESC>;
             layers                = <COMBOLAYERS>;
