@@ -151,7 +151,7 @@
             layers                = <COMBOLAYERS>;
         };
         tab {
-            timeout-ms            = <COMBO_TERM_FAST>;
+            timeout-ms            = <50>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <17 18>;
             bindings              = <&kp TAB>;
@@ -161,7 +161,7 @@
         // Hold for ALT+LCTRL, tap for ESC
         esc {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <200>;							// previous values: 250 -> 230 -> 200
+            require-prior-idle-ms = <200>;							// previous values: 250 -> 230 -> 200; behavior seen when ESC in Vim after typing fast
             key-positions         = <30 31>;
             bindings              = <&esc_acl LA(LCTRL) ESC>;
             layers                = <COMBOLAYERS>;
