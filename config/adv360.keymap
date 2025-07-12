@@ -151,7 +151,7 @@
             layers                = <COMBOLAYERS>;
         };
         tab {
-            timeout-ms            = <50>;
+            timeout-ms            = <12>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <17 18>;
             bindings              = <&kp TAB>;
