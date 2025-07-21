@@ -321,7 +321,7 @@
         };
         lbrace {
             timeout-ms            = <COMBO_TERM_SLOW>;
-            require-prior-idle-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <20>;
             key-positions         = <55 56>;
             bindings              = <&mm_lbrace>;
             layers                = <COMBOLAYERS>;
