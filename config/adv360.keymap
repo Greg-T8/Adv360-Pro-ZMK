@@ -463,7 +463,7 @@
 				nlk: num_layer_key {
 						compatible                 = "zmk,behavior-hold-tap";
 						#binding-cells             = <2>;
-						bindings                   = <&kp>, <&mo NUM>;
+						bindings                   = <&mo>, <&kp>;
 						flavor                     = "balanced";
 						tapping-term-ms            = <TAPPING_TERM>;
 						require-prior-idle-ms      = <PRIOR_IDLE>;
