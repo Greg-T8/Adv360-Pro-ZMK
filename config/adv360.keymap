@@ -542,7 +542,7 @@
             tapping-term-ms       = <TAPPING_TERM>;
             quick-tap-ms          = <QUICK_TAP>;
             require-prior-idle-ms = <PRIOR_IDLE>;
-            bindings              = <&mo>, <&sk>;
+            bindings              = <&kp>, <&sk>;
         };
 				lts: layer_tap_shift {
 						compatible            = "zmk,behavior-hold-tap";
