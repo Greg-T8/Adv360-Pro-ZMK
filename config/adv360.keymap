@@ -405,7 +405,7 @@
             timeout-ms            = <COMBO_TERM_SLOW>;
             // require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions         = <44 58>;
-            bindings              = <&kp BSLH>;
+            bindings              = <&mm_bslh>;
             layers                = <COMBOLAYERS>;
         };
     };
@@ -698,6 +698,12 @@
 					compatible     = "zmk,behavior-mod-morph";
 					#binding-cells = <0>;
 					bindings       = <&kp DQT>, <&kp DQT>;
+					mods           = <(MOD_LSFT)>;
+				};
+				mm_bslh: mm_bslh {
+					compatible     = "zmk,behavior-mod-morph";
+					#binding-cells = <0>;
+					bindings       = <&kp BSLH>, <&kp BSLH>;
 					mods           = <(MOD_LSFT)>;
 				};
 
