@@ -47,9 +47,8 @@
 
 // Layer-tap settings
 &lt {
-    flavor = "hold-preferred";
+    flavor = "balanced";
     tapping-term-ms = <175>;
-		require-prior-idle-ms = <150>;
     quick_tap_ms = <200>;
 };
 
