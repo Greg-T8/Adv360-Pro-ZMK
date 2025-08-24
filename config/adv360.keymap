@@ -135,10 +135,6 @@
 								= <&macro_release &kp P>
 								;
 				};
-}
-
-
-
     };
 
     combos {
