@@ -7,12 +7,13 @@
 
 #define DEFAULT    0
 #define GAME       1
-#define WT         2
-#define NUM        3
-#define NAV        4
-#define FN         5
-#define NAV2       6
-#define MOD        7
+#define BF1942		 2
+#define WT         3
+#define NUM        4
+#define NAV        5
+#define FN         6
+#define NAV2       7
+#define MOD        8
 
 #define COMBOLAYERS DEFAULT NAV FN NUM
 
@@ -120,6 +121,24 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+				tu: bf1942_throttle_up_hold {
+						compatible     = "zmk,behavior-macro";
+						#binding-cells = <0>;
+						bindings
+								= <&macro_press   &kp P>
+								;
+				};
+				tur: bf1942_throttle_up_release {
+						compatible     = "zmk,behavior-macro";
+						#binding-cells = <0>;
+						bindings
+								= <&macro_release &kp P>
+								;
+				};
+}
+
+
+
     };
 
     combos {
@@ -775,7 +794,7 @@
 
         default_layer {
             bindings = <
-                XXX       				&mm_1        &mm_2        &mm_3         &mm_4         &mm_5  XXX                                                                                  &mo MOD  &mm_6   &mm_7         &mm_8         &mm_9        &mm_0					  &tog GAME
+                XXX       				&mm_1        &mm_2        &mm_3         &mm_4         &mm_5  XXX                                                                                  &mo MOD  &mm_6   &mm_7         &mm_8         &mm_9        &mm_0					  &tog BF1942
                 &kp TAB           &kp Q        &kp W				&kp E         &kp R         &kp T  XXX                                                                                  XXX      &kp Y   &kp U         &kp I         &kp O        &kp P				    XXX
                 &kp ENTER         &tml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G  XXX                XXX            XXX         XXX  		XXX														XXX			 &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp ENTER 
                 &mts LSHFT LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B                                    XXX         XXX			     													  			 &kp N   &kp M    	   &mm_comma     &mm_dot      &kp FSLH			  &mts LSHFT LSHFT
@@ -786,6 +805,15 @@
             bindings = <
                 &kp ESC    &kp N1  &kp N2  &kp N3   &kp N4  &kp N5  ___                                                                   &mo MOD  ___    ___     &kp N8     &kp N9    &kp N0    ___
                 &kp TAB    &kp Q   &kp W   &kp E    &kp R   &kp T   &kp I                                                                 &none    &kp Y  &kp U   &kp I      &kp O     &kp P     &kp BSLH
+                &kp CAPS   &kp A   &kp S   &kp D    &kp F   &kp G   &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none    &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+                &kp LSHFT  &kp Z   &kp X   &kp C    &kp V   &kp B                                XXX        &kp PG_UP                              &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                &kp DEL    XXX     XXX     XXX      XXX                    &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+            >;
+        };
+        bf1942 {
+            bindings = <
+                &kp ESC    &kp N1  &kp N2  &kp N3   &kp N4  &kp N5  ___                                                                   &mo MOD  ___    ___     &kp N8     &kp N9    &kp N0    ___
+                &kp TAB    &kp Q   &kp W   &kp E    &kp R   &kp T   &kp I                                                                 &none    &kp Y  &kp U   &kp I      &kp O     &tu       &tur
                 &kp CAPS   &kp A   &kp S   &kp D    &kp F   &kp G   &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none    &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
                 &kp LSHFT  &kp Z   &kp X   &kp C    &kp V   &kp B                                XXX        &kp PG_UP                              &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
                 &kp DEL    XXX     XXX     XXX      XXX                    &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
