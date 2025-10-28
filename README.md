@@ -1,26 +1,191 @@
-# Kinesis Advantage 360 Pro ZMK Config
+# Custom Kinesis Advantage 360 Pro Configuration
 
-This is my personal fork of the Kineses Advantage 360 Pro ZMK configuration. Most
+This is my heavily customized ZMK configuration for the Kinesis Advantage 360 Pro keyboard, focusing on efficiency, ergonomics, and advanced typing features.
 
-## Modifying the keymap
+## Overview
 
-[The ZMK documentation](https://zmk.dev/docs) covers both basic and advanced functionality and has a table of OS compatibility for keycodes. Please note that the RGB Underglow, Backlight and Power Management sections are not relevant to the Advantage 360 Pro's custom ZMK fork. For more information see [this note](#note)
+This configuration implements:
 
-There is a web based GUI available for editing the keymap. It is available at https://kinesiscorporation.github.io/Adv360-Pro-GUI. This repository is also compatible with certain other web based ZMK keymap editors however they may have keycodes or behaviours that are not implemented on the 360 Pro and could cause unusual behaviour or build failures. Furthermore changes made on other keymap editors may not be compatible if one goes back to using the Kinesis GUI.
+- **9 layers**: DEFAULT, GAME, BF (Battlefield), WT (War Thunder), NUM, NAV, FN, NAV2, MOD
+- **70+ combos** for symbols, navigation, and text editing
+- **Home row mods** with optimized timing for comfortable typing
+- **Tap dance behaviors** for advanced key sequences
+- **Custom macros** for window management and special characters
+- **Balanced hold-tap behaviors** to minimize accidental activations
 
-Certain ZMK features (e.g. combos) require knowing the exact key positions in the matrix. They can be found in both image and text format [here](assets/key-positions.md)
+## Key Features
 
-## Building the Firmware with GitHub Actions
+### Home Row Mods
 
-### Setup
+The default layer uses home row mods on the left hand:
 
-1. Fork this repo.
-2. Enable GitHub Actions on your fork.
+- `A` → GUI when held
+- `S` → ALT when held
+- `D` → CTRL when held
+- `F` → SHIFT when held
 
-### Build firmware
+Right hand home row mods:
 
-1. Push a commit to trigger the build.
-2. Download the artifact.
+- `J` → SHIFT when held
+- `K` → CTRL when held
+- `L` → ALT when held
+- `;` → GUI when held
+
+**Timing Configuration:**
+
+- Tapping term: 280ms (left), 280ms (right)
+- Prior idle requirement: 170ms (left), 250ms (right)
+- Quick tap: 150ms
+- Hold-trigger-on-release enabled for smooth modifier combinations
+
+### Layer System
+
+1. **DEFAULT (0)**: Standard QWERTY with home row mods and extensive combos
+2. **GAME (1)**: Traditional gaming layout with no home row mods
+3. **BF (2)**: Battlefield-optimized layout
+4. **WT (3)**: War Thunder-specific bindings
+5. **NUM (4)**: Number pad layer accessed via right thumb
+6. **NAV (5)**: Navigation layer with arrow keys and number pad on left hand
+7. **FN (6)**: Function keys (F1-F12) accessed via left thumb
+8. **NAV2 (7)**: Extended navigation for alt-tab macro
+9. **MOD (8)**: System settings, Bluetooth, RGB controls
+
+### Combos
+
+This configuration includes 70+ combos organized into categories:
+
+#### Left Hand Horizontal Combos
+
+- **17+18**: Tab (12ms timeout for fast activation)
+- **16+17**: Reverse Tab (Shift+Tab)
+- **30+31**: ESC (hold for ALT+CTRL)
+- **31+32**: CTRL+SHIFT
+- **32+33**: Undo (CTRL+Z)
+- **48+49**: Delete (hold for CTRL+DEL)
+- **49+50**: Backspace (hold for CTRL+BSPC)
+- **65+66**: Sticky Shift
+
+#### Left Hand Vertical Combos
+
+Special characters:
+
+- **15+29**: `!` (Exclamation)
+- **16+30**: `%` (Percent)
+- **17+31**: `@` (At)
+- **18+32**: `$` (Dollar)
+- **19+33**: `#` (Hash)
+
+Text editing:
+
+- **29+47**: Select All (CTRL+A)
+- **30+48**: Cut (CTRL+X)
+- **31+49**: Copy (CTRL+C)
+- **32+50**: Paste (tap dance: CTRL+V / CTRL+SHIFT+V)
+- **33+51**: Bold (CTRL+B)
+
+#### Right Hand Horizontal Combos
+
+Brackets and quotes:
+
+- **22+23**: `_` (Underscore)
+- **23+24**: `[` (Left bracket, 25ms timeout)
+- **24+25**: `]` (Right bracket)
+- **40+41**: `"` (Double quotes)
+- **41+42**: `(` (Left paren, hold for CTRL+SHIFT)
+- **42+43**: `)` (Right paren, hold for ALT+CTRL)
+- **54+55**: `'` (Single quote)
+- **55+56**: `{` (Left brace)
+- **56+57**: `}` (Right brace)
+
+#### Right Hand Vertical Combos
+
+Math and symbols:
+
+- **22+40**: `*` (Star)
+- **23+41**: `+` (Plus)
+- **24+42**: `=` (Equal)
+- **25+43**: `&` (Ampersand)
+- **26+44**: `^` (Caret)
+- **40+54**: `` ` `` (Grave)
+- **41+55**: `-` (Minus)
+- **42+56**: `/` (Slash)
+- **43+57**: `|` (Pipe)
+- **44+58**: `\` (Backslash)
+
+### Macros
+
+Custom macros for enhanced workflow:
+
+- **alttab**: Hold ALT, tap TAB, activates NAV2 layer for navigation, releases ALT on layer exit
+- **close**: ALT+DEL for closing windows
+- **arrow**: Types `=>` (JavaScript arrow function)
+- **endash**: Inserts en-dash character (–)
+
+### Tap Dance
+
+- **td_paste**: Single tap = CTRL+V (paste), double tap = CTRL+SHIFT+V (paste special)
+
+### Mod Morphs
+
+Prevents unintended behavior when shift is held:
+
+- Numbers (0-9), brackets, parentheses, quotes, comma, dot, colon, minus, underscore, backslash
+- HOME/END masked with CTRL to prevent document-level jumps
+
+### Timing Constants
+
+```c
+#define TAPPING_TERM 220        // Standard hold-tap timing
+#define PRIOR_IDLE   170        // Prevents accidental mod activation when typing fast
+#define QUICK_TAP    150        // Repeat key timing
+#define COMBO_TERM_FAST 15      // Fast combo timeout for frequently used combos
+#define COMBO_TERM_SLOW 200     // Standard combo timeout
+#define COMBO_IDLE_FAST 120     // Fast combo idle time
+#define COMBO_IDLE_SLOW 250     // Larger idle time reduces accidental combos
+```
+
+### Navigation Layer Features
+
+The NAV layer (activated via left thumb space hold) provides:
+
+- **Arrow keys** on right hand (J/K/L/;)
+- **Number pad** on left hand (home row: 4/5/6/0, upper row: 7/8/9, lower row: 1/2/3)
+- **Home/End navigation** with smart CTRL masking
+- **Page Up/Down** for scrolling
+
+### Number Layer Features
+
+The NUM layer (activated via right thumb space hold) provides:
+
+- **Number pad layout** on left hand matching NAV layer
+- Optimized for numeric data entry
+- Quick access to numbers without leaving home position
+
+### Function Layer Features
+
+The FN layer (accessed via left thumb shift hold) provides:
+
+- **F1-F12** function keys
+- Organized in standard number pad layout (F7/F8/F9, F4/F5/F6, F1/F2/F3, F10/F11/F12)
+
+## Building and Flashing
+
+### Build with GitHub Actions
+
+1. Fork this repository
+2. Enable GitHub Actions
+3. Push changes to trigger build
+4. Download firmware artifacts from Actions tab
+
+### Flash Firmware
+
+1. Connect left keyboard via USB
+2. Press Mod+macro1 for bootloader mode
+3. Copy `left.uf2` to USB drive
+4. Repeat for right side with Mod+macro3
+5. Use `right.uf2` for right side
+
+For detailed flashing instructions, see the [Quick Start Guide](https://kinesis-ergo.com/wp-content/uploads/Advantage360-Professional-QSG-v8-25-22.pdf).
 
 ## Building the Firmware in a local container
 
@@ -28,28 +193,30 @@ Certain ZMK features (e.g. combos) require knowing the exact key positions in th
 
 #### Software
 
-* Either Podman or Docker is required, Podman is chosen if both are installed.
-* Make is also required
+- Either Podman or Docker is required, Podman is chosen if both are installed.
+- Make is also required
 
 #### Windows specific
 
-* If compiling on Windows use WSL2 and Docker [Docker Setup Guide](https://docs.docker.com/desktop/windows/wsl/).
-* Install make using `sudo apt-get install make` inside the WSL2 instance.
-* The repository can be cloned directly into the WSL2 instance or accessed through the C: mount point WSL provides by default (`/mnt/c/path-to-repo`).
+- If compiling on Windows use WSL2 and Docker [Docker Setup Guide](https://docs.docker.com/desktop/windows/wsl/).
+- Install make using `sudo apt-get install make` inside the WSL2 instance.
+- The repository can be cloned directly into the WSL2 instance or accessed through the C: mount point WSL provides by default (`/mnt/c/path-to-repo`).
 
 #### macOS specific
 
 On macOS [brew](https://brew.sh) can be used to install the required components.
 
-* docker
-* [colima](https://github.com/abiosoft/colima) can be used as the docker engine
+- docker
+- [colima](https://github.com/abiosoft/colima) can be used as the docker engine
 
 ```shell
 brew install docker colima
 colima start
 ```
+
 > Note: On Apple Silicon (ARM based) systems you need to make sure to start colima with the correct architecture for the container being used.
-> ```
+>
+> ```shell
 > colima start --arch x86_64
 > ```
 
@@ -135,7 +302,7 @@ The changelog for both the config repo and the underlying ZMK fork that the conf
 
 ## Beta testing
 
-The Advantage 360 Pro is always getting updates and refinements. If you are willing to beta test you can follow [this guide from ZMK](https://zmk.dev/docs/features/beta-testing#testing-features) on how to change where your config repo points to. The `west.yml` file that is mentioned is located in config/. [This link](config/west.yml) can take you to the file. Typically you will only need to change the `revision: ` to match the beta branch. There is currently no beta branch available for testing.
+The Advantage 360 Pro is always getting updates and refinements. If you are willing to beta test you can follow [this guide from ZMK](https://zmk.dev/docs/features/beta-testing#testing-features) on how to change where your config repo points to. The `west.yml` file that is mentioned is located in config/. [This link](config/west.yml) can take you to the file. Typically you will only need to change the `revision:` to match the beta branch. There is currently no beta branch available for testing.
 
 Feedback on beta branches should be submitted as a GitHub issue on the base ZMK repository as opposed to this config repository.
 
@@ -151,8 +318,15 @@ Whilst the Advantage 360 Pro is compatible with base ZMK (The pull request to me
 
 Further support resources can be found on Kinesis.com:
 
-* https://kinesis-ergo.com/support/kb360pro/#firmware-updates
-* https://kinesis-ergo.com/support/kb360pro/#manuals
+- [Firmware Updates](https://kinesis-ergo.com/support/kb360pro/#firmware-updates)
+- [User Manuals](https://kinesis-ergo.com/support/kb360pro/#manuals)
 
 In the event of a hardware issue it may be necessary to open a support ticket directly with Kinesis as opposed to a GitHub issue in this repository.
-* https://kinesis-ergo.com/support/kb360pro/#ticket
+
+- [Support Ticket System](https://kinesis-ergo.com/support/kb360pro/#ticket)
+
+## Resources
+
+- [ZMK Documentation](https://zmk.dev/docs) - For understanding ZMK behaviors and features
+- [Key Positions Reference](assets/key-positions.md) - Visual guide for combo key positions
+- [Kinesis 360 Pro Manual](https://kinesis-ergo.com/wp-content/uploads/Advantage360-ZMK-KB360-PRO-Users-Manual-v3-10-23.pdf) - Official hardware documentation
