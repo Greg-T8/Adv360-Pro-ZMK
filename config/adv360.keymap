@@ -292,7 +292,7 @@
 						key-positions         = <24 25 26>;
 						bindings              = <&mm_lt>;
 						layers                = <COMBOLAYERS>;
-				}
+				};
 
         double_quotes {
             timeout-ms            = <COMBO_TERM_SLOW>;
