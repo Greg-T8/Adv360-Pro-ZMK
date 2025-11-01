@@ -429,15 +429,14 @@
         mm_t: mm_t {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&td_t>, <&kp T>;              // When shift is held, output T immediately (no tap dance delay)
+            bindings       = <&td_t>, <&kp LS(T)>;              // When shift is held, output T immediately (no tap dance delay)
             mods           = <(MOD_LSFT|MOD_RSFT)>;
-						keep-mods      = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         td_f: tap_dance_f {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <275>;
             bindings = <&kp F>, <&kp LS(F)>;
         };
 
@@ -446,9 +445,7 @@
             #binding-cells = <0>;
             bindings       = <&td_f>, <&kp LS(F)>; 
             mods           = <(MOD_LSFT|MOD_RSFT)>;
-						// keep-mods 		 = <(MOD_LSFT|MOD_RSFT)>;
         };
-
 
 
         hmlf: home_row_mod_left_f {
