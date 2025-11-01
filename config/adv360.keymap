@@ -323,7 +323,7 @@
 						key-positions         = <41 42 43>;
 						bindings              = <&mm_gt>;
 						layers                = <COMBOLAYERS>;
-				}
+				};
 
         quote {
             timeout-ms            = <COMBO_TERM_SLOW>;
