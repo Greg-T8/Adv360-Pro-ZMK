@@ -446,11 +446,11 @@
             #binding-cells = <0>;
             bindings       = <&td_f>, <&kp F>;              // When shift is held, output F immediately (no tap dance delay)
             mods           = <(MOD_LSFT|MOD_RSFT)>;
-						keep-mods 		 = <(MOD_LSFT|MOD_RSFT)>;
+						// keep-mods 		 = <(MOD_LSFT|MOD_RSFT)>;
         };
 
 
-
+				
 
 
         hmlf: home_row_mod_left_f {
@@ -463,7 +463,6 @@
             quick-tap-ms               = <QUICK_TAP>;
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_RIGHT 17>;
             hold-trigger-on-release;
-            //hold-while-undecided; 
         };
         hml: home_row_mod_left {
             compatible                 = "zmk,behavior-hold-tap";
@@ -820,6 +819,8 @@
 					mods           = <(MOD_LSFT)>;
 				};
     };
+
+
 
     keymap {
         compatible = "zmk,keymap";
