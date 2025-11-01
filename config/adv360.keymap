@@ -949,24 +949,24 @@
         // -------------------------------------------------------------------------
         default {
             bindings = <
-                XXX        &mm_1        &mm_2        &mm_3         &mm_4          &mm_5  XXX                                                                                  &mo MOD  &mm_6   &mm_7         &mm_8         &mm_9        &mm_0					  &tog GAME
-                &kp TAB    &kp Q        &kp W				 &kp E         &kp R          &kp T  XXX                                                                                  XXX      &kp Y   &kp U         &kp I         &kp O        &kp P				    XXX
-                &kp ENTER  &tml LGUI A  &hml LALT S  &hml LCTRL D  &hmlf LSHFT F  &kp G  XXX                 XXX            XXX         XXX  		XXX														XXX			 &kp H   &hmrj RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp ENTER 
-                XXX			   &kp Z        &kp X        &kp C         &kp V          &kp B                                     XXX         XXX			     													  			 &kp N   &kp M    	   &mm_comma     &mm_dot      &kp FSLH			  XXX
-							  XXX      	 XXX          XXX          XXX           XXX                        &lt NAV SPACE  &lts FN LSHFT  &atb 0 DEL  &kp DEL  &mts LSHFT LSHFT  &lt NUM SPACE				  	   XXX           XXX           XXX          XXX					    XXX
+                XXX         &mm_1        &mm_2        &mm_3         &mm_4          &mm_5  XXX                                                                                  &mo MOD  &mm_6   &mm_7         &mm_8         &mm_9        &mm_0					  &tog GAME
+                &kp TAB     &kp Q        &kp W				 &kp E         &kp R          &kp T  XXX                                                                                  XXX      &kp Y   &kp U         &kp I         &kp O        &kp P				    XXX
+                &kp ENTER   &tml LGUI A  &hml LALT S  &hml LCTRL D  &hmlf LSHFT F  &kp G  XXX                 XXX            XXX         XXX  		XXX														XXX			 &kp H   &hmrj RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp ENTER 
+                XXX			    &kp Z        &kp X        &kp C         &kp V          &kp B                                     XXX         XXX			     													  			 &kp N   &kp M    	   &mm_comma     &mm_dot      &kp FSLH			  XXX
+							  &tog GAME	  XXX          XXX          XXX           XXX                        &lt NAV SPACE  &lts FN LSHFT  &atb 0 DEL  &kp DEL  &mts LSHFT LSHFT  &lt NUM SPACE				  	   XXX           XXX           XXX          XXX					    XXX
             >;
         };
 
         // -------------------------------------------------------------------------
         // Layer 1: GAME
-        // -------------------------------------------------------------------------
+        // ---------------- ---------------------------------------------------------
         game {
             bindings = <
                 &kp ESC    &kp N1  &kp N2  &kp N3   &kp N4  &kp N5  ___                                                                   &mo MOD  ___    ___     &kp N8     &kp N9    &kp N0    ___
                 &kp TAB    &kp Q   &kp W   &kp E    &kp R   &kp T   &kp I                                                                 &none    &kp Y  &kp U   &kp I      &kp O     &kp P     &kp BSLH
                 &kp CAPS   &kp A   &kp S   &kp D    &kp F   &kp G   &kp M            &kp LALT    &kp TAB    &kp LGUI  &kp RCTRL           &none    &kp H  &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-                &kp LSHFT  &kp Z   &kp X   &kp C    &kp V   &kp B                                XXX        &kp PG_UP                              &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                &kp DEL    XXX     XXX     XXX      XXX                    &kp SPACE &kp LSHIFT  &kp LCTRL  &kp PG_DN &kp ENTER &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+                &kp LSHFT  &kp Z   &kp X   &kp C    &kp V   &kp B                                &kp BSPC   &kp PG_UP                              &kp N  &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                ___        XXX     XXX     XXX      &kp M                  &kp SPACE &kp LSHIFT  &kp LCTRL  &kp DEL &kp ENTER &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
