@@ -78,7 +78,7 @@
             wait-ms = <40>;
             tap-ms  = <40>;
             bindings
-                = <&macro_press   &mo NAV2>
+                = <&macro_press   &mo ALTNAV>
 								, <&macro_press   &kp LALT>
                 , <&macro_tap     &kp TAB>
                 , <&macro_pause_for_release>
@@ -437,7 +437,7 @@
         td_f: tap_dance_f {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <275>;
+            tapping-term-ms = <270>;
             bindings = <&kp F>, <&kp LS(F)>;
         };
 

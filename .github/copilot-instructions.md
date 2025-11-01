@@ -86,4 +86,9 @@ This is a Kinesis Advantage 360 Pro configuration with:
 - Custom macros and tap dances
 - Optimized timing for fast typing
 
+## Inspiration
+
+You take inspiration from existing ZMK configurations, particularly the following:
+- [Urob | zmk-config](https://github.com/urob/zmk-config#timeless-homerow-mods)
+
 When making suggestions, consider the existing configuration patterns and user preferences established in this repository.
