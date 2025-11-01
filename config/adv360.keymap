@@ -478,17 +478,6 @@
             hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
             hold-trigger-on-release;
         };
-        hmrw: home_row_mod_right_win {
-            compatible                 = "zmk,behavior-hold-tap";
-            #binding-cells             = <2>;
-            bindings                   = <&kp>, <&mm_colon>;
-            flavor                     = "balanced";
-            tapping-term-ms            = <280>;
-            require-prior-idle-ms      = <200>;
-            quick-tap-ms               = <QUICK_TAP>;
-            hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
-            hold-trigger-on-release;
-        };
         tml: home_row_mod_left_tap {
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
@@ -501,25 +490,6 @@
             hold-trigger-on-release;                                                    
             //hold-while-undecided;                                                     
         };
-				nlk: num_layer_key {
-						compatible                 = "zmk,behavior-hold-tap";
-						#binding-cells             = <2>;
-						bindings                   = <&mo>, <&kp>;
-						flavor                     = "balanced";
-						tapping-term-ms            = <TAPPING_TERM>;
-						require-prior-idle-ms      = <PRIOR_IDLE>;
-						quick-tap-ms               = <QUICK_TAP>;
-				};
-				sps: space_shift {
-						compatible                 = "zmk,behavior-hold-tap";
-						#binding-cells             = <2>;
-						bindings                   = <&kp>, <&kp>;
-						flavor                     = "balanced";
-						tapping-term-ms            = <TAPPING_TERM>;
-						require-prior-idle-ms      = <PRIOR_IDLE>;
-						quick-tap-ms               = <QUICK_TAP>;
-				};
-
 
         lparen_csr: lparen_control_shift_right {
             compatible                 = "zmk,behavior-hold-tap";
@@ -567,15 +537,6 @@
             hold-trigger-on-release;
         };
 
-        mtn: mod_tap_num {
-            compatible            = "zmk,behavior-hold-tap";
-            #binding-cells        = <2>;
-            flavor                = "hold-preferred";
-            tapping-term-ms       = <TAPPING_TERM>;
-            quick-tap-ms          = <QUICK_TAP>;
-            require-prior-idle-ms = <PRIOR_IDLE>;
-            bindings              = <&mo>, <&sl>;
-        };
         mts: mod_tap_shift {
             compatible            = "zmk,behavior-hold-tap";
             #binding-cells        = <2>;
@@ -594,32 +555,6 @@
 						require-prior-idle-ms = <PRIOR_IDLE>;
 						bindings              = <&mo>, <&sk>;
 				};
-
-        cw: cap_word {
-            compatible      = "zmk,behavior-hold-tap";
-            #binding-cells  = <2>;
-            flavor          = "tap-preferred";
-            tapping-term-ms = <170>;
-            quick_tap_ms    = <125>;
-            bindings        = <&caps_word>, <&kp>;
-        };
-        nw: num_word {
-            compatible      = "zmk,behavior-hold-tap";
-            #binding-cells  = <2>;
-            flavor          = "tap-preferred";
-            tapping-term-ms = <170>;
-            quick_tap_ms    = <125>;
-            bindings        = <&tog>, <&kp>;
-        };
-
-        wt: warthunder {
-            compatible      = "zmk,behavior-hold-tap";
-            #binding-cells  = <2>;
-            flavor          = "hold-preferred";
-            tapping-term-ms = <125>;
-            quick_tap_ms    = <125>;
-            bindings        = <&kp>, <&kp>;
-        };
 
         /* Navigation */
 
