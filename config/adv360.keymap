@@ -433,40 +433,11 @@
             bindings = <&kp LC(V)>, <&kp LS(LC(V))>;
         };
 
-        td_t: tap_dance_t {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <275>;
-            bindings = <&kp T>, <&kp LS(T)>;
-        };
-
-        mm_t: mm_t {
-            compatible     = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings       = <&td_t>, <&kp LS(T)>;              // When shift is held, output T immediately (no tap dance delay)
-            mods           = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        td_f: tap_dance_f {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <275>;
-            bindings = <&kp F>, <&kp LS(F)>;
-        };
-
-        mm_f: mm_f {
-            compatible     = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings       = <&td_f>, <&kp LS(F)>; 
-            mods           = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-
         hmlf: home_row_mod_left_f {
             compatible                 = "zmk,behavior-hold-tap";
             #binding-cells             = <2>;
-            bindings                   = <&kp>, <&mm_f>;
-            flavor                     = "balanced";
+            bindings                   = <&kp>, <&kp>;
+            flavor                     = "hold-preferred";
             tapping-term-ms            = <280>;
             require-prior-idle-ms      = <170>;
             quick-tap-ms               = <5>;
@@ -484,6 +455,17 @@
             hold-trigger-key-positions = <KEYS_RIGHT THUMBS_RIGHT 17>;      						// keys not listed immediately produce a tap, i.e. keys on the left side of the keyboard
             hold-trigger-on-release;                                                    // allows combining multiple modifiers on same side of keyboard until key on opposite side is pressed and released
             //hold-while-undecided;                                                     // allows immediate usage of mouse with modifiers without waiting for tapping term to expire; prevents sticky shift on tap
+        };
+        hmrj: home_row_mod_right_j {
+            compatible                 = "zmk,behavior-hold-tap";
+            #binding-cells             = <2>;
+            bindings                   = <&kp>, <&kp>;
+            flavor                     = "hold-preferred";
+            tapping-term-ms            = <280>;
+            require-prior-idle-ms      = <250>;																					// Changed from 200
+            quick-tap-ms               = <QUICK_TAP>;
+            hold-trigger-key-positions = <KEYS_LEFT THUMBS_LEFT THUMBS_RIGHT>;
+            hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
             compatible                 = "zmk,behavior-hold-tap";
@@ -850,7 +832,7 @@
             bindings = <
                 XXX        &mm_1        &mm_2        &mm_3         &mm_4          &mm_5  XXX                                                                                  &mo MOD  &mm_6   &mm_7         &mm_8         &mm_9        &mm_0					  &tog GAME
                 &kp TAB    &kp Q        &kp W				 &kp E         &kp R          &mm_t  XXX                                                                                  XXX      &kp Y   &kp U         &kp I         &kp O        &kp P				    XXX
-                &kp ENTER  &tml LGUI A  &hml LALT S  &hml LCTRL D  &hmlf LSHFT 0  &kp G  XXX                 XXX            XXX         XXX  		XXX														XXX			 &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp ENTER 
+                &kp ENTER  &tml LGUI A  &hml LALT S  &hml LCTRL D  &hmlf LSHFT F  &kp G  XXX                 XXX            XXX         XXX  		XXX														XXX			 &kp H   &hmr_j RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp ENTER 
                 XXX			   &kp Z        &kp X        &kp C         &kp V          &kp B                                     XXX         XXX			     													  			 &kp N   &kp M    	   &mm_comma     &mm_dot      &kp FSLH			  XXX
 							  XXX      	 XXX          XXX          XXX           XXX                        &lt NAV SPACE  &lts FN LSHFT  &atb 0 DEL  &kp DEL  &mts LSHFT LSHFT  &lt NUM SPACE				  	   XXX           XXX           XXX          XXX					    XXX
             >;
