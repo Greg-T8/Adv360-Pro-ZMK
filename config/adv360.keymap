@@ -289,7 +289,7 @@
 				left_angle {
 						timeout-ms            = <25>;
 						require-prior-idle-ms = <COMBO_IDLE_FAST>;
-						key-positions         = <24 25 26>;
+						key-positions         = <23 24 25>;
 						bindings              = <&mm_lt>;
 						layers                = <COMBOLAYERS>;
 				};
