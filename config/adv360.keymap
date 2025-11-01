@@ -416,14 +416,14 @@
         td_paste: tap_dance_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <275>;
             bindings = <&kp LC(V)>, <&kp LS(LC(V))>;
         };
 
         td_t: tap_dance_t {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <275>;
             bindings = <&kp T>, <&kp LS(T)>;
         };
 
@@ -437,7 +437,7 @@
         td_f: tap_dance_f {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <275>;
             bindings = <&kp F>, <&kp LS(F)>;
         };
 
