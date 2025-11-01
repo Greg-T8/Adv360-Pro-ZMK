@@ -444,11 +444,10 @@
         mm_f: mm_f {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&td_f>, <&kp F>;              // When shift is held, output F immediately (no tap dance delay)
+            bindings       = <&td_f>, <&kp LS(F)>;              // When shift is held, output F immediately (no tap dance delay)
             mods           = <(MOD_LSFT|MOD_RSFT)>;
 						// keep-mods 		 = <(MOD_LSFT|MOD_RSFT)>;
         };
-
 
 				
 
