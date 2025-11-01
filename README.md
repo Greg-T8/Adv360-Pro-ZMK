@@ -13,6 +13,19 @@ This configuration implements:
 - **Custom macros** for window management and special characters
 - **Balanced hold-tap behaviors** to minimize accidental activations
 
+## Keymap Visualization
+
+You can view an interactive visualization of the keymap at:
+
+**[View Interactive Keymap →](https://keymap-drawer.streamlit.app/?zmk_url=https%3A%2F%2Fgithub.com%2FGreg-T8%2FKinesis-Adv360Pro-ZMK%2Fblob%2Fmain%2Fconfig%2Fadv360.keymap)**
+
+The visualization shows:
+
+- Default layer with home row mods
+- All combo positions and their outputs
+- Layer-specific keybindings
+- Hold vs. tap behaviors
+
 ## Key Features
 
 ### Home Row Mods
