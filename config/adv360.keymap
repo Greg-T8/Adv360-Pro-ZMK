@@ -333,7 +333,6 @@
             layers                = <COMBOLAYERS>;
         };
 
-
         /* Vertical combos - right hand */
 
         star {
@@ -430,7 +429,7 @@
         mm_t: mm_t {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&td_t>, <&kp LS(T)>;
+            bindings       = <&td_t>, <&kp T>;              // When shift is held, output T immediately (no tap dance delay)
             mods           = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -444,9 +443,12 @@
         mm_f: mm_f {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&td_f>, <&kp LS(F)>;
+            bindings       = <&td_f>, <&kp F>;              // When shift is held, output F immediately (no tap dance delay)
             mods           = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+
+
 
         hmlf: home_row_mod_left_f {
             compatible                 = "zmk,behavior-hold-tap";
