@@ -286,6 +286,13 @@
             bindings              = <&mm_rbracket>;
             layers                = <COMBOLAYERS>;
         };
+				left_angle {
+						timeout-ms            = <25>;
+						require-prior-idle-ms = <COMBO_IDLE_FAST>;
+						key-positions         = <24 25 26>;
+						bindings              = <&mm_lt>;
+						layers                = <COMBOLAYERS>;
+				}
 
         double_quotes {
             timeout-ms            = <COMBO_TERM_SLOW>;
@@ -310,6 +317,13 @@
             bindings              = <&rparen_csr RA(RIGHT_CONTROL) 0>;
             layers                = <COMBOLAYERS>;
         };
+				right_angle {
+						timeout-ms            = <25>;
+						require-prior-idle-ms = <COMBO_IDLE_FAST>;
+						key-positions         = <41 42 43>;
+						bindings              = <&mm_gt>;
+						layers                = <COMBOLAYERS>;
+				}
 
         quote {
             timeout-ms            = <COMBO_TERM_SLOW>;
@@ -688,15 +702,27 @@
         mm_lparen: mm_lparen {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&kp LPAR>, <&kp LT>;
+            bindings       = <&kp LPAR>, <&kp LPAR>;
             mods           = <(MOD_LSFT)>;
         };
         mm_rparen: mm_rparen {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings       = <&kp RPAR>, <&kp GT>;
+            bindings       = <&kp RPAR>, <&kp RPAR>;
             mods           = <(MOD_LSFT)>;
         };
+				mm_gt: mm_greater_than {
+					compatible     = "zmk,behavior-mod-morph";
+					#binding-cells = <0>;
+					bindings       = <&kp GT>, <&kp GT>;
+					mods           = <(MOD_LSFT)>;
+				};
+				mm_lt: mm_less_than {
+					compatible     = "zmk,behavior-mod-morph";
+					#binding-cells = <0>;
+					bindings       = <&kp LT>, <&kp LT>;
+					mods           = <(MOD_LSFT)>;
+				};
         mm_lbrace: mm_lbrace {
             compatible     = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
