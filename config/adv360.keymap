@@ -24,7 +24,7 @@
 #define ALTNAV     5
 #define MOD        6
 
-#define COMBOLAYERS DEFAULT NAV FN NUM
+#define COMBOLAYERS DEFAULT NUM NAV FN ALTNAV
 
 // -------------------------------------------------------------------------
 // Special Key Definitions
